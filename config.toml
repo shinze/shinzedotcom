@@ -1,0 +1,15 @@
+baseURL = "https://www.shinze.com"
+defaultContentLanguage = "fr"
+languageCode = "fr"
+title = "Shinze"
+theme = "hyde"
+about = "Everything is mine"
+
+[Menus]
+  main = [
+      {Name = "Twitter", URL = "https://twitter.com/shinze"},
+      {Name = "LinkedIn", URL = "https://www.linkedin.com/in/gaetanark/"}
+  ]
+  [params]
+  description = "De tout, entre autres"
+  layoutReverse = true
