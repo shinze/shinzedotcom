@@ -2,37 +2,38 @@
 title: 'À propos'
 date: 2021-07-05T00:05:03+02:00
 draft: true
+slug: a-propos
 summary: À propos de ce blog, des outils utilisés, de son contenu…
 ---
 
 **Un pense-bête, une documentation, un premier billet pour tester
-différentes fonctionnalités. Si vous être curieux, n’hésitez surtout,
+différentes fonctionnalités. Si vous êtes curieux, n’hésitez surtout,
 fouillez, récupérez, copiez, collez et adaptez à vos besoins.**
 
 ## Hugo, testé et adopté
 
-Je suis tombé amoureux des outils de génération de sites statiques.
+Je suis amoureux des outils de génération de sites statiques.
 Ce sont en général des outils simples, libres, utilisant des langages qui
-me sont accessibles souvent très performants.
+me sont accessibles et souvent très performants.
 
 Ce blog est généré avec [Hugo](https://gohugo.io/), un _framework_ spécialement
 fait pour ce genre de choses.
 
 Hugo permet de créer toute forme de site, du blog au site d’e-commerce,
-le contenu est pour moi écrit en
+le contenu est écrit en
 [Markdown](https://daringfireball.net/projects/markdown/syntax), un
-langage léger permettant de générer de l’HTML très simplement.
+langage léger, un standard d’usage, permettant de générer de l’HTML très simplement.
 
 ### Un thème tout fait pour commencer
 
-Le thème utilisé ests [Hyde](https://themes.gohugo.io/themes/hyde/) par Mark Otto (@mdo), légèrement modifié et adapté pour la langue française.
+Le thème utilisé ests [Hyde](https://themes.gohugo.io/themes/hyde/) par Mark Otto (@mdo) porté sur Hugo par [Steve Francis](https://github.com/spf13/hyde), légèrement modifié et adapté pour la langue française et ajouter quelques fonctionnalités.
 
 - [ ] 📓 TODO : Faire mon propre thème, promis. 
 
-## Comment ça marche ?
+## Un markdown étendu
 
-Ce site fonctionne grâce à Hugo, un générateur de site statique.
-
+Hugo utilise un moteur de rendu nommé Goldmark pour tout ce qui est contenu. 
+Goldmark respecte le standard *commonMark* mais l’étend avec quelques éléments intéressants.
 
 ## Insertion de code simple
 
