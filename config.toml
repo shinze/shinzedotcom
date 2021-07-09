@@ -2,7 +2,7 @@ baseURL = "https://www.shinze.com"
 defaultContentLanguage = "fr"
 languageCode = "fr"
 title = "Shinze"
-theme = "hyde"
+theme = "hydeshinze"
 about = "Everything is mine"
 
 [Menus]
