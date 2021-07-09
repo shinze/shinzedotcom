@@ -11,5 +11,19 @@ about = "Everything is mine"
       {Name = "LinkedIn", URL = "https://www.linkedin.com/in/gaetanark/"}
   ]
   [params]
-  description = "De tout, entre autres"
-  layoutReverse = true
+    author = "Gaëtan Ark"
+    description = "De tout, entre autres"
+    layoutReverse = true
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = false
+    noClasses = false
+    style = "manni"
+    tabWidth = 2
