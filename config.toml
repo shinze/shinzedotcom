@@ -2,7 +2,7 @@ baseURL = "https://www.shinze.com"
 defaultContentLanguage = "fr"
 languageCode = "fr"
 title = "Shinze"
-theme = "hydeshinze"
+theme = "shinze"
 about = "Everything is mine"
 
 [Menus]
@@ -22,8 +22,8 @@ about = "Everything is mine"
     guessSyntax = false
     lineAnchors = ""
     lineNoStart = 1
-    lineNos = false
-    lineNumbersInTable = false
+    lineNos = true
+    lineNumbersInTable = true
     noClasses = false
     style = "manni"
     tabWidth = 2

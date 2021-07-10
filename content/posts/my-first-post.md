@@ -13,36 +13,31 @@ fouillez, récupérez, copiez, collez et adaptez à vos besoins.**
 ## Hugo, testé et adopté
 
 Je suis amoureux des outils de génération de sites statiques.
-Ce sont en général des outils simples, libres, utilisant des langages qui
-me sont accessibles et souvent très performants.
+Ce sont des outils simples, libres, utilisant des langages qui me sont accessibles et performants.
 
-Ce blog est généré avec [Hugo](https://gohugo.io/), un _framework_ spécialement
-fait pour ce genre de choses.
+Ainsi ce blog est généré avec [Hugo](https://gohugo.io/), un _framework_ spécialement conçu à cet effet.
 
-Hugo permet de créer toute forme de site, du blog au site d’e-commerce,
-le contenu est écrit en
-[Markdown](https://daringfireball.net/projects/markdown/syntax), un
-langage léger, un standard d’usage, permettant de générer de l’HTML très simplement.
+Hugo permet de créer toute forme de site, du blog au site d’e-commerce, le contenu est rédigé en [Markdown](https://daringfireball.net/projects/markdown/syntax), un langage léger, un standard d’usage, me permettant de générer de l’HTML confortablement.
 
-### Un thème tout fait pour commencer
+### Pour commencer, un thème tout fait
 
-Le thème utilisé ests [Hyde](https://themes.gohugo.io/themes/hyde/) par Mark Otto (@mdo) porté sur Hugo par [Steve Francis](https://github.com/spf13/hyde), légèrement modifié et adapté pour la langue française et ajouter quelques fonctionnalités.
+Le thème utilisé est [Hyde](https://themes.gohugo.io/themes/hyde/) par Mark Otto (@mdo) porté sur Hugo par [Steve Francis](https://github.com/spf13/hyde), légèrement modifié et adapté pour la langue française et ajouter quelques fonctionnalités.
 
 - [ ] 📓 TODO : Faire mon propre thème, promis. 
 
 ## Un markdown étendu
 
-Hugo utilise un moteur de rendu nommé Goldmark pour tout ce qui est contenu. 
-Goldmark respecte le standard *commonMark* mais l’étend avec quelques éléments intéressants.
+Hugo utilise un moteur de rendu nommé Goldmark pour tout ce qui est contenu. Ce moteur respecte le standard *commonMark* mais l’étend avec quelques éléments intéressants.
 
 ## Insertion de code simple
 
-### Exemple en shell
+### Exemple de code en shell
 
 ```sh
 $ hugo server -D
 ```
-### Exemple en html
+
+### Exemple de code html
 
 ```html {hl_lines=[2],linenostart=1}
 <!-- Commentaire -->
@@ -55,15 +50,36 @@ $ hugo server -D
   </figcaption>
 ```
 
-### En JavaScript
-```javascript
-var toto = "hello"
+### En SVG
+```svg
+<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <rect x="10" y="10" height="100" width="100" style="stroke:#ff0000; fill: #0000ff"/>
+</svg>
 ```
-## Insertion de code un peu enrichie
 
-Ce petit module utilise les [*shortcodes* d’Hugo](https://gohugo.io/templates/shortcode-templates/) et me permet d’insérer un 
-extrait de code, d’indiquer le langage utilisé, le nom du fichier et un petit 
-commentaire en plus.
+### JavaScript
+```javascript
+// Un commentaire en JS
+const hello = "hello"
+function hello() {
+    console.info(hello);
+}
+```
+
+### CSS
+```css
+/* Un commentaire en CSS */
+body {
+    background-color: red;
+}
+.class {
+  color: blue;
+}
+```
+
+## Insertion de code enrichi
+
+Ce module que j’ai *développé* utilise les [*shortcodes* d’Hugo](https://gohugo.io/templates/shortcode-templates/) et me permet d’insérer un extrait de code, d’indiquer le langage utilisé, le nom du fichier et d’ajouter un petit commentaire.
 
 {{< code lang="markdown" caption="Exemple d’insertion de code enrichie" filename="post.md">}}
 ```markdown

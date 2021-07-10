@@ -1,0 +1,24 @@
+</main>
+
+<aside class="aside">
+  <nav class="aside__nav">
+    <a class="aside__logo" href="{{ .Site.BaseURL }}">
+      {{ .Site.Title }}
+    </a>
+    <p class="aside__signature">
+      Un peu de tout, entre autres.
+    </p>
+    <ul class="aside__list">
+      {{ range.Site.Menus.main }}
+      <li class="aside__list-item">
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
+
+</aside>
+
+</body>
+
+</html>

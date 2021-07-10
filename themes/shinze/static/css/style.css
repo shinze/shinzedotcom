@@ -1,0 +1,450 @@
+/* Grayscale Design palette: https://grayscale.design/app?lums=98.00,93.53,86.50,75.82,59.98,39.02,23.18,12.50,5.47,1.00&palettes=%23b300ff,%23b02384,%2348ada8,%23586934,%23fcce02,%23edadbc,%237f81b5,%23262523&filters=0%7C0,0%7C0,0%7C0,0%7C0,0%7C0,0%7C0,0%7C0,0%7C0&names=purpl,pink,cyan,green,gold,red,blue,grey&labels=,,,,,,, */
+
+:root {
+  --grayscale-50: #fdfdfd;
+  --grayscale-100: #f8f8f8;
+  --grayscale-200: #efefef;
+  --grayscale-300: #e2e2e2;
+  --grayscale-400: #cbcbcb;
+  --grayscale-500: #a8a8a8;
+  --grayscale-600: #848484;
+  --grayscale-700: #636363;
+  --grayscale-800: #424242;
+  --grayscale-900: #191919;
+
+  --purple-50: #fefcff;
+  --purple-100: #fcf6ff;
+  --purple-200: #f8e9ff;
+  --purple-300: #f3d8ff;
+  --purple-400: #eab9ff;
+  --purple-500: #da84ff;
+  --purple-600: #c642ff;
+  --purple-700: #9d00e0;
+  --purple-800: #6c009b;
+  --purple-900: #2f0043;
+
+  --pink-50: #fefbfd;
+  --pink-100: #fdf7fb;
+  --pink-200: #fceff8;
+  --pink-300: #f8daee;
+  --pink-400: #f1bae0;
+  --pink-500: #e681c6;
+  --pink-600: #db49ad;
+  --pink-700: #ad2281;
+  --pink-800: #79185a;
+  --pink-900: #310a25;
+
+  --cyan-50: #fafdfd;
+  --cyan-100: #f3fafa;
+  --cyan-200: #e7f5f4;
+  --cyan-300: #cfebea;
+  --cyan-400: #9cd6d3;
+  --cyan-500: #59bab5;
+  --cyan-600: #3d928e;
+  --cyan-700: #2e6e6b;
+  --cyan-800: #1f4a48;
+  --cyan-900: #0c1c1b;
+
+  --green-50: #fefefd;
+  --green-100: #f8faf5;
+  --green-200: #e8eedc;
+  --green-300: #dce5ca;
+  --green-400: #c3d2a4;
+  --green-500: #97b060;
+  --green-600: #758b45;
+  --green-700: #5b6c35;
+  --green-800: #3c4723;
+  --green-900: #181d0e;
+
+  --gold-50: #fffdf4;
+  --gold-100: #fff4c6;
+  --gold-200: #feefaa;
+  --gold-300: #fee267;
+  --gold-400: #f2c602;
+  --gold-500: #caa502;
+  --gold-600: #9f8201;
+  --gold-700: #766101;
+  --gold-800: #514201;
+  --gold-900: #1e1900;
+
+  --red-50: #fefcfd;
+  --red-100: #fdf8f9;
+  --red-200: #fbebef;
+  --red-300: #f7dae1;
+  --red-400: #f2c4cf;
+  --red-500: #e68ba0;
+  --red-600: #da5776;
+  --red-700: #b72849;
+  --red-800: #7f1c33;
+  --red-900: #340b15;
+
+  --blue-50: #fcfcfd;
+  --blue-100: #f8f8fb;
+  --blue-200: #eeeef5;
+  --blue-300: #e0e0ed;
+  --blue-400: #c7c8df;
+  --blue-500: #a0a1c8;
+  --blue-600: #797bb1;
+  --blue-700: #5c5e9f;
+  --blue-800: #3e406c;
+  --blue-900: #161625;
+
+  --grey-50: #fdfdfd;
+  --grey-100: #f8f8f8;
+  --grey-200: #efefee;
+  --grey-300: #e3e2e0;
+  --grey-400: #cdcbc8;
+  --grey-500: #acaaa5;
+  --grey-600: #86837b;
+  --grey-700: #67645e;
+  --grey-800: #44423e;
+  --grey-900: #1a1918;
+
+  /* Responsive type scale */
+  --fz1: 1.802rem;
+  --fz2: 1.602rem;
+  --fz3: 1.424rem;
+  --fz4: 1.266rem;
+  --fz5: 1.125rem;
+  --fz6: 0.889rem;
+}
+
+@media (min-width: 64rem) {
+  :root {
+    /* Responsive type scale */
+    --fz1: 4.209rem;
+    --fz2: 3.157rem;
+    --fz3: 2.369rem;
+    --fz4: 1.777rem;
+    --fz5: 1.333rem;
+    --fz6: 0.75rem;
+  }
+}
+
+html {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  /* Ugly fix for the grid broken by pre blocks */
+  min-width: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  font-size: 100%;
+  line-height: 1.75;
+  background-color: var(--grey-100);
+  color: var(--grey-700);
+  overscroll-behavior: none;
+}
+
+a {
+  color: var(--blue-800);
+}
+
+a:visited {
+  color: var(--pink-800);
+}
+
+a:active {
+  color: var(--pink-600)
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 500;
+  color: var(--grey-800);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: var(--fz2);
+}
+
+h1,
+.t1 {
+  font-size: var(--fz2);
+  margin-bottom: var(--fz2);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+h2,
+.t2 {
+  font-size: var(--fz3);
+  margin-bottom: var(--fz3);
+  line-height: 1.3;
+}
+
+h3,
+.t3 {
+  font-size: var(--fz4);
+  margin-bottom: var(--fz4);
+  line-height: 1.3;
+}
+
+h4,
+.t4 {
+  font-size: var(--fz5);
+  margin-bottom: var(--fz5);
+  line-height: 1.3;
+}
+
+h5,
+.t5 {
+  font-size: var(--fz6);
+  margin-bottom: var(--fz6);
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+h6,
+.t6 {
+  font-size: var(--fz6);
+  margin-bottom: var(--fz6);
+  line-height: 1.3;
+}
+
+p {
+  font-size: 1rem;
+}
+
+pre {
+  margin: 0;
+}
+
+/* Aside  */
+.aside {
+  color: var(--grey-800);
+  background-color: var(--grey-200);
+}
+
+.aside a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.aside a:hover,
+.aside a:focus {
+  text-decoration: underline;
+}
+
+.aside__logo {
+  font-size: var(--fz2);
+  letter-spacing: -.06em;
+  font-weight: 700;
+}
+
+.aside__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.aside__signature {
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: var(--fz4);
+}
+
+/* Layout  */
+
+body {
+  display: grid;
+}
+
+.aside {
+  padding: var(--fz3);
+  order: -1;
+}
+
+.content {
+  padding: var(--fz5);
+}
+
+/* Code */
+
+.highlight {
+  background-color: white;
+  box-shadow: 0 0 0 1px var(--grey-300);
+  border-radius: .25rem;
+  overflow-x: auto;
+  margin-bottom: var(--fz2);
+}
+
+.highlight code {
+  font-family: 'Recursive', sans-serif;
+  font-weight: 400;
+  color: var(--grey-800)
+}
+
+/* Code line numbers */
+.lntable {
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  line-height: 1.5;
+}
+
+.lntable td {
+  padding-left: 1rem
+}
+
+.lntable td:first-child {
+  border-right: 1px var(--grey-300) solid;
+  padding: .5rem .25rem .5rem 1rem;
+  background-color: var(--blue-100);
+}
+
+.lnt {
+  color: var(--grey-500);
+  text-align: right;
+}
+
+
+/* Commented code */
+
+.commented-code {
+  position: relative;
+  padding: 2.5rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: .3rem;
+  box-shadow: 0 0 0 1px var(--grey-300);
+  margin-bottom: var(--fz2);
+}
+
+.commented-code .highlight {
+  margin-bottom: .8rem;
+  border-radius: 0;
+}
+
+.commented-code__code {}
+
+.commented-code__caption-meta {
+  font-family: 'Recursive', sans-serif;
+  position: absolute;
+  bottom: calc(100% - 1.9rem);
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem
+}
+
+.commented-code__caption {
+  font-style: normal;
+  padding: 0 .8rem .8rem .8rem;
+}
+
+.commented-code__caption-content {
+  font-size: .9rem;
+}
+
+.commented-code__lang {
+  font-size: .8rem;
+  font-weight: normal;
+  font-style: normal;
+  background-color: var(--pink-200);
+  box-shadow: 0 0 0 1px var(--pink-500);
+  display: inline-block;
+  padding: 0 .5rem 0 .5rem;
+  border-radius: 10000rem;
+}
+
+.commented-code__filename {
+  font-size: .8rem;
+  font-style: normal;
+  color: var(--pink-800)
+}
+
+/* Posts list */
+
+.posts {}
+.post__title {
+  font-size: var(--fz4);
+  margin-bottom: var(--fz4);
+}
+
+/* Single layout elements */
+
+.back {
+  display: inline-block;
+  margin-bottom: var(--fz3);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 1000rem;
+  padding: 0 1rem 0 1rem;
+  transform: translateX(-1rem);
+  transition: all .3s;
+}
+
+.back:hover,
+.back:focus {
+  background-color: var(--grey-800);
+  color: var(--gold-100);
+  transform: translateX(0)
+}
+
+.back:active {
+  background-color: var(--pink-700);
+}
+
+.back::before {
+  content: "‹";
+  display: inline-block;
+  margin-right: var(--fz6)
+}
+
+/* Responsive layout */
+
+@media (min-width: 48rem) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 18rem;
+  }
+
+  .aside {
+    order: 2;
+    padding: var(--fz4);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .aside__nav {
+  }
+
+  .content {
+    padding: var(--fz2);
+  }
+}
+
+@media (min-width: 80rem) {
+  
+  .content {
+    padding: 10%;
+  }
+}
