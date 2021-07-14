@@ -1,29 +1,34 @@
 baseURL = "https://www.shinze.com"
-defaultContentLanguage = "fr"
-languageCode = "fr"
 title = "Shinze"
 theme = "shinze"
 about = "Everything is mine"
+defaultcontentlanguage = "fr"
+
+[params]
+author = "Gaëtan Ark"
+description = "De tout, entre autres"
+languageCode = "fr"
+
+# https://gohugo.io/content-management/taxonomies/
+[taxonomies]
+category = "categories"
+tag = "css, learn"
 
 [Menus]
-  main = [
-      {Name = "Twitter", URL = "https://twitter.com/shinze"},
-      {Name = "LinkedIn", URL = "https://www.linkedin.com/in/gaetanark/"}
-  ]
-  [params]
-    author = "Gaëtan Ark"
-    description = "De tout, entre autres"
-    layoutReverse = true
+main = [
+  {Name = "Twitter", URL = "https://twitter.com/shinze"},
+  {Name = "LinkedIn", URL = "https://www.linkedin.com/in/gaetanark/"}
+]
 
 [markup]
-  [markup.highlight]
-    anchorLineNos = false
-    codeFences = true
-    guessSyntax = false
-    lineAnchors = ""
-    lineNoStart = 1
-    lineNos = true
-    lineNumbersInTable = true
-    noClasses = false
-    style = "manni"
-    tabWidth = 2
+[markup.highlight]
+anchorLineNos = false
+codeFences = true
+guessSyntax = false
+lineAnchors = ""
+lineNoStart = 1
+lineNos = true
+lineNumbersInTable = true
+noClasses = false
+style = "manni"
+tabWidth = 2

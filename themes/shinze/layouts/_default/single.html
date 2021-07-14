@@ -1,8 +1,8 @@
 {{ partial "header.html" . }}
 
-<a href="/" class="back">Retour à l’accueil</a>
+<!-- <a href="/" class="back">Retour à l’accueil</a> -->
 <h1>{{ .Title }}</h1>
-
+{{ .TableOfContents }}
 {{ .Content }}
-
+{{ partial "tags.html" .}}
 {{ partial "aside.html" . }}

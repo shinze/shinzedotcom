@@ -5,9 +5,9 @@
     <a class="aside__logo" href="{{ .Site.BaseURL }}">
       {{ .Site.Title }}
     </a>
-    <p class="aside__signature">
-      Un peu de tout, entre autres.
-    </p>
+    <div class="aside__signature">
+      {{ .Site.Params.description}}
+    </div>
     <ul class="aside__list">
       {{ range.Site.Menus.main }}
       <li class="aside__list-item">
