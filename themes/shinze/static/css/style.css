@@ -426,9 +426,20 @@ body {
 
 /* Posts list */
 
-.posts {}
+.posts {
+}
+
+.post {
+  background-color: #fff;
+  border-radius: .25rem;
+  border: 1px solid var(--grey-200);
+  margin-bottom: var(--fz6);
+  padding: var(--fz6);
+}
+
 .post__title {
   font-size: var(--fz2);
+  margin: 0;
   margin-bottom: 0;
 }
 
@@ -443,6 +454,14 @@ body {
 
 .post__date {
   font-size: var(--fz6);
+  font-family: 'Recursive', monospace;
+  color: var(--cyan-700);
+  margin-bottom: var(--fz6);
+  display: inline-block
+}
+
+.post__summary {
+  
 }
 
 /* Single layout elements */

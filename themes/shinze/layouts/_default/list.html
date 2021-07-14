@@ -5,15 +5,21 @@
 {{ .Content }}
 
 {{ range.Data.Pages }}
-<article class="post-snippet">
-  <h3>
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-  </h3>
-  <time datetime="{{ .Date.Format " 2006-01-02T15:04:05Z07:00" }}">
-    {{ .Date.Format "January 2, 2006" }}
-  </time>
-</article>
+  <article class="post">
+    <h2 class="post__title">
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </h2>
+    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}" class="post__date">
+      {{ .Date.Day }} {{ index $.Site.Data.mois (printf "%d" .Date.Month) }} {{ .Date.Year }}
+    </time>
+    <p>{{ .Summary }}</p>
+    {{ if .Truncated }}
+    <div class="post__read-more">
+      <a href="{{ .RelPermalink }}">Lire la suite <span class="sr-only">({{ .Title }})</span></a>
+    </div>
+    {{ end }}
+  </article>
 {{ end }}
 
 
-{{/* partial "footer.html" . */}}
+{{ partial "aside.html" . }}
