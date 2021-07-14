@@ -1,4 +1,5 @@
 ---
+weight: 2
 title: "Le modèle de boîte en CSS"
 summary: À propos de standard web, mes cours notamment sur différents sujets, HTML, CSS et une pincée de JavaScript.
 tags: ['learn', 'css']

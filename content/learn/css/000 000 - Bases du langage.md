@@ -1,4 +1,5 @@
 ---
+weight: 1
 title: "Introduction au langage CSS"
 summary: "Les fondamentaux du langage"
 tags: ['learn', 'css']
