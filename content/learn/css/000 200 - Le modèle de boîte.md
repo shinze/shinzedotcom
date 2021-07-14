@@ -12,15 +12,15 @@ draft: true
 
 Dans cet exemple afin de faire une petite zone de 100px × 100px qui contient un texte de bienvenue, vous allez ajouter le bout de code qui suit à votre document `html`.
 
-{{ <code lang="html" caption="C’est toujours bien d’être poli" filename="index.html"> }}
+{{<code lang="html" caption="C’est toujours bien d’être poli" filename="index.html">}}
 ```html
 <h1>Bienvenue sur mon site d’e-commerce !</h1>
 ```
-{{ < /code > }}
+{{</code>}}
 
 Puis dans un fichier `css` relié à votre fichier `html`, vous allez décrire ce que vous souhaitez, une boîte qui fait `100px` par `100px`.
 
-{{ < code lang="css" caption="C’était assez simple finalement…" filename="style.css" > }}
+{{<code lang="css" caption="C’était assez simple finalement…" filename="style.css">}}
 ```css
 h1 {
   width: 100px;
@@ -30,7 +30,7 @@ h1 {
   border: 1px #cacaca solid;
 }
 ```
-{{ < /code > }}
+{{</code>}}
 
 Mais… Comme vous pouvez le constater [dans cet exemple](https://codepen.io/shinze/pen/eYWBOzb), ça ne marche pas tout à fait comme prévu… Le contenu dépasse.
 
@@ -42,11 +42,10 @@ Habituellement, quand vous voulez réaliser ce même exemple dans la plupart des
 
 Mais surtout vous allez redimensionner cet élément à `100px × 100px` en indiquant ces valeurs dans des champs dédiés à cet usage.
 
-{{ < quote > }}
-
+{{<quote>}}
 > «  Je vais mettre ce texte ici sur un fond qui
 > fera 100  ×  100 pixels… ».
-> {{ < /quote > }}
+{{</quote>}}
 
 Le document sur lequel vous travaillez habituellement est dans des dimensions hauteur et largeur qui sont figées, que ce soit pour imprimer (A4, A5…) ou tout autre usage, vous êtes habitués à travailler dans un espace figé.
 

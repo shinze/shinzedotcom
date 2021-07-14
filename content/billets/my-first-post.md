@@ -39,7 +39,7 @@ $ hugo server -D
 
 ### Exemple de code `html`
 
-```html {hl_lines=[2],linenostart=1}
+```html {hl_lines=[2]}
 <!-- Commentaire -->
 <figcaption class="commented-code__caption">
     <div class="commented-code__caption-meta">  
