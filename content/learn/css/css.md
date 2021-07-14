@@ -14,7 +14,7 @@ draft: true
  2. De *modifier des propriétés* (propriétés visuelle la plupart, comme la largeur);
  3. Et d’*attribuer une valeur* à ces propriétés (par exemple : 130px);
   
-![image alt text](description-css.svg)
+![image alt text](images/description-css.svg)
 
 ---
 
@@ -31,10 +31,10 @@ draft: true
 ## Propriétés logiques
 ## Espaces
 ## Pseudo-éléments et pseudo class
-  - États
 ## Bordures, contours, ombres
   - Élements d’habillage
 ## Focus
+  - États
 ## Z-index
 ## Fonctions
 ## Dégradés
