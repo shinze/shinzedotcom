@@ -1,13 +1,11 @@
 ---
 weight: 1
 title: 'Introduction au langage CSS'
-summary: 'Le concept fondamental du langage'
+summary: 'Le langage en quelques lignes'
 tags: ['learn', 'css']
 date: 2021-07-10T01:18:26+02:00
 draft: true
 ---
-
-## Le langage
 
 `CSS` pour _Cascading StyleSheet_ (feuille de styles en cascade) est le langage de mise en forme des pages `html` et `CSS` permet :
 
@@ -15,10 +13,15 @@ draft: true
 2.  De **modifier des propriétés** (propriétés visuelle la plupart, comme la largeur);
 3.  Et d’**attribuer une valeur** à ces propriétés (par exemple : 130px);
 
-![image alt text](/images/description-css.svg)
+<!-- ![image alt text](/images/description-css.svg) -->
 
-{{ < code lang="html" caption="C’est toujours bien d’être poli" filename="index.html" > }}
-```html
-<h1>Bienvenue sur mon site d’e-commerce !</h1>
+{{ < code lang="css" caption="uie" filename="hello"> }}
+```css
+h1 {
+    color: blue
+  }
 ```
 {{ < /code > }}
+
+Dans ce fichier CSS, on sélectionne un élément `html` nommé `h1` et on lui applique une couleur bleue
+
