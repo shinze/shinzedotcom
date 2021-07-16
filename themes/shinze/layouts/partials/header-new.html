@@ -1,0 +1,8 @@
+    <header class="header">
+      <a class="header__sitename" href="{{ .Site.BaseURL }}">
+        {{ .Site.Title }}
+      </a>
+      <div class="header__description">
+        {{ .Site.Params.description | markdownify }}
+      </div>
+    </header>

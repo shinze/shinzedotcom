@@ -1,25 +1,5 @@
-{{ partial "header.html" . }}
-
-
-<div class="posts">
-  {{ range .Site.RegularPages -}}
-  <article class="post">
-    <!-- <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}" class="post__date"> -->
-    <!--   {{ .Date.Day }} {{ index $.Site.Data.mois (printf "%d" .Date.Month) }} {{ .Date.Year }} -->
-    <!-- </time> -->
-    <h2 class="post__title">
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
-    </h2>
-   <div class="post__summary">
-      {{ .Summary }}
-    </div> 
-    {{ if .Truncated }}
-    <div class="post__read-more">
-      <a href="{{ .RelPermalink }}">Lire la suite <span class="sr-only">({{ .Title }})</span></a>
-    </div>
-    {{ end }}
-  </article>
-  {{- end }}
-</div>
-
-{{ partial "aside.html" . }}
+{{ define "main" -}}
+  <h1 class="content__title content__title--home">À lire</h1>
+  {{ .Content }}
+  {{ partial "list.html" . }}
+{{- end }}

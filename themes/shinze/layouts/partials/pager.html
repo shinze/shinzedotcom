@@ -1,0 +1,16 @@
+<section class="pager">
+  
+  <div class="pager__item">
+  	{{ if .NextPage }}
+    <strong class="pager__item-caption">Chapitre précédent</strong>
+  	<a class="link-reverse" href="{{ .NextPage.Permalink }}?ref=footer">‹ {{ .NextPage.Title | truncate 50 "..." }}</a>
+  	{{ end }}
+  </div>
+  
+  <div class="pager__item">
+  	{{ if .PrevPage }}
+    <strong class="pager__item-caption">Chapitre suivant</strong>
+  	<a class="link-reverse" href="{{ .PrevPage.Permalink }}?ref=footer">{{ .PrevPage.Title | truncate 50 "..."}} ›</a>
+  	{{ end }}
+  </div>
+</section>

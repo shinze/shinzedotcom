@@ -1,13 +1,15 @@
 baseURL = "https://www.shinze.com"
-title = "Shinze"
+title = "shinze"
 theme = "shinze"
 about = "Everything is mine"
 defaultcontentlanguage = "fr"
 
 [params]
 author = "Gaëtan Ark"
-description = "De tout, entre autres"
+description = "De tout, *entre autres*"
+descriptionlong = "**Gaëtan Ark** (parfois appelé *gatan*, [shinze](twitter.com/shinze) ou encore *papa*), vous trouverez ici de tout, entre autres mais surtout le contenu de mes cours à propos des standards du web."
 languageCode = "fr"
+github = "https://github.com/shinze/shinzedotcom"
 
 # https://gohugo.io/content-management/taxonomies/
 [taxonomies]

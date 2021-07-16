@@ -1,0 +1,23 @@
+
+<div class="post">
+  <ul class="posts__list">
+    {{ range .Pages -}}
+    <li class="post">
+      <h2 class="post__title">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </h2>
+      <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}" class="post__date">
+        {{ .Date.Day }} {{ index $.Site.Data.mois (printf "%d" .Date.Month) }} {{ .Date.Year }}
+      </time>
+      <!-- <div class="post__summary"> -->
+      <!--   {{ .Summary }} -->
+      <!-- </div>  -->
+      {{ if .Truncated }}
+      <div class="post__read-more">
+        <a href="{{ .RelPermalink }}">Lire la suite <span class="sr-only">({{ .Title }})</span></a>
+      </div>
+      {{ end }}
+    </li>
+    {{- end }}
+  </ul>
+</div>
