@@ -1,4 +1,3 @@
-
 <div class="post">
   <ul class="posts__list">
     {{ range .Pages -}}
@@ -12,11 +11,14 @@
       <!-- <div class="post__summary"> -->
       <!--   {{ .Summary }} -->
       <!-- </div>  -->
+      {{/*
       {{ if .Truncated }}
       <div class="post__read-more">
         <a href="{{ .RelPermalink }}">Lire la suite <span class="sr-only">({{ .Title }})</span></a>
       </div>
       {{ end }}
+
+      */}}
     </li>
     {{- end }}
   </ul>

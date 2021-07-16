@@ -1,5 +1,7 @@
 {{ define "main" -}}
   <h1 class="content__title">{{ .Title | markdownify }}</h1>
+  {{ partial "tags.html" . }}
   {{ .Content }}
   {{ partial "list.html" . }}
+  {{ partial "pager.html" . }}
 {{- end }}

@@ -1,6 +1,6 @@
 ---
 weight: 3
-title: 'Le modèle de boîte en CSS'
+title: 'Les CSS c’est des boîtes'
 summary: ''
 tags: ['learn', 'css']
 categories: ['Cours']

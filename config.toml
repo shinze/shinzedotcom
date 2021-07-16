@@ -14,7 +14,7 @@ github = "https://github.com/shinze/shinzedotcom"
 # https://gohugo.io/content-management/taxonomies/
 [taxonomies]
 category = "categories"
-tag = "css, learn"
+tag = "tags"
 
 [Menus]
 main = [

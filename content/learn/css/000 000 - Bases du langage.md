@@ -1,5 +1,6 @@
 ---
 weight: 1
+favicon: "🐒" 
 title: 'Qu’est-ce que ce langage CSS ?'
 summary: 'Le langage en quelques lignes'
 tags: ['learn', 'css']
@@ -98,3 +99,4 @@ qui composent votre projet (documents `html`, `css`, `js`… et plus tard vos im
 
 - [Shay Howe, Learn to code HTML & CSS](https://learn.shayhowe.com/html-css/);
 - [Mozilla, Les bases de CSS](https://developer.mozilla.org/fr/docs/Learn/Getting_started_with_the_web/CSS_basics);
+- [La cascade](https://la-cascade.io/);
