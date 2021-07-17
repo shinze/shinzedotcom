@@ -1,10 +1,10 @@
 .p {color: var(--green-600)}
 .hll { background-color: var(--pink-50) }
  /*{ background: #f0f3f3; }*/
-.c { color: var(--grey-500); font-style: italic;} /* Comment */
+.c { color: var(--grey-800); font-style: italic;} /* Comment */
 .err { color: #AA0000; background-color: #FFAAAA } /* Error */
-.k { color: var(--purple-600); } /* Keyword */
-.o { color: var(--grey-500) } /* Operator */
+.k { color: var(--gold-800); } /* Keyword */
+.o { color: var(--pink-600) } /* Operator */
 .cm { color: #0099FF; font-style: italic } /* Comment.Multiline */
 .cp { color: #009999 } /* Comment.Preproc */
 .c1 { color: #999; } /* Comment.Single */

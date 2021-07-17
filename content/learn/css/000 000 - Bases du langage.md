@@ -29,8 +29,8 @@ Une feuille de styles ou document `css` se nomme avec l’extension *.css*, par 
 
 **Vous allez avec votre outil de choix créer votre premier (?) site.**
 
-1. Créez un dossier que vous pouvez nommer comme vous souhaitez («*Mon premier site*» par exemple);
-2. Ouvrez votre éditeur de code préféré;
+1. Créez un dossier que vous pouvez nommer **🗂  Mon premier site** par exemple;
+2. Ouvrez votre éditeur de code préféré ♥️;
 3. Créez deux fichiers, un fichier nommé `index.html` et un autre `style.css` que vous enregistrez
 dans le dossier précédemment créé.
 
@@ -42,7 +42,7 @@ Et dans ces fichiers taper le code suivant.
 
 {{< code
   lang="css"
-  filename="style.css"
+  filename="Mon premier projet/style.css"
   caption="Dans cet exemple, on sélectionne un élément `h1` auquel on applique une couleur bleue" >}}
 ```css
 h1 {
@@ -54,7 +54,7 @@ h1 {
 
 {{< code
   lang="html"
-  filename="index.html"
+  filename="Mon premier projet/index.html"
   caption="Dans le fichier `html` on relie d’abord le fichier `css` en l’ajoutant dans le `head`" >}}
 ```html {hl_lines=[4],linenostart=1}
 …
@@ -71,7 +71,7 @@ h1 {
 
 {{< code
   lang="html"
-  filename="index.html"
+  filename="Mon premier projet/index.html"
   caption="Dans le `body` du document `html` on ajoute le titre de notre contenu" >}}
 ```html
 <body>

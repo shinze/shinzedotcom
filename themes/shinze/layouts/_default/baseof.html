@@ -22,13 +22,18 @@
 	{{ end -}}
   <body>
     <main class="main">
+      
       <header class="header">
         <a class="header__sitename" href="{{ .Site.BaseURL }}">
           {{ .Site.Title }}
         </a>
-        <div class="header__description">
-          {{ .Site.Params.description | markdownify }}
-        </div>
+        <nav class="header__links">
+          <ul class="header__links-list">
+            <li><a href="/learn">Mes cours</a></li>
+            <li><a href="/billets/a-propos">À propos</a></li>
+          </ul>
+        </nav>
+        <button type="button" id="theme-switcher" class="theme-switcher"></button>
       </header>
       <section class="content">
       {{ block "main" . -}}{{- end }}
@@ -44,5 +49,7 @@
     {{ if not .Site.IsServer }}
       {{ template "_internal/google_analytics.html" . }}
     {{ end }}
+    <script src="/js/script.js"></script>
+       
   </body>
 </html>
