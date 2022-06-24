@@ -33,7 +33,10 @@
             <li><a href="/billets/a-propos">À propos</a></li>
           </ul>
         </nav>
-        <button type="button" id="theme-switcher" class="theme-switcher"></button>
+        <button type="button" id="theme-switcher" class="theme-switcher" aria-label="Changer de thème">
+         <span class="theme-switcher__icon--moon">🌚</span>
+         <span class="theme-switcher__icon--sun">🌞</span>
+        </button>
       </header>
       <section class="content">
       {{ block "main" . -}}{{- end }}

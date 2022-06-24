@@ -17,14 +17,13 @@ de leur balise. Un `h1 {…}` pour sélectionner le titre principal du contenu
 sélectionner tous les paragraphes d’une page et leur appliquer des propriétés communes.
 
 La sélection par balise est généralement utilisée pour régler un aspect visuel transverse
-à votre page ou à votre site.
-
-### Exemple de sélection par *tag*
+à votre page ou à votre site. Voici un exemple :
 
 {{< code
   lang="html"
   filename="index.html"
   caption="Je crée deux sections dans lesquelles sont deux paragraphes." >}}
+
 ```html
 <section>
   <p>Un exemple de texte</p>
@@ -33,24 +32,26 @@ La sélection par balise est généralement utilisée pour régler un aspect vis
   <p>Un autre exemple de texte</p>
 </section>
 ```
+
 {{< /code >}}
 
 {{< code
   lang="css"
   filename="style.css"
   caption="Dans le fichier `css`, je sélectionne les `p` et change le corps du texte en le passant à `2rem`" >}}
+
 ```css
 p { font-size: 2rem}
 ```
+
 {{< /code >}}
 
 Dans cet exemple tous les éléments dont le type est `p` sont sélectionnés et vont
 avoir le même style.
 
-{{<hi>}}
-### Exercice
-Ajoutez un titre `<h3>` aux sections du document `html` et appliquez-leur en `css` la même couleur.
-{{</hi>}}
+{{<exercice>}}
+Ajoutez un titre `<h3>` aux sections du document `html` et appliquez-leur en `css` une même couleur de votre choix.
+{{</exercice>}}
 
 ## Sélection par `class`
 
@@ -69,7 +70,8 @@ Permet la sélection d’éléments selon :
 {{< code
   lang="css"
   filename="style.css"
-  caption="Presque tous les mode de sélection par attribut" >}}
+  caption="Presque tous les modes de sélection par attribut" >}}
+
 ```css
 /* Les éléments img qui contiennent un attribut alt */
 img[alt] {
@@ -95,17 +97,24 @@ a[href~=".com"] {
 a[href="https://www.perdu.com"] {
     color: green
 }
+
+/* Et celui-ci ? */
+p[class="hello"] {
+  color: orange;
+}
 ```
+
 {{< /code >}}
 
 {{< hi >}}
+
 ### Exercice
+
 Faîtes la page `html` qui correspond au fichier `css` cité en exemple ci-dessus.
 {{< /hi >}}
 
 **Note**: Il est tout à fait possible de *simuler* la sélection par `class`
 par le biais de la sélection par attributs.
-
 
 ## Position hiérarchique
 

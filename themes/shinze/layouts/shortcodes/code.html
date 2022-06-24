@@ -1,8 +1,4 @@
 <figure class="commented-code">
-  <div class="commented-code__code">
-    {{ .Inner | markdownify }}
-   </div> 
-
   <figcaption class="commented-code__caption">
     <div class="commented-code__caption-meta">  
       <em class="commented-code__lang" title="Type de fichier">{{ .Get "lang"}}</em>
@@ -12,4 +8,7 @@
       {{ .Get "caption" | markdownify }}
     </div>
   </figcaption>
+  <div class="commented-code__code">
+    {{ .Inner | markdownify }}
+   </div> 
 </figure>

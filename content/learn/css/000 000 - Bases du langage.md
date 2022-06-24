@@ -31,8 +31,7 @@ Une feuille de styles ou document `css` se nomme avec l’extension *.css*, par 
 
 1. Créez un dossier que vous pouvez nommer **🗂  Mon premier site** par exemple;
 2. Ouvrez votre éditeur de code préféré ♥️;
-3. Créez deux fichiers, un fichier nommé `index.html` et un autre `style.css` que vous enregistrez
-dans le dossier précédemment créé.
+3. Créez deux fichiers, un fichier nommé `index.html` et un autre `style.css` que vous enregistrez dans le dossier précédemment créé.
 
 {{<hi>}}
 **Note** : Faire un nouveau document html avec VS Code
@@ -44,19 +43,21 @@ Et dans ces fichiers taper le code suivant.
   lang="css"
   filename="Mon premier projet/style.css"
   caption="Dans cet exemple, on sélectionne un élément `h1` auquel on applique une couleur bleue" >}}
+
 ```css
 h1 {
     color: blue
   }
 ```
-{{< /code >}}
 
+{{< /code >}}
 
 {{< code
   lang="html"
   filename="Mon premier projet/index.html"
   caption="Dans le fichier `html` on relie d’abord le fichier `css` en l’ajoutant dans le `head`" >}}
-```html {hl_lines=[4],linenostart=1}
+
+```html
 …
 <head>
   <!-- D’autres éléments seront présents dans le head du document. -->
@@ -66,18 +67,20 @@ h1 {
 </body>
 …
 ```
-{{< /code >}}
 
+{{< /code >}}
 
 {{< code
   lang="html"
   filename="Mon premier projet/index.html"
   caption="Dans le `body` du document `html` on ajoute le titre de notre contenu" >}}
+
 ```html
 <body>
   <h1>Mon premier site internet !</h1>
 </body>
 ```
+
 {{< /code >}}
 
 La dernière étape est d’ouvrir cette page avec un navigateur de votre choix et si tout se passe bien,
@@ -88,7 +91,7 @@ vous devez voir le texte que vous venez d’ajouter en couleur bleue.
 ## Ce que vous venez de réaliser
 
 1. **Ce que vous allez faire pour chacun de vos projets, créer un dossier et y ajouter les fichiers
-qui composent votre projet (documents `html`, `css`, `js`… et plus tard vos images)**;
+   qui composent votre projet (documents `html`, `css`, `js`… et plus tard vos images)**;
 2. Lier une feuille de styles à un document `html`;
 3. Ajouter votre premier _sélecteur_ à une page et modifier _la propriété_ d’un élément.
 
