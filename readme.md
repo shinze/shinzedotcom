@@ -6,3 +6,6 @@ La ressource que tu as utilisé est celle ci : https://www.youtube.com/watch?v=B
 
 Pour lancer le dév : npm start
 pour lance le build : npm build
+
+
+À voir pour minifier les ressources : https://www.benjaminrancourt.ca/how-to-minify-your-eleventy-build/

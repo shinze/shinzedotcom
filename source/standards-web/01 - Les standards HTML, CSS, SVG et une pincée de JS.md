@@ -19,7 +19,7 @@ Le web fonctionne grâce à ces langages. Chaque page que vous pouvez consulter 
 - CSS est ce va permettre de modifier les propriétés visuelles des éléments HTML  et SVG;
 - JS peut modifier ces langages, changer les propriétés d’éléments lorsque l’utilisateur interagit, charger des données, les afficher, rendre votre page dynamique.
 
-## Sur cet espace
+## À consulter dans cette section
 
 1. Le langage [[HTML]];
 	1. [[Des attributs]];

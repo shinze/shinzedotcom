@@ -3,16 +3,11 @@ tags: [Notebooks/Cours]
 title: 'Les standards HTML, CSS, SVG et une pincée de JS'
 created: '2022-07-03T11:55:33.118Z'
 modified: '2022-07-03T16:46:07.004Z'
-layout: base.njk
-author: Gaëtan Ark
 ---
 
-## Standards web
+## { title }
 
-```html
-<p>Hello</p>
-```
-
+### Standards web
 
 Les langages HTML, CSS, SVG et JS sont des langages fondamentaux du web proposé par le [W3C](https://www.w3.org/), un regroupement d’industriels du marché du web (fabricants ou fournisseurs de matériel, de logiciels, de services) dont l’objectif est de définir ces standards [parmi d’autres](https://www.w3.org/standards/).
 
@@ -25,7 +20,7 @@ Le web fonctionne grâce à ces langages. Chaque page que vous pouvez consulter 
 - CSS est ce va permettre de modifier les propriétés visuelles des éléments HTML  et SVG;
 - JS peut modifier ces langages, changer les propriétés d’éléments lorsque l’utilisateur interagit, charger des données, les afficher, rendre votre page dynamique.
 
-## Sur cet espace
+### Sur cet espace
 
 1. Le langage [[HTML]];
 	1. [[Des attributs]];
@@ -43,4 +38,3 @@ Le web fonctionne grâce à ces langages. Chaque page que vous pouvez consulter 
 3. Le langage [[SVG]];
 4. Les outils pour développer
 5. Qualité;
-

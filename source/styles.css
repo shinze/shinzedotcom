@@ -1,3 +1,15 @@
-body {
+
+html {
   font-family: sans-serif;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+*,*::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  color: #222;
+  background-color: #efefef;
 }
