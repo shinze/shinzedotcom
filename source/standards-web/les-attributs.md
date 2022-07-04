@@ -1,8 +1,6 @@
 ---
-tags: [Notebooks/Cours/HTML]
-title: Attributs
-created: '2022-07-03T11:58:50.626Z'
-modified: '2022-07-03T13:28:35.384Z'
+tags: "standards-web"
+title: "Les attributs HTML"
 ---
 
 # Des attributs

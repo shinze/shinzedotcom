@@ -1,11 +1,7 @@
 ---
-tags: [Notebooks/Cours/HTML]
-title: Balises
-created: '2022-07-03T11:55:33.118Z'
-modified: '2022-07-03T16:46:23.464Z'
+tags: "standards-web"
+title: "Les balises HTML"
 ---
-
-# Des balises
 
 HTML est un langage à balises permettant de délimiter différentes parties de votre contenu, chaque **élément** ainsi signalé va porter un sens différent.
 

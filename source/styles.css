@@ -1,6 +1,10 @@
-
+:root {
+  --txt : #222;
+  --bg: #efefef;
+  --links: blue;
+}
 html {
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
   box-sizing: border-box;
 }
@@ -9,7 +13,34 @@ html {
   box-sizing: inherit;
 }
 
+a {
+  color: var(--links);
+  transition: all .3s
+}
+
+a:hover, a:focus {
+  text-underline-offset: 1px;
+}
+
+a:visited {
+  color: purple
+}
+
+
 body {
-  color: #222;
-  background-color: #efefef;
+  color: var(--txt);
+  background-color: var(--bg);
+  margin: 0;
+  padding: 2rem;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  line-height: 1.2;
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+
+ul, ol {
+  margin: 0 0 1em 0;
+  padding: 0 0 0 5%;
 }
