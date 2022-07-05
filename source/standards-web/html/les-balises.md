@@ -1,5 +1,5 @@
 ---
-tags: "standards-web"
+tags: "html"
 title: "Les balises HTML"
 ---
 
@@ -17,7 +17,7 @@ La balise ouvrante s’écrit `<nomBalise>` et la balise fermante `</nomBalise>`
 
 ```html
 <h1>Découvrir le langage HTML</h1>
-<p>Le langage HTML (HyperText Markup Language) est le langage qui va permettre de **structurer, d’enrichir et de donner du sens** au contenu.</p>
+<p>Le langage HTML (HyperText Markup Language) est…</p>
 ```
 
 Ci-dessus, un exemple de quatre balises délimitant du contenu, un titre (avec les balises `h1`) et un paragraphe (avec les balises `p`).

@@ -1,7 +1,7 @@
 ---
-tags: [Notebooks/Cours]
-title: 'Bienvenue didon'
-author: Gaëtan Ark
+tags: "shinze"
+title: 'Bienvenue ici beau loulou'
+layout: "base.njk"
 ---
 
 ## Hello

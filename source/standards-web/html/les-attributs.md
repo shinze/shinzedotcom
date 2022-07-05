@@ -1,5 +1,5 @@
 ---
-tags: "standards-web"
+tags: "html"
 title: "Les attributs HTML"
 ---
 
@@ -17,7 +17,7 @@ Exemple d’une balise délimitant un lien, ici les balises `<a></a>` permettent
 L’attribut nommé `href` permet ici d’indiquer l’adresse à laquelle l’utilisateur sera redirigé : `https://perdu.com` une fois le lien activé.
 
 
-## À retenir à propos des attributs
+## À savoir
 
 ### Quelques éléments ont des attributs obligatoires
 
@@ -29,9 +29,9 @@ L’attribut nommé `href` permet ici d’indiquer l’adresse à laquelle l’u
 C’est le cas de l’attribut `class` comme sur l’exemple suivant.
 
 ```html
-<p class="paragraphe intro">…Contenu…</p>
+<p class="paragraphe intro">Contenu de l’intro</p>
 <!-- Cet autre paragraphe n’a pas de class -->
-<p class="">…Contenu…</p>
+<p class="">Un autre contenu</p>
 ```
 
 - Notez qu’une valeur d’attribut n’est pas toujours obligatoire;
