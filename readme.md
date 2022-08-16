@@ -23,4 +23,4 @@ La ressource que tu as utilisé est celle ci : https://www.youtube.com/watch?v=B
 ## Ressources
 
 - https://davidea.st/articles/11ty-tips-i-wish-i-knew-from-the-start/;
-- (test.md) 
+- (Hey)[./test.md]
