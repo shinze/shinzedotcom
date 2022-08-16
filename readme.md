@@ -18,3 +18,9 @@ La ressource que tu as utilisé est celle ci : https://www.youtube.com/watch?v=B
 - La navigation globale est gérée par `_data/navigation.js` et l’affichage est calculé dans `base.njk`;
 - Utilisation de MarkdownIt;
 - Utilisation de https://github.com/markdown-it/markdown-it-mark pour les tags md marqués de ==tag==;
+
+
+## Ressources
+
+- https://davidea.st/articles/11ty-tips-i-wish-i-knew-from-the-start/;
+- 

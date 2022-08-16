@@ -2,8 +2,11 @@
   --txt : #222;
   --txt-lighter: #999;
   --bg: #fff;
-  --links: #3740ff;
+  --links: #0000ee; /* #3740ff */
+  --links-visited: #551abb;
   --selected: #b3d4fc;
+  --callout-bg: #d3e7ff;
+  --callout-border: #b3d4fc;
   --fz1: 3rem;
   --fz2: 2.5rem;
   --fz3: 2rem;
@@ -104,11 +107,22 @@ a {
 }
 
 a:visited {
-  color: purple
+  color: var(--links-visited);
 }
+
 
 p, ol, ul, pre {
   margin-bottom: var(--fz6);
+}
+
+
+h1 + p {
+  font-size: var(--fz5);
+  margin-bottom: var(--fz5);
+}
+
+p + *:not(p, .callout) {
+  margin-top: var(--fz1);
 }
 
 ul ul {
@@ -119,10 +133,6 @@ ul::marker {
   color: var(--txt-lighter);
 }
 
-h1 + p {
-  font-size: var(--fz5);
-  margin-bottom: var(--fz5);
-}
 
 code, pre {
   background-color: #ffc;
@@ -137,7 +147,9 @@ pre[class*="language-"] {
 
 pre[class^="language-html"]::before {
   content: "html";
-  display: block;
+  display: inline-block;
+  padding: .25rem;
+  background-color: white;
 }
 
 
@@ -152,6 +164,38 @@ pre[class^="language-html"]::before {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 1rem
+  gap: .25rem
 }
 
+.nav a {
+  display: inline-block;
+  padding: .25rem .5rem;
+}
+
+.nav a[aria-current="page"] {
+  text-decoration: none;
+  background-color: var(--links);
+  color: white;
+}
+
+/* Contenu principal */
+
+.main {
+  margin-bottom: var(--fz3);  
+}
+
+/* Pied de page */
+.footer {
+  padding-top: var(--fz6);
+  border-top: 1px #ccc solid;  
+}
+
+/* Callout */
+
+.callout {
+  background-color: var(--callout-bg);
+  border: .0625rem var(--callout-border) solid;
+  padding: var(--fz6);
+  border-radius: var(--rounded-small);
+  margin-bottom: var(--fz6);
+}

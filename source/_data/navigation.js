@@ -5,10 +5,10 @@ module.exports = [
   },
   {
     "label": "À propos",
-    "url": "/a-propos"
+    "url": "/a-propos/"
   },
   {
     "label": "Standards web",
-    "url": "/standards-web"
+    "url": "/standards-web/"
   }
 ]

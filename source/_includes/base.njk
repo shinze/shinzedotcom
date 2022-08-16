@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="{{ eleventy.generator }}">
-  <title>{{ title }} - Gaëtan Ark - Shinze</title>
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/prismjs@1.20.0/themes/prism.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="{{ eleventy.generator }}">
+    <title>{{ title }} - {{ global.website }} - Shinze</title>
+    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.20.0/themes/prism.css">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
 
-<body>
-
-<nav class="nav">
-  <ul>
-    {% for item in navigation %}
-    <li><a href="{{ item.url }}">{{ item.label }}</a></li>
-    {% endfor %}
-  </ul>
-</nav>
-  <main class="main">
-    <h1>{{ title }}</h1>
-    {{ content | safe }}
-  </main>
-  <footer class="footer">
-    <p>Le contenu de ce site est complètement libre.</p>
-    <p>Site réalisé grâce à <a href="https://www.11ty.dev">Eleventy (11ty)</a></p>
-  </footer>
-
-</body>
+  <body>
+    <nav class="nav">
+      <ul>
+        {% for item in navigation %}
+          <li>
+            {{ page.url }}
+            {{ item.url }}
+            <a href="{{ item.url }}" {% if item.url in page.url %} aria-current="page"{% endif %}>
+              {{ item.label }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <main class="main">
+      <h1>{{ title }}</h1>
+      {{ content | safe }}
+    </main>
+    <footer class="footer">
+      <p>Site réalisé grâce à <a href="https://www.11ty.dev">{{ eleventy.generator }}</a> - Le contenu de ce site est totalement libre.
+      </p>
+    </footer>
+  </body>
 
 </html>
