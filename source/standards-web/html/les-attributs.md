@@ -3,7 +3,7 @@ tags: "html"
 title: "Les attributs HTML"
 ---
 
-# Des attributs
+# Des attributs, les infos clés
 
 - Un attribut est une propriété que l’on donne à un élément html pour modifier son comportement;
 - Un attribut se compose d’un nom d’attribut et d’une ou plusieurs valeurs;
@@ -14,17 +14,18 @@ title: "Les attributs HTML"
 ```
 
 Exemple d’une balise délimitant un lien, ici les balises `<a></a>` permettent d’ajouter un lien sur le contenu `vous êtes perdu`.\
-L’attribut nommé `href` permet ici d’indiquer l’adresse à laquelle l’utilisateur sera redirigé : `https://perdu.com` une fois le lien activé.
+L’attribut nommé `href` est l’adresse à laquelle l’utilisateur est redirigé : `https://perdu.com` une fois le lien utilisé.
 
 
-## À savoir
+## Quelques éléments ont des attributs obligatoires
 
-### Quelques éléments ont des attributs obligatoires
+Par exemple,
+1. Les liens et l’attribut `href`, sinon pas de lien;
+2. L’attribut `alt` sur les images, cet attribut permettant de renseigner l’image sur son contenu.
 
-1. Les liens et l’attribut `href`, sinon le lien ne marche pas);
-2. L’attribut `alt` sur les images;
+Il existe 
 	
-### Un attribut peut comporter plusieurs valeurs
+## Un attribut peut comporter plusieurs valeurs
 
 C’est le cas de l’attribut `class` comme sur l’exemple suivant.
 

@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="{{ eleventy.generator }}">
     <title>{{ title }} - {{ global.website }} - Shinze</title>
-    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.20.0/themes/prism.css">
+    <link rel="stylesheet" href="/prism-light.css">
     <link rel="stylesheet" href="/styles.css">
   </head>
 
   <body>
     <nav class="nav">
-      <ul>
+      {# <ul>
         {% for item in navigation %}
           <li>
             {{ page.url }}
@@ -23,15 +23,20 @@
             </a>
           </li>
         {% endfor %}
-      </ul>
+      </ul> #}
     </nav>
     <main class="main">
-      <h1>{{ title }}</h1>
+      {# {% if subtitle %}
+        <p>{{ subtitle }}</p>
+      {% endif %} #}
+      <a href="/">Accueil</a>
+      <h1>
+        <p class="header-sitename">{{ title }}</p>
+      </h1>
       {{ content | safe }}
     </main>
     <footer class="footer">
-      <p>Site réalisé grâce à <a href="https://www.11ty.dev">{{ eleventy.generator }}</a> - Le contenu de ce site est totalement libre.
-      </p>
+      <p>Site réalisé grâce à <a href="https://www.11ty.dev">{{ eleventy.generator }}</a> - Le contenu de ce site est totalement libre.</p>
     </footer>
   </body>
 

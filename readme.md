@@ -14,7 +14,7 @@ La ressource que tu as utilisé est celle ci : https://www.youtube.com/watch?v=B
 
 ### Structure de l’appli
 
-- Chaque dossier est un nœud de l’arborescence et contient un fichie `dossier.json` contenant les données propres de ce niveau d’arborescence.
+- Chaque dossier est un nœud de l’arborescence et contient un fichier `dossier.json` contenant les données propres de ce niveau d’arborescence.
 - La navigation globale est gérée par `_data/navigation.js` et l’affichage est calculé dans `base.njk`;
 - Utilisation de MarkdownIt;
 - Utilisation de https://github.com/markdown-it/markdown-it-mark pour les tags md marqués de ==tag==;

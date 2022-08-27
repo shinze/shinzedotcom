@@ -41,7 +41,7 @@ body {
   margin: 0;
   padding: 1.5rem;
   width: 100vw;
-  max-width: 70ch;
+  max-width: 80ch;
 }
 
 *,*::before, *::after {
@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
-h3, h4, h5, h6 {
+h4, h5, h6 {
   font-weight: bold;
 }
 
@@ -80,6 +80,7 @@ h1 {
 h2 {
   font-size: var(--fz2);
   margin-bottom: var(--fz3);
+  margin-top: var(--fz1);
 }
 
 h3 {
@@ -116,14 +117,12 @@ p, ol, ul, pre {
 }
 
 
-h1 + p {
+h1 + p,
+h1 + h2 + p {
   font-size: var(--fz5);
   margin-bottom: var(--fz5);
 }
 
-p + *:not(p, .callout) {
-  margin-top: var(--fz1);
-}
 
 ul ul {
   margin-bottom: 0;
@@ -131,6 +130,10 @@ ul ul {
 
 ul::marker {
   color: var(--txt-lighter);
+}
+
+li {
+  margin-bottom: var(--fz6);
 }
 
 
@@ -143,14 +146,22 @@ pre[class*="language-"] {
   border: 1px rgba(0,0,0,.2) solid;
   border-radius: var(--rounded-small);
   margin-bottom: var(--fz2);
+  position: relative;
+  font-size: .8rem;
+  margin-bottom: var(--fz4);
 }
 
 pre[class^="language-html"]::before {
   content: "html";
   display: inline-block;
-  padding: .25rem;
+  padding: .25rem .5rem;
+  font-size: .8rem;
   background-color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
+
 
 
 /* Navigation haute */
@@ -198,4 +209,12 @@ pre[class^="language-html"]::before {
   padding: var(--fz6);
   border-radius: var(--rounded-small);
   margin-bottom: var(--fz6);
+}
+
+.callout :last-child {
+  margin-bottom: 0;
+}
+
+.callout code, .callout pre {
+  background-color: rgba(255,255,255,.8);
 }

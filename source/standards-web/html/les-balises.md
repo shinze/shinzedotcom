@@ -1,12 +1,11 @@
 ---
 tags: "html"
 title: "Les balises HTML"
-tempplateEngineOverride: njk, md
 ---
 
-HTML est un **langage à balises** permettant de délimiter différentes parties de votre contenu, chaque **élément** va porter un sens différent.
+HTML est un **langage à balises**, des bouts de code permettant de délimiter différentes parties de votre contenu, chaque **élément** ainsi créé va apporter un sens différent à votre contenu.
 
-Différents types de contenus peuvent être *balisés* : des titres, des paragraphes, des listes, des liens, des images, des navigation, des sections, des formulaires [La liste peut être longue](http://html5doctor.com/element-index/) et permet d’améliorer [la sémantique](https://fr.wikipedia.org/wiki/HTML_s%C3%A9mantique) de votre contenu.
+Différents types d’éléments peuvent être indiqués par des *balises* : des titres, des paragraphes, des listes, des liens, des images, des navigations, des sections, des formulaires [La liste peut être longue](http://html5doctor.com/element-index/) et permet d’améliorer [la sémantique](https://fr.wikipedia.org/wiki/HTML_s%C3%A9mantique) de votre contenu, son indexation dans les différentes moteurs de recherche et enfin et surtout l’accessibilité de vos contenus.
 
 ## Comment ça marche ?
 
@@ -14,21 +13,23 @@ Pour baliser un contenu vous utiliserez (la plupart du temps) une balise ouvrant
 
 La balise ouvrante s’écrit `<nomBalise>` et la balise fermante `</nomBalise>`, entre ces deux balises le contenu que l’on souhaite délimiter.
 
-
-
-L’ensemble balise ouvrante + contenu + balise fermante se nomme un élément .
-
-```html
+``` html
 <h1>Découvrir le langage HTML</h1>
 <p>Le langage HTML (HyperText Markup Language) est…</p>
 ```
 
-Ci-dessus, un exemple de quatre balises délimitant du contenu, un titre (avec les balises `h1`) et un paragraphe (avec les balises `p`).
+Ci-dessus, l’extrait d’un document `html` avec un exemple de balises délimitant différents types de contenus. Un titre (avec les balises `h1`) et un paragraphe (avec les balises `p`).
 
-La suite : [[Des attributs]]
+L’ensemble balise **ouvrante + contenu + balise fermante** se nomme **un élément**. Dans l’exemple précédent nous avons donc créé deux éléments.
+## Un petit exercice
 
+1. Suivez ce [guide de mise en place d’un projet pour le web](../../pratique/nouveau-projet);
+2. Donnez-moi votre recette préférée dans le fichier *index.html* (si vous manquez d’inspiration faîtes la recette de ce que vous venez de manger);
+
+
+Une fois que vous avez terminé votre recette, vous pouvez aller consulter [ma version de la pizza quatre fromages](../recette).
 
 ## Références
 
 - [Liste de balises disponibles en HTML5](https://developer.mozilla.org/fr/docs/Web/HTML/Element);
-- [Une autre liste](http://html5doctor.com/element-index/), chaque élément HTML est analysé et illustré d’exemples;
+- [Une autre liste d’éléments utilisables en HTML](http://html5doctor.com/element-index/), chaque élément HTML est ici analysé et illustré d’exemples.
