@@ -1,4 +1,4 @@
 {
   "layout": "base.njk",
-  "tags": "js"
+  "tags": "post, js, standards"
 }

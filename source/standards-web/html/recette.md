@@ -1,13 +1,11 @@
 ---
-tags: "post, html, standards, recette"
 title: "Exercice, la recette de cuisine, un faux départ"
 eleventyNavigation:
-  key: Recette1
-  parent: html 
-  order: 1
+  key: "Recette"
+  parent: "HTML"
 ---
 
-## C’est parti pour la recette !
+## C’est parti pour la recette !
 
 Dans mon document `index.html` avec VS Code, j’ai commencé à saisir le plan de mon document comme ceci :
 

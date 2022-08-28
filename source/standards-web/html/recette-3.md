@@ -1,10 +1,8 @@
 ---
-tags: "post, html, standards, recette"
 title: "Exercice, la recette de cuisine, c’est parti (S1E3)"
 eleventyNavigation:
-  key: Recette3
-  parent: html
-  order: 3
+  key: "Recette, page 3"
+  parent: "Recette"
 ---
 
 [Consulter la précédente étape](../recette-2)

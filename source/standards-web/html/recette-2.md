@@ -1,10 +1,8 @@
 ---
-tags: "post, html, standards, recette"
 title: "Exercice, la recette de cuisine, c’est parti (pour de vrai)"
 eleventyNavigation:
-  key: Recette2
-  parent: html
-  order: 2
+  key: "Recette, page 2"
+  parent: "Recette"
 ---
 
 [Par ici pour le début de la recette](../recette)

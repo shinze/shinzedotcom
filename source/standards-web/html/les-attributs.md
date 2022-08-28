@@ -1,6 +1,8 @@
 ---
-tags: "post, html, standards"
 title: "Les attributs"
+eleventyNavigation:
+  key: "Les attributs"
+  parent: "HTML"
 ---
 
 # Des attributs, les infos clés

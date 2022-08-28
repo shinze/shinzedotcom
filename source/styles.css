@@ -136,10 +136,6 @@ ul::marker {
   color: var(--txt-lighter);
 }
 
-li {
-  margin-bottom: var(--fz6);
-}
-
 
 code, pre {
   background-color: #ffc;
