@@ -1,8 +1,11 @@
 ---
-tags: "standards-web"
+tags: "post, standards"
 subtitle: "Les standards HTML, CSS, SVG et une pincée de JS"
 title: "Les standards HTML, CSS, SVG et une pincée de JS"
 date: Last Modified
+eleventyNavigation:
+  key: Standards
+  parent: Home
 ---
 
 ## Des standards ?

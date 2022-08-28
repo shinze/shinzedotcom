@@ -1,6 +1,6 @@
 ---
-tags: "html"
-title: "Les balises HTML"
+tags: "post, html, standards"
+title: "Les balises"
 ---
 
 HTML est un **langage à balises**, des bouts de code permettant de délimiter différentes parties de votre contenu, chaque **élément** ainsi créé va apporter un sens différent à votre contenu.

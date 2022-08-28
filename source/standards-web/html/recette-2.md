@@ -1,9 +1,13 @@
 ---
-tags: "html"
+tags: "post, html, standards, recette"
 title: "Exercice, la recette de cuisine, c’est parti (pour de vrai)"
+eleventyNavigation:
+  key: Recette2
+  parent: html
+  order: 2
 ---
 
-[Par ici pour le début de cet exercice](../html/recette)
+[Par ici pour le début de la recette](../recette)
 
 ## Je pars sur une meilleure base
 
@@ -64,11 +68,13 @@ Après toutes ces modifications, voici le code que j’obtiens :
 
 ### À noter
 
-Les espaces présents devant chaque balise sont ce que l’on nomme des indentations. Elles ne sont utiles qu’aux humains (vous) et leur rendre le document plus compréhensible.
+Les espaces présents devant chaque balise sont ce que l’on nomme des indentations.
+
+Elles ne sont utiles qu’aux humains (vous) pour vous rendre le document plus compréhensible.
 
 </div>
 
-## Encore un peu de contenu
+## On la mange quand cette pizza ?
 
 Sour le `h1`, j’ajoute du contenu, un rapide texte d’introduction.
 
@@ -104,7 +110,7 @@ Après j’attaque la liste des ingrédients, que je mets… Sous le titre indiq
   </ul>
 ```
 
-La liste des ingrédients est complète, j’ai ajouté quelques `h3` pour fournir un peu plus d’informations au utilisateurs qui souhaiteraient réaliser cette sucullente recette. 
+La liste des ingrédients est complète, j’ai ajouté quelques `h3` pour fournir un peu plus d’informations au utilisateurs qui souhaiteraient réaliser cette succulente recette. 
 
 Les balises `ul, li` permettent d’indiquer la présence d’une liste (un ensemble d’informations que l’on regroupe), chaque item de la liste est mis dans une balise `li` et l’ensemble des éléments est dans une balise `ul` (**U**nordered **L**ist).
 

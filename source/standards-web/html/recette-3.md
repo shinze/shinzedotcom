@@ -1,13 +1,17 @@
 ---
-tags: "html"
+tags: "post, html, standards, recette"
 title: "Exercice, la recette de cuisine, c’est parti (S1E3)"
+eleventyNavigation:
+  key: Recette3
+  parent: html
+  order: 3
 ---
 
 [Consulter la précédente étape](../recette-2)
 
 ## Vous en reprendrez bien un peu ?
 
-Une liste d’ingrédients sans recette étant très décevante, je suis évidemment passé à la rédaction de la suite, la recette.
+Une liste d’ingrédients sans recette étant décevante, je suis évidemment passé à la rédaction de la suite, la recette.
 
 Voici le code que j’ai ajouté :
 
@@ -30,7 +34,7 @@ Voici le code que j’ai ajouté :
 
 Si vous êtes observateur vous pouvez voir ici l’utilisation d’un type de liste différent, un `ol` (et toujours des `li` pour les items de la liste).
 
-**Cette balise indique une liste ou l’ordre des éléments a son importance : c’est difficile de faire cuire la pizza sans sa pâte, c’est donc très adapté dans cet exemple**
+**Cette balise indique une liste ou l’ordre des éléments a son importance : c’est difficile de faire cuire la pizza sans sa pâte, c’est adapté à mon exemple**
 
 ## La fin de la recette
 
@@ -48,12 +52,12 @@ Après la recette, j’ai poursuivi comme ceci :
 <p>Vous pouvez aussi accompagner vos pizzas d’une salade de mâche assaisonnée de vinaigre balsamique.</p>
 ```
 
-Rien de très complexe, des paragraphes `p` pour développer chacun des contenus proposés.
+De simples paragraphes `p` pour développer chacun des contenus proposés.
 
 ## La recette complète (pour les gourmands)
 
 <div class="callout">
-Je ne vous conseille pas de réaliser cette recette qui est complètement improvisée.
+Je ne vous conseille pas de réaliser cette recette qui est improvisée.
 </div>
 
 ```html

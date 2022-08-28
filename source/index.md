@@ -1,8 +1,9 @@
 ---
-tags: "shinze"
+tags: "post, shinze"
 title: 'Bienvenue ici beau loulou'
-layout: "base.njk"
 date: Last Modified
+eleventyNavigation:
+  key: Home
 ---
 
 ## Hello

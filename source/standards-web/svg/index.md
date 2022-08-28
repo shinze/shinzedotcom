@@ -1,5 +1,5 @@
 ---
-tags: "svg, standards-web"
+tags: "post, svg, standards"
 title: "SVG"
 ---
 

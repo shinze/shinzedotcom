@@ -1,6 +1,6 @@
 ---
-tags: "html"
-title: "Les attributs HTML"
+tags: "post, html, standards"
+title: "Les attributs"
 ---
 
 # Des attributs, les infos clés

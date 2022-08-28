@@ -3,41 +3,74 @@
 
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="{{ eleventy.generator }}">
-    <title>{{ title }} - {{ global.website }} - Shinze</title>
+    <title>{{ title }} - {{ page.data.tags }} - Shinze</title>
     <link rel="stylesheet" href="/prism-light.css">
     <link rel="stylesheet" href="/styles.css">
   </head>
 
   <body>
     <nav class="nav">
-      {# <ul>
+      <ul>
         {% for item in navigation %}
-          <li>
-            {{ page.url }}
-            {{ item.url }}
-            <a href="{{ item.url }}" {% if item.url in page.url %} aria-current="page"{% endif %}>
-              {{ item.label }}
-            </a>
-          </li>
-        {% endfor %}
-      </ul> #}
-    </nav>
-    <main class="main">
-      {# {% if subtitle %}
-        <p>{{ subtitle }}</p>
-      {% endif %} #}
-      <a href="/">Accueil</a>
-      <h1>
-        <p class="header-sitename">{{ title }}</p>
-      </h1>
-      {{ content | safe }}
-    </main>
-    <footer class="footer">
-      <p>Site réalisé grâce à <a href="https://www.11ty.dev">{{ eleventy.generator }}</a> - Le contenu de ce site est totalement libre.</p>
-    </footer>
-  </body>
+          {% if page.url in item.url %}
+            <li aria-current="page">{{ item.label }}
+          {% else %}
+            <li>
+              <a href="{{ item.url }}">{{ item.label }}</a>
+          {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
 
-</html>
+      <main class="main">
+        {{ page.date }}
+        <h1>
+          <p class="header-sitename">{{ title }}</p>
+        </h1>
+        {{ content | safe }}
+      </main>
+
+      <h2>Dans cette section</h2>
+      {% set navPages = collections.all | eleventyNavigation %}
+
+{% macro renderNavListItem(entry) %}
+  {% if entry.children.length %}
+    <li>
+      <details
+        {%- for child in entry.children %}
+          {% if child.parent == entry.title and child.url == page.url %}
+            class="is-active"
+            open
+          {% endif %}
+        {% endfor %}
+      >
+        <summary>{{ entry.title }}</summary>
+        <ul role="list">
+          {%- for child in entry.children %}{{ renderNavListItem(child) }}{% endfor -%}
+        </ul>
+      </details>
+    </li>
+  {% else %}
+    <li>
+      <a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a>
+    </li>
+  {%- endif -%}
+{%- endmacro %}
+
+<ul class="nav-list" role="list">
+{%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+</ul>
+
+        <footer class="footer">
+          <p>Site réalisé grâce à <a href="https://www.11ty.dev">{{ eleventy.generator }}</a> - Le contenu de ce site est totalement libre.</p>
+        </footer>
+
+
+
+
+      </body>
+
+    </html>

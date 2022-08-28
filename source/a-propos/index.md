@@ -1,5 +1,5 @@
 ---
-tags: "a-propos"
+tags: "post, a-propos"
 title: "À propos de ce site"
 ---
 

@@ -42,6 +42,7 @@ body {
   padding: 1.5rem;
   width: 100vw;
   max-width: 80ch;
+  font-size: 110%
 }
 
 *,*::before, *::after {
@@ -111,6 +112,9 @@ a:visited {
   color: var(--links-visited);
 }
 
+[aria-current="page"] {
+  font-weight: bold;
+}
 
 p, ol, ul, pre {
   margin-bottom: var(--fz6);
@@ -147,7 +151,6 @@ pre[class*="language-"] {
   border-radius: var(--rounded-small);
   margin-bottom: var(--fz2);
   position: relative;
-  font-size: .8rem;
   margin-bottom: var(--fz4);
 }
 
@@ -183,7 +186,7 @@ pre[class^="language-html"]::before {
   padding: .25rem .5rem;
 }
 
-.nav a[aria-current="page"] {
+.nav [aria-current="page"] {
   text-decoration: none;
   background-color: var(--links);
   color: white;

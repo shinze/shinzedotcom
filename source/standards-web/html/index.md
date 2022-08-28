@@ -1,5 +1,5 @@
 ---
-tags: "html"
+tags: "post, html, standards"
 title: "HTML"
 description: "Les bases du langage HTML"
 date: Last Modified

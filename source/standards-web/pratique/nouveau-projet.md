@@ -1,4 +1,5 @@
 ---
+tags: "post, standards"
 title : "Comment initialiser un projet avec VS Code"
 ---
 

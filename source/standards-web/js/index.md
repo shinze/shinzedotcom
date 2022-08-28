@@ -1,5 +1,5 @@
 ---
-tags: "js"
+tags: "post, js, standards"
 title: "Javascript"
 ---
 
