@@ -1,6 +1,6 @@
 ---
-title: "Exercice, la recette de cuisine, c’est parti (S1E3)"
 eleventyNavigation:
+  title: "Exercice, la recette de cuisine, c’est parti (S1E3)"
   key: "Recette, page 3"
   parent: "Recette"
 ---

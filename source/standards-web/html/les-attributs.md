@@ -1,6 +1,6 @@
 ---
-title: "Les attributs"
 eleventyNavigation:
+  title: "Les attributs lorem"
   key: "Les attributs"
   parent: "HTML"
 ---

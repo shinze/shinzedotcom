@@ -1,6 +1,6 @@
 module.exports = [
   {
-    "label": "Accueil",
+    "label": "Shinze",
     "url": "/"
   },
   {

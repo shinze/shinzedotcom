@@ -1,6 +1,6 @@
 ---
-title: "Exercice, la recette de cuisine, c’est parti (pour de vrai)"
 eleventyNavigation:
+  title: "Exercice, la recette de cuisine, c’est parti (pour de vrai)"
   key: "Recette, page 2"
   parent: "Recette"
 ---

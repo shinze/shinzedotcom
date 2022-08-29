@@ -1,6 +1,6 @@
 ---
-title: "Les balises"
 eleventyNavigation:
+  title: "Les balises"
   key: "Les balises"
   parent: "HTML"
 ---

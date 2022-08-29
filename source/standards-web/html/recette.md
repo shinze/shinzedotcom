@@ -1,6 +1,6 @@
 ---
-title: "Exercice, la recette de cuisine, un faux départ"
 eleventyNavigation:
+  title: "Exercice, la recette de cuisine, un faux départ"
   key: "Recette"
   parent: "HTML"
 ---

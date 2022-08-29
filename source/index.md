@@ -1,10 +1,10 @@
 ---
 tags: "post, shinze"
-title: 'Bienvenue ici beau loulou'
+title: 'Shinze.com, du contenu à venir'
 date: Last Modified
+layout: "base.njk"
 eleventyNavigation:
-  key: "Accueil"
+  key: "Shinze"
 ---
 
-## Hello
 

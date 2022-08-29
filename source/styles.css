@@ -1,19 +1,40 @@
+@import url(/prism-dark.css) screen and (prefers-color-scheme: dark);
+@import url(/prism-light.css) screen and (prefers-color-scheme: light);
+
 :root {
-  --txt : #222;
-  --txt-lighter: #999;
-  --bg: #fff;
-  --links: #0000ee; /* #3740ff */
-  --links-visited: #551abb;
-  --selected: #b3d4fc;
-  --callout-bg: #d3e7ff;
-  --callout-border: #b3d4fc;
-  --fz1: 3rem;
+  --fz1: 4rem;
   --fz2: 2.5rem;
   --fz3: 2rem;
   --fz4: 1.5rem;
   --fz5: 1.25rem;
   --fz6: 1rem;
   --rounded-small: .25rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --txt : rgb(188, 188, 219);
+    --txt-lighter: rgb(255, 255, 255);
+    --bg: rgb(26, 26, 38);
+    --links: #44fff6; /* #3740ff */
+    --links-visited: #deabff;
+    --selected: #0f1010;
+    --callout-bg: rgb(19, 19, 31);
+    --callout-border: #101b29;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --txt : rgb(0, 0, 0);
+    --txt-lighter: #999;
+    --bg: #fff;
+    --links: #0000ee; /* #3740ff */
+    --links-visited: #551abb;
+    --selected: #b3d4fc;
+    --callout-bg: #d3e7ff;
+    --callout-border: #b3d4fc;
+  }
 }
 
 * {
@@ -28,11 +49,12 @@ html {
   font-family: Segoe UI,system-ui,-apple-system,sans-serif;
   line-height: 1.5;
   font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  font-size: clamp(0.8125rem, 0.6195rem + 1.0294vw, 1.25rem);
+  font-size: clamp(0.8125rem, 0.6195rem + 1.0294vw, 1.5rem);
 }
 
 body {
@@ -67,6 +89,7 @@ input, button, textarea, select {
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   line-height: 1.2;
+  margin-top: var(--fz3);
 }
 
 h4, h5, h6 {
@@ -75,18 +98,19 @@ h4, h5, h6 {
 
 h1 {
   font-size: var(--fz1);
-  margin-bottom: var(--fz3);
+  margin-bottom: var(--fz1);
+  font-weight: bold;
+  line-height: 1;
 }
 
 h2 {
   font-size: var(--fz2);
-  margin-bottom: var(--fz3);
-  margin-top: var(--fz1);
+  margin-bottom: var(--fz4);
 }
 
 h3 {
   font-size: var(--fz3);
-  margin-bottom: var(--fz3);
+  margin-bottom: var(--fz4);
 }
 
 h4 {
@@ -138,8 +162,9 @@ ul::marker {
 
 
 code, pre {
-  background-color: #ffc;
+  background-color: var(--bg);
   font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
+  font-stretch: 75%;
 }
 
 pre[class*="language-"] {
@@ -155,7 +180,7 @@ pre[class^="language-html"]::before {
   display: inline-block;
   padding: .25rem .5rem;
   font-size: .8rem;
-  background-color: white;
+  background-color: var(--bg);
   position: absolute;
   top: 0;
   right: 0;
@@ -216,4 +241,16 @@ pre[class^="language-html"]::before {
 
 .callout code, .callout pre {
   background-color: rgba(255,255,255,.8);
+}
+
+/* Breadcrumbs */
+
+.breadcrumbs {
+  font-size: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: .5rem;
+  margin-bottom: var(--fz1);
 }

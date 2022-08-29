@@ -1,7 +1,7 @@
 ---
 tags: "css"
-title: "Cascading Stylsheets"
 eleventyNavigation:
+  title: "Cascading Stylsheets"
   key: "CSS"
   parent: "Standards web"
   order: 2

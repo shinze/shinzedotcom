@@ -1,11 +1,9 @@
 ---
-tags: "post, standards"
-subtitle: "Les standards HTML, CSS, SVG et une pincée de JS"
-title: "Les standards HTML, CSS, SVG et une pincée de JS"
-date: Last Modified
 eleventyNavigation:
+  title: "Les standards HTML, CSS, SVG et une pincée de JS"
   key: "Standards web"
-  parent: "Accueil"
+  parent: "Shinze"
+  order: 1
 ---
 
 ## Des standards ?

@@ -1,39 +1,37 @@
 ---
-title : "Page pour tester eleventy, c’est super"
 tags: "test"
+eleventyNavigation:
+  title : "Page de test"
+  key: "Styleguide"
+  parent: "Divers"
 ---
 
 # Titre de niveau 1, les titres 
+
+Ce document n’est là que pour tester les [différents éléments](#) qui le composent. Des titres, des liens, des images. Un large panel de différents élément html afin d’avoir un aperçu rapide des fonctions du site.
+
+```css
+.code {
+  color: #ffcc00
+}
+```
+
+Lorem, ipsum dolor sit amet [consectetur](#) adipisicing elit. Adipisci, ab? Quibusdam quisquam saepe ipsa quam ipsam. Nemo sit tempora, quos fugit ipsa molestiae inventore, accusantium optio natus molestias perspiciatis itaque.
+
 ## Titre de niveau 2
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid cumque ipsam molestiae adipisci eaque autem et ex, repellat corrupti harum in laboriosam. Suscipit consectetur aliquam earum illum cupiditate rem illo.
+
 ### Titre de niveau 3
+
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum inventore dolorum labore in porro natus illo eos molestiae, perferendis totam obcaecati aspernatur deleniti, distinctio officiis sint optio consequuntur consequatur dignissimos.
+
 #### Titre de niveau 4
 ##### Titre de niveau 5
 ###### Titre de niveau 6
 
 
-# Titre de niveau 1, les titres
 
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad commodi recusandae quia labore quod ab inventore hic eos. Nihil animi suscipit minus numquam nostrum possimus autem alias voluptatem in esse.
-
-## Titre de niveau 2
-
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad commodi recusandae quia labore quod ab inventore hic eos. Nihil animi suscipit minus numquam nostrum possimus autem alias voluptatem in esse.
-
-### Titre de niveau 3
-
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad commodi recusandae quia labore quod ab inventore hic eos. Nihil animi suscipit minus numquam nostrum possimus autem alias voluptatem in esse.
-
-#### Titre de niveau 4
-
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad commodi recusandae quia labore quod ab inventore hic eos. Nihil animi suscipit minus numquam nostrum possimus autem alias voluptatem in esse.
-
-##### Titre de niveau 5
-
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad commodi recusandae quia labore quod ab inventore hic eos. Nihil animi suscipit minus numquam nostrum possimus autem alias voluptatem in esse.
-
-###### Titre de niveau 6
-
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad commodi recusandae quia labore quod ab inventore hic eos. Nihil animi suscipit minus numquam nostrum possimus autem alias voluptatem in esse.
 
 ## Des éléments de liste
 
