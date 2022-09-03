@@ -12,7 +12,7 @@ Le [W3C](https://www.w3.org/) (World Wide Web Consortium) est un groupement [d�
 
 **L’existence de standards pour le web et fondamentale, elle garantit théoriquement un web ouvert ou chacun accéde à l’information quelles que soient ses capacités techniques ou physiques.**
 
-Chaque page que vous pouvez consulter en ligne (avec un navigateur web) utilise au moins un des langages suivants :
+Chaque page que vous pouvez consulter en ligne (avec un navigateur web) utilise au moins un de ces languages :
 
 1. [HTML](html/) (HyperText Markup Language) est le langage qui permet de structurer et d’enrichir du contenu textuel pour le web;
 2. [SVG](svg/) (Scalable Vector Graphics) est un langage graphique pour créer des images vectorielles;

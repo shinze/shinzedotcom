@@ -1,0 +1,21 @@
+{
+  "sitename": "Shinze",
+  "url": "https://www.shinze.com",
+  "language": "fr",
+  "description": "Un site qui parle essentiellement de standards web et plus particulièrement des langages HTML et CSS.",
+  "feed": {
+    "subtitle": "Un site qui parle essentiellement de standards web et plus particulièrement des langages HTML et CSS.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://www.shinze.com"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://example.com/feed/feed.json"
+  },
+  "author": {
+    "name": "Gaëtan Ark",
+    "email": "gaetan.ark@gmail.com",
+    "url": "https://www.shinze.com/a-propos/"
+  }
+}

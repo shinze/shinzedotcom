@@ -1,31 +1,50 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="{{ metadata.language }}">
 
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="{{ eleventy.generator }}">
-    <title>{{ title }} -  Shinze</title>
+    <title>{{ eleventyNavigation.title }} - {{ metadata.sitename }}</title>
     <link rel="stylesheet" href="/styles.css">
+    <meta name="description" content="{{ description or metadata.description }}">
   </head>
 
-  <body>
-    <ol class="breadcrumbs">
-      {# https://mvolkmann.github.io/blog/eleventy/plugins/navigation-plugin/ #}
-      {% set crumbs = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
-      {% for crumb in crumbs %}
-        <li>
-          <a class="crumb" href="{{ crumb.url | url }}">{{ crumb.title }}</a> / 
-        </li>
-      {% endfor %}
-      <li><strong>{{ eleventyNavigation.title }}</strong></li>
-    </ol>
+  <body style="background-image: url(/img/headers/{{ cover }})">
+    <header>
+      <nav>
+        <ol class="breadcrumbs" aria-label="fil d’arianne">
+          {# https://mvolkmann.github.io/blog/eleventy/plugins/navigation-plugin/ #}
+          {% set crumbs = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
+          {% for crumb in crumbs %}
+          <li>
+            {% if loop.index != 1 %}
+              <span class="breadcrumbs-separator">/</span>
+            {% endif %}
+            <a class="crumb {{ 'breadcrumbs-home' if loop.index == 1 }}" href="{{ crumb.url | url }}">{{ crumb.title }}</a>
+          </li>
+          {% endfor %}
+          <li>
+            <span class="breadcrumbs-separator">/</span>
+            <strong>{{ eleventyNavigation.title }}</strong>
+          </li>
+        </ol>
+      </nav>
+    </header>
     <main class="main">
-      <h1>{{ eleventyNavigation.title }}</h1>
-      {{ content | safe }}
+      {# <img src="{{ cover }}" alt=""> #}
+
+      <div class="post">
+        <h1>{{ eleventyNavigation.title }}</h1>
+        <p class="post-date"><time datetime="{{ page.date }}" class="post-date-time">{{ page.date | postDate }}</time></p>
+        
+        <aside class="toc">
+        {{ content | toc | safe }}
+        </aside>
+        {{ content | safe }}
+      </div>
     </main>
 
-    <h2>Navigation</h2>
     {# https://www.mikeaparicio.com/posts/2022-08-19-nested-navigation-in-eleventy/ #}
     {% set navPages = collections.all | eleventyNavigation %}
     {% macro renderNavListItem(entry) %}
@@ -53,17 +72,17 @@
             {%- endif -%}
           {%- endmacro %}
 
-          <nav>
-            <ul class="nav-list" role="list">
-              {%- for entry in navPages %}{{ renderNavListItem(entry) }}
+          <nav class="navigation">
+            <h2 class="navigation-title">Navigation</h2>
+            <ul class="navigation-list" role="list">
+              {%- for entry in navPages %}
+                {{ renderNavListItem(entry) }}
               {%- endfor -%}
             </ul>
           </nav>
-
           <footer class="footer">
             <p>Site réalisé grâce à <a href="https://www.11ty.dev">{{ eleventy.generator }}</a> - Le contenu de ce site est totalement libre.</p>
           </footer>
-
         </body>
 
       </html>

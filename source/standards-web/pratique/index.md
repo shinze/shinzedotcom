@@ -1,6 +1,7 @@
 ---
 eleventyNavigation:
-  title: "Diverses pages"
+  title: "Autres"
   key: "Divers"
   parent: "Shinze"
+  order: 100
 ---

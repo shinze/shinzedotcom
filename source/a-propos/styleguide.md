@@ -1,12 +1,11 @@
 ---
 tags: "test"
 eleventyNavigation:
-  title : "Page de test"
+  title : "Guide de styles"
   key: "Styleguide"
   parent: "Divers"
+  order: 10
 ---
-
-# Titre de niveau 1, les titres 
 
 Ce document n’est là que pour tester les [différents éléments](#) qui le composent. Des titres, des liens, des images. Un large panel de différents élément html afin d’avoir un aperçu rapide des fonctions du site.
 
@@ -28,10 +27,25 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum inventore dolorum 
 
 #### Titre de niveau 4
 ##### Titre de niveau 5
-###### Titre de niveau 6
+###### Titre de niveau 6, un callout
 
 
+<div class="callout">
+Lorem ipsum dolor sit, `test code` consectetur adipisicing elit. Eum inventore dolorum labore in porro natus illo eos molestiae, perferendis totam obcaecati aspernatur deleniti, distinctio officiis sint optio consequuntur consequatur dignissimos.
+</div>
 
+## Un callout plus complet
+
+<div class="callout">
+
+## Un titre de niveau 2
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, enim numquam. Fuga adipisci voluptate autem. Sit adipisci consequuntur minus odio delectus, nemo atque at tenetur, sequi ullam id eveniet perferendis.
+
+- Hello;
+- World;
+
+</div>
 
 ## Des éléments de liste
 

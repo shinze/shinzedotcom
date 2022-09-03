@@ -1,4 +1,5 @@
 ---
+tag: "recette"
 eleventyNavigation:
   title: "Exercice, la recette de cuisine, c’est parti (S1E3)"
   key: "Recette, page 3"
@@ -7,7 +8,7 @@ eleventyNavigation:
 
 [Consulter la précédente étape](../recette-2)
 
-## Vous en reprendrez bien un peu ?
+## Vous en reprendrez bien un peu
 
 Une liste d’ingrédients sans recette étant décevante, je suis évidemment passé à la rédaction de la suite, la recette.
 
@@ -32,11 +33,9 @@ Voici le code que j’ai ajouté :
 
 Si vous êtes observateur vous pouvez voir ici l’utilisation d’un type de liste différent, un `ol` (et toujours des `li` pour les items de la liste).
 
-**Cette balise indique une liste ou l’ordre des éléments a son importance : c’est difficile de faire cuire la pizza sans sa pâte, c’est adapté à mon exemple**
+**Cette balise `ol` indique une liste ou l’ordre des éléments a son importance : c’est difficile de faire cuire la pizza sans sa pâte, c’est donc adapté à mon exemple**
 
-## La fin de la recette
-
-Après la recette, j’ai poursuivi comme ceci :
+Après les étapes de la recette, j’ai poursuivi comme ceci :
 
 ```html
 <h3>Et si je n’aime pas le gorgonzola ?</h3>
@@ -50,7 +49,7 @@ Après la recette, j’ai poursuivi comme ceci :
 <p>Vous pouvez aussi accompagner vos pizzas d’une salade de mâche assaisonnée de vinaigre balsamique.</p>
 ```
 
-De simples paragraphes `p` pour développer chacun des contenus proposés.
+De simples paragraphes (`<p>`) pour développer chacun des contenus proposés pour le lecteur. Chaque paragraphe essayant de développer une seule idée.
 
 ## La recette complète (pour les gourmands)
 
