@@ -1,0 +1,34 @@
+---
+layout: layouts/base.nkj
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - post
+    - posts
+    - tagList
+  addAllPagesToCollections: true
+eleventyComputed:
+  title: Tagged “{{ tag }}”
+permalink: /tags/{{ tag | slugify }}/
+---
+<h1>Tagged “{{ tag }}”</h1>
+
+{% set postslist = collections[ tag ] %}
+
+
+<ol reversed class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
+{% for post in postslist | reverse %}
+  <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+    <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+    {% for tag in post.data.tags %}
+      {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+      <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+    {% endfor %}
+  </li>
+{% endfor %}
+</ol>
+
+<p>See <a href="{{ '/tags/' | url }}">all tags</a>.</p>

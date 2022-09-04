@@ -3,7 +3,7 @@ tags: "test"
 eleventyNavigation:
   title : "Guide de styles"
   key: "Styleguide"
-  parent: "Divers"
+  parent: "Shinze"
   order: 10
 ---
 

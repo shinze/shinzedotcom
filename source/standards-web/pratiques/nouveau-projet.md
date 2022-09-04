@@ -1,9 +1,9 @@
 ---
-tags: "post, standards"
+tags: "standards"
 eleventyNavigation:
-  title : "Comment initialiser un projet avec VS Code"
+  title : "Initialiser un projet avec VS Code"
   key: "Débuter un projet web avec VSCode"
-  parent: "Divers"
+  parent: "Pratiques"
 ---
 
 ### Mon premier projet

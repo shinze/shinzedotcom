@@ -1,5 +1,6 @@
 ---
 cover: "adi-goldstein-mDinBvq1Sfg-unsplash.jpg"
+color: "#EEFC57"
 eleventyNavigation:
   title: "Les balises"
   key: "Les balises"

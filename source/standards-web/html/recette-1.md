@@ -1,6 +1,6 @@
 ---
-tag: "recette"
-cover: "calum-lewis-vA1L1jRTM70-unsplash.jpg"
+tag: "recette #B8336A"
+color: "#B8336A"
 eleventyNavigation:
   title: "Exercice, la recette de cuisine, un faux départ"
   key: "Recette"

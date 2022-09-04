@@ -3,6 +3,7 @@ const PostCSSPlugin = require("eleventy-plugin-postcss");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require('markdown-it-anchor');
 const markdownItContainer = require('markdown-it-container');
+const markdownItAttrs = require('markdown-it-attrs');
 const htmlmin = require('html-minifier');
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const { DateTime } = require("luxon");
@@ -32,6 +33,7 @@ module.exports = function(eleventyConfig) {
     quotes: ['«\xA0', '\xA0»', '‹\xA0', '\xA0›'],
   };
   eleventyConfig.setLibrary("md", markdownIt(mdOptions)
+    .use(markdownItAttrs)
     .use(markdownItAnchor)
     // https://davidea.st/articles/11ty-tips-i-wish-i-knew-from-the-start/
     .use(markdownItContainer, 'dynamic', {

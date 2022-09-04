@@ -1,12 +1,13 @@
 ---
 cover: "tetiana-shevereva-_CZDCUE-FOA-unsplash.jpg"
+color: "#FC7A57"
 eleventyNavigation:
   title: "Les images"
   key: "Images"
   parent: "HTML"
 ---
 
-Les images sont des éléments insérés dans un document HTML, les images ne font pas partie de la page mais sont des ressources externes téléchargées par le navigateur au moment de leur affichage.
+Les images sont des éléments insérés dans un document HTML, elles ne font pas partie de la page mais sont des ressources externes téléchargées par le navigateur au moment de leur affichage.
 
 ## Exemple simple avec trois types d’images
 
