@@ -4,7 +4,7 @@ eleventyNavigation:
   title: "CSS"
   subtitle: "Cascading StyleSheets"
   key: "CSS"
-  parent: "Standards web"
+  parent: "Standards"
   order: 2
 ---
 

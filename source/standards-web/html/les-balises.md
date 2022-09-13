@@ -3,7 +3,7 @@ color: "#EEFC57"
 eleventyNavigation:
   title: "Les balises"
   subtitle: "Les bases du language HTML"
-  key: "Les balises"
+  key: "Balises"
   parent: "HTML"
 ---
 

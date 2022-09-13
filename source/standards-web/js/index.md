@@ -1,10 +1,9 @@
 ---
-tags: "post, js, standards"
 eleventyNavigation:
   title: "Javascript"
   key: "Javascript"
-  parent: "Standards web"
-  order: 3
+  parent: "Standards"
+  order: 5
 ---
 
 Du contenu à venir viendra ici, promis

@@ -1,5 +1,4 @@
 ---
-tag: "recette #B8336A"
 color: "#B8336A"
 eleventyNavigation:
   title: "La recette de cuisine"

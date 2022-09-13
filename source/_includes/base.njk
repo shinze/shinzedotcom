@@ -29,7 +29,6 @@
       <path fill="currentColor"  class="blob-2" d="M 178.029 80.881 C 183.229 100.981 173.479 141.292 149.579 157.792 C 125.679 174.192 87.629 166.781 71.929 156.281 C 56.329 145.781 51.829 116.181 60.129 91.781 C 68.329 67.381 89.429 48.181 115.529 46.581 C 141.629 44.881 172.929 60.781 178.029 80.881 Z"/>
     </svg>
 
-    <pre><code>{{ page.date }}</code></pre>
     <header>
       <nav>
         <ol class="breadcrumbs" aria-label="fil d’arianne">
@@ -83,15 +82,17 @@
     </main>
 
     {# https://github.com/11ty/eleventy-base-blog/blob/main/_includes/layouts/post.njk #}
-    {%- if collections.all %}
-    {%- set nextPost = collections.all | getNextCollectionItem(page) %}
-    {%- set previousPost = collections.all | getPreviousCollectionItem(page) %}
+    {%- if collections.standards %}
+    {%- set nextPost = collections.standards | getNextCollectionItem(page) %}
+    {%- set previousPost = collections.standards | getPreviousCollectionItem(page) %}
     {%- if nextPost or previousPost %}
     <nav>
       <ol class="pager">
         {%- if previousPost %}
           <li class="pager-item pager-item-prev">
             <a href="{{ previousPost.url | url }}">
+              
+              {{ previousPost.data.eleventyNavigation.order }}
               <span class="pager-item-label">Avant ça</span>
               {{ previousPost.data.eleventyNavigation.title }}
               <span class="pager-item-subtitle">
@@ -103,6 +104,7 @@
         {%- if nextPost %}
           <li class="pager-item pager-item-next">
             <a href="{{ nextPost.url | url }}">
+              {{ nextPost.data.eleventyNavigation.order }}
               <span class="pager-item-label">À suivre</span>
               {{ nextPost.data.eleventyNavigation.title }}
               <span class="pager-item-subtitle">

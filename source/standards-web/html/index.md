@@ -4,7 +4,7 @@ eleventyNavigation:
   title: "HTML"
   subtitle: "HyperText Markup Language"
   key: "HTML"
-  parent: "Standards web"
+  parent: "Standards"
   order: 1
 ---
 

@@ -1,9 +1,8 @@
 ---
-tags: "post, svg, standards"
-title: "SVG"
 eleventyNavigation:
+  title: "SVG"
   key: "SVG"
-  parent: "Standards web"
+  parent: "Standards"
   order: 4
 ---
 
