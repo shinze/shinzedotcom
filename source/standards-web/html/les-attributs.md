@@ -1,6 +1,8 @@
 ---
+color: "#d8bef8"
 eleventyNavigation:
   title: "Les attributs"
+  subtitle: "Nom d’attribut et valeur"
   key: "Les attributs"
   parent: "HTML"
 ---
@@ -18,9 +20,10 @@ Un attribut est un bout de code ajouté à un élément pour modifier ses propri
 Exemple d’une balise délimitant un lien, ici les balises `<a></a>` permettent d’ajouter un lien sur le contenu `vous êtes perdu`. L’attribut nommé `href` est l’adresse à laquelle l’utilisateur est redirigé : `https://perdu.com` une fois le lien utilisé.
 
 
-## Des éléments ont des attributs obligatoires
+## Les attributs obligatoires
 
-Je ne vais pas ici en faire la liste mais voici quelques exemples :
+Des balises ont des attributs obligatoire, de manière intrinsèque car cet attribut est nécessaire au bon fonctionnement de l’élément mais aussi pour des raisons d’accessibilité :
+
 - Les liens, l’attribut `href` et sa valeur, sinon pas de lien;
 - L’attribut `alt` sur les images, cet attribut permet de renseigner l’image sur son contenu (si l’image n’est pas disponible ou si la personne ne peut pas voir les images).
 
@@ -37,11 +40,11 @@ Les attributs `class` sont utilisables sur tous les éléments qui composent une
 <p class="">Un autre contenu</p>
 ```
 
-Une valeur d’attribut n’est pas toujours obligatoire, c’est le cas pour l’attribut `alt` (sur les images), on considère qu’il faut le renseigner seulement se l’image *sert* le contenu, ou contient du texte par exemple.
+Une valeur d’attribut n’est pas toujours obligatoire, c’est le cas pour l’attribut `alt` (sur les images). **Vous devez renseigner seulement se l’image *sert* le contenu**, ou contient du texte par exemple.
 
 ```html
 <!-- exemple d’image ou le alt est nécessaire -->
-<img src="img/affiche.jpg" alt="Affiche de l’événememt lorem ipsum, le 13 juillet">
+<img src="img/affiche.jpg" alt="Fête du 13 juillet">
 <!-- exemple d’image ou la valeur de alt n’est pas nécessaire -->
 <img src="img/puce-liste.png" alt="">
 ```

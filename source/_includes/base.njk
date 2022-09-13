@@ -6,15 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="{{ eleventy.generator }}">
     <title>{{ eleventyNavigation.title }} - {{ metadata.sitename }}</title>
-    <link rel="stylesheet" href="/styles.css">
     <meta name="description" content="{{ description or metadata.description }}">
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+      :root {
+        --post-color: {{ color }};
+        --post-rotation1: {{ [0, 15, 30, 45, 180] | random }}deg;
+        --post-rotation2: {{ [0, 15, 30, 45, 180] | random }}deg;
+      }
+    </style>
+    <script src="/js/hsluv.js"></script>
   </head>
 
   <body>
-    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="blob"
-         style="transform: rotate({{ [0, 15, 30, 45, 180] | random }}deg)">
-      <path fill="{{ color if color else 'var(--links)' }}" d="M67.6,-26.2C72.8,-6.1,51.9,18.2,28,34.7C4.1,51.1,-22.8,59.7,-38.5,49.2C-54.1,38.7,-58.6,9.1,-50.3,-15.3C-42.1,-39.7,-21,-58.9,5.1,-60.5C31.2,-62.2,62.5,-46.3,67.6,-26.2Z" transform="translate(100 100)" />
+    {# <svg class="blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path fill="currentColor" d="M67.6,-26.2C72.8,-6.1,51.9,18.2,28,34.7C4.1,51.1,-22.8,59.7,-38.5,49.2C-54.1,38.7,-58.6,9.1,-50.3,-15.3C-42.1,-39.7,-21,-58.9,5.1,-60.5C31.2,-62.2,62.5,-46.3,67.6,-26.2Z" />
+      <rect fill="currentColor" style="transform: rotate({{ [0, 15, 30, 45, 180] | random }}deg)" x="30" y="30" width="80" height="80"/>
+    </svg> #}
+
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="blob">
+      <path fill="currentColor" class="blob-1" d="M 129.256 45.475 C 134.456 65.575 113.556 89.875 89.656 106.375 C 65.756 122.775 38.856 131.375 23.156 120.875 C 7.556 110.375 3.056 80.775 11.356 56.375 C 19.556 31.975 40.656 12.775 66.756 11.175 C 92.856 9.475 124.156 25.375 129.256 45.475 Z"/>
+      <path fill="currentColor"  class="blob-2" d="M 178.029 80.881 C 183.229 100.981 173.479 141.292 149.579 157.792 C 125.679 174.192 87.629 166.781 71.929 156.281 C 56.329 145.781 51.829 116.181 60.129 91.781 C 68.329 67.381 89.429 48.181 115.529 46.581 C 141.629 44.881 172.929 60.781 178.029 80.881 Z"/>
     </svg>
+
+    <pre><code>{{ page.date }}</code></pre>
     <header>
       <nav>
         <ol class="breadcrumbs" aria-label="fil d’arianne">
@@ -39,23 +54,67 @@
       {# <img src="{{ cover }}" alt=""> #}
 
       <div class="post">
-        <h1>{{ eleventyNavigation.title }}</h1>
-        {# <p class="post-date"><time datetime="{{ page.date }}" class="post-date-time">{{ page.date | postDate }}</time></p> #}
-        <div class="post-tags">
-          {% for tag in tags -%}
-            {% if tag !== 'posts' %}
-              <a class="post-tag" href="/tags/{{ tag }}">{{ tag }}</a>
+        
+        <div class="post-header">
+          <h1 class="post-title">{{ eleventyNavigation.title }}</h1>
+          <p class="post-subtitle">{{ eleventyNavigation.subtitle }}</p>
+            {# <p class="post-date"><time datetime="{{ page.date }}" class="post-date-time">{{ page.date | postDate }}</time></p> #}
+            
+          <div class="post-tags">
+            {% for tag in tags -%}
+              {% if tag !== 'posts' %}
+                <a class="post-tag" href="/tags/{{ tag }}">{{ tag }}</a>
 
-            {% endif %}
-          {%- endfor %}
-          <span class="post-tag" style="color: {{ color }}">{{ color }}</span>
+              {% endif %}
+            {%- endfor %}
+            <span class="post-tag">
+              {{ color }}
+            </span>
+            <span class="post-tag-color" style="background-color: {{ color }}">&nbsp;</span>
+          </div>
+
         </div>
-        <aside class="toc-toc">
-        {{ content | toc | safe }}
-        </aside>
+        <details class="toc-toc">
+         <summary class="toc-toc-summary">Dans cette page</summary>
+          {{ content | toc | safe }}
+        </details>
         {{ content | safe }}
       </div>
     </main>
+
+    {# https://github.com/11ty/eleventy-base-blog/blob/main/_includes/layouts/post.njk #}
+    {%- if collections.all %}
+    {%- set nextPost = collections.all | getNextCollectionItem(page) %}
+    {%- set previousPost = collections.all | getPreviousCollectionItem(page) %}
+    {%- if nextPost or previousPost %}
+    <nav>
+      <ol class="pager">
+        {%- if previousPost %}
+          <li class="pager-item pager-item-prev">
+            <a href="{{ previousPost.url | url }}">
+              <span class="pager-item-label">Avant ça</span>
+              {{ previousPost.data.eleventyNavigation.title }}
+              <span class="pager-item-subtitle">
+                {{ previousPost.data.eleventyNavigation.subtitle }}
+              </span>
+            </a>
+          </li>
+        {% endif %}
+        {%- if nextPost %}
+          <li class="pager-item pager-item-next">
+            <a href="{{ nextPost.url | url }}">
+              <span class="pager-item-label">À suivre</span>
+              {{ nextPost.data.eleventyNavigation.title }}
+              <span class="pager-item-subtitle">
+                {{ nextPost.data.eleventyNavigation.subtitle }}
+              </span>
+            </a>
+          </li>
+        {% endif %}
+      </ol>
+    </nav>
+    {%- endif %}
+    {%- endif %}
 
     {# https://www.mikeaparicio.com/posts/2022-08-19-nested-navigation-in-eleventy/ #}
     {% set navPages = collections.all | eleventyNavigation %}
@@ -69,8 +128,7 @@
                {# {{ entry.excerpt }} #}
             {% endif %}
             <ul role="list">
-              {%- for child in entry.children %}{{ renderNavListItem(child) }}
-              {% endfor -%}
+              {%- for child in entry.children %}{{ renderNavListItem(child) }}{% endfor -%}
             </ul>
           </li>
 
@@ -92,9 +150,24 @@
               {%- endfor -%}
             </ul>
           </nav>
+
+
+
           <footer class="footer">
             <p>Site réalisé grâce à <a href="https://www.11ty.dev">{{ eleventy.generator }}</a> - Le contenu de ce site est totalement libre.</p>
           </footer>
+
+          <script>
+              const root = document.querySelector("body");
+              function lightnessToHex(color, lightness) {
+                return hsluv.hsluvToHex([
+                  hsluv.hexToHsluv(color)[0],
+                  hsluv.hexToHsluv(color)[1],
+                  lightness
+                ]);
+              }
+              root.style.setProperty("--post-color-dark", lightnessToHex("{{ color }}", 20));
+          </script>
         </body>
 
       </html>

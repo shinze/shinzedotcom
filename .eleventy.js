@@ -1,3 +1,6 @@
+// https://www.aleksandrhovhannisyan.com/blog/useful-11ty-filters/#custom-filters-for-any-11ty-project
+// https://www.aleksandrhovhannisyan.com/tags/11ty/
+
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const PostCSSPlugin = require("eleventy-plugin-postcss");
 const markdownIt = require("markdown-it");
@@ -11,9 +14,12 @@ const pluginTOC = require('eleventy-plugin-toc');
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(PostCSSPlugin);
   eleventyConfig.addPlugin(pluginTOC);
+
+  eleventyConfig.addPlugin(syntaxHighlight, {
+    // alwaysWrapLineHighlights: true,
+  });
   
 
   /* Option MD */
@@ -26,16 +32,39 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_FULL);
   });
 
+  // Codepen embeds
+ // Multiline Content with Parameter
+ eleventyConfig.addShortcode("livecode", function(href, defaultTab) {
+  const cpUrl = `https://codepen.io/shinze/embed/preview/${href}?default-tab=${defaultTab}%2Cresult&editable=true`;
+  const alternative = `
+  <a href="https://codepen.io/shinze/pen/${href}">Accéder au document sur codepen</a>
+  `
+  return `
+  <div className="livecode">
+    <iframe src="${cpUrl}" frameborder="no" loading="lazy" allowtransparency="true"
+        allowfullscreen="true"
+        height="500"
+        class="livecode-iframe"
+        scrolling="no">
+      ${alternative}
+    </iframe>
+  </div>
+  `;
+});
+
+
   let mdOptions = {
     html: true,
     breaks: true,
     linkify: true,
     quotes: ['«\xA0', '\xA0»', '‹\xA0', '\xA0›'],
   };
+
   eleventyConfig.setLibrary("md", markdownIt(mdOptions)
     .use(markdownItAttrs)
     .use(markdownItAnchor)
     // https://davidea.st/articles/11ty-tips-i-wish-i-knew-from-the-start/
+    // Callout
     .use(markdownItContainer, 'dynamic', {
       validate: function () { return true; },
       render: function (tokens, idx) {
@@ -53,6 +82,7 @@ module.exports = function(eleventyConfig) {
   // Simply copy assets to public
   eleventyConfig.addPassthroughCopy("source/styles.css");
   eleventyConfig.addPassthroughCopy("source/img");
+  eleventyConfig.addPassthroughCopy("source/js");
   
   eleventyConfig.addTransform('htmlmin', (content, outputPath) => {
     if (outputPath.endsWith('.html')) {

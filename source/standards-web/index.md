@@ -1,6 +1,7 @@
 ---
 eleventyNavigation:
-  title: "Les standards HTML, CSS, SVG et une pincée de JS"
+  title: "Les standards web"
+  subtitle: "HTML, CSS, SVG et une pincée de JS"
   key: "Standards web"
   parent: "Shinze"
   order: 1
@@ -10,7 +11,7 @@ eleventyNavigation:
 
 Le [W3C](https://www.w3.org/) (World Wide Web Consortium) est un groupement [d’industriels](https://www.w3.org/Consortium/Member/List) du web dont l’objectif est de trouver un consensus autour [des technologies](https://www.w3.org/standards/) (langages, architecture, protocoles…) faisant le web d’aujourd’hui et de demain, ce sont des standards.
 
-**L’existence de standards pour le web et fondamentale, elle garantit théoriquement un web ouvert ou chacun accéde à l’information quelles que soient ses capacités techniques ou physiques.**
+**L’existence de standards pour le web et fondamentale, elle garantit théoriquement un web ouvert ou chacun accède à l’information quelles que soient ses capacités techniques ou physiques.**
 
 Chaque page que vous pouvez consulter en ligne (avec un navigateur web) utilise au moins un de ces languages :
 

@@ -2,7 +2,8 @@
 tag: "recette #B8336A"
 color: "#B8336A"
 eleventyNavigation:
-  title: "Exercice, la recette de cuisine, un faux départ"
+  title: "La recette de cuisine"
+  subtitle: "Un faux départ"
   key: "Recette"
   parent: "HTML"
   order: "100"

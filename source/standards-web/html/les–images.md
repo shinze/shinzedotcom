@@ -1,8 +1,8 @@
 ---
-cover: "tetiana-shevereva-_CZDCUE-FOA-unsplash.jpg"
 color: "#FC7A57"
 eleventyNavigation:
   title: "Les images"
+  subtitle: "Et même les gif animés"
   key: "Images"
   parent: "HTML"
 ---
