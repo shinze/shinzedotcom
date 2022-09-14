@@ -226,14 +226,6 @@ ul, ol {
   padding-left: 0;
 }
 
-li {
-  margin-left: var(--fz6);
-}
-
-li::marker {
-  color: var(--txt-softer);
-}
-
 ul ul {
   margin-bottom: 0;
 }
@@ -338,24 +330,10 @@ pre[class="language-svg"]::before {
 }
 
 
-
-.post-date {
-  font-size: var(--fz7);
-  color: var(--txt-softer);
-}
-
-.post-date-time {
-
-}
-
+/* Navigation principale */
 
 .navigation {
-  font-size: .75rem;
-  max-width: clamp(40rem, 60vw, 100vw);
-  padding-left: 5vw;
-  padding-right: 5vw;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: .80rem;
 }
 
 .navigation a {
@@ -367,10 +345,18 @@ pre[class="language-svg"]::before {
   font-size: var(--fz5);
 }
 
-.navigation-list {}
+.navigation-list > li > a {
+  background: red;
+}
+
+.navigation-list > li > a {
+  background: red;
+}
 
 .navigation-list ul {
-  margin-bottom: var(--fz6)
+  padding: 0;
+  list-style: none;
+  margin-bottom: var(--fz6);
 }
 
 
@@ -401,8 +387,21 @@ pre[class="language-svg"]::before {
 
 /* Contenu principal */
 
+.main-layout {
+  display: grid;
+  grid-template-columns: 20vw 1fr;
+}
+
 .main {
-  margin-bottom: var(--fz3); 
+
+}
+
+.main li {
+  margin-left: var(--fz6);
+}
+
+.main li::marker {
+  color: var(--txt-softer);
 }
 
 
@@ -709,14 +708,6 @@ pre[class="language-svg"]::before {
 .pager-item a:hover,
 .pager-item a:focus {
   background-color: var(--bg-alt2);
-}
-
-.pager-item a:before {
-  content: "<"
-}
-
-.pager-item-next a:before {
-  content: ">"
 }
 
 .pager-item-label {

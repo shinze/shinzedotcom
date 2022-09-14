@@ -1,24 +1,24 @@
 ---js
 {
   navigationOptions: {
-    listElement: "ul",              // Change the top level tag
-    listItemElement: "li",        // Change the item tag
+    listElement    : "ul",   // Change the top level tag
+    listItemElement: "li",   // Change the item tag
 
-    listClass: "navigation-item",                // Add a class to the top level
-    listItemClass: "",            // Add a class to every item
-    listItemHasChildrenClass: "", // Add a class if the item has children
-    activeListItemClass: "",      // Add a class to the current page’s item
+    listClass               : "navigation-list",        // Add a class to the top level
+    listItemClass           : "navigation-list-item",   // Add a class to every item
+    listItemHasChildrenClass: "",                       // Add a class if the item has children
+    activeListItemClass     : "current",                // Add a class to the current page’s item
 
-    anchorClass: "nada",              // Add a class to the anchor
-    activeAnchorClass: "current",        // Add a class to the current page’s anchor
+    anchorClass      : "tamere",          // Add a class to the anchor
+    activeAnchorClass: "active",   // Add a class to the current page’s anchor
 
     // If matched, `activeListItemClass` and `activeAnchorClass` will be added
-    activeKey: "eleventyNavigation.key",
+    activeKey: {{ eleventyNavigation.key }},
     // It’s likely you want to pass in `eleventyNavigation.key` here, e.g.:
     // activeKey: eleventyNavigation.key
 
     // Show excerpts (if they exist in data, read more above)
-    showExcerpt: true
+    showExcerpt: false
   }
 }
 ---
@@ -44,6 +44,7 @@
 
   <body>
 
+    <pre><code>{{ eleventyNavigation.key }}</code></pre>
     <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="blob">
       <path fill="currentColor" class="blob-1" d="M 129.256 45.475 C 134.456 65.575 113.556 89.875 89.656 106.375 C 65.756 122.775 38.856 131.375 23.156 120.875 C 7.556 110.375 3.056 80.775 11.356 56.375 C 19.556 31.975 40.656 12.775 66.756 11.175 C 92.856 9.475 124.156 25.375 129.256 45.475 Z"/>
       <path fill="currentColor"  class="blob-2" d="M 178.029 80.881 C 183.229 100.981 173.479 141.292 149.579 157.792 C 125.679 174.192 87.629 166.781 71.929 156.281 C 56.329 145.781 51.829 116.181 60.129 91.781 C 68.329 67.381 89.429 48.181 115.529 46.581 C 141.629 44.881 172.929 60.781 178.029 80.881 Z"/>
@@ -69,81 +70,82 @@
         </ol>
       </nav>
     </header>
-    <main class="main">
-      {# <img src="{{ cover }}" alt=""> #}
 
-      <div class="post">
-
-        <div class="post-header">
-          <h1 class="post-title">{{ eleventyNavigation.title }}</h1>
-
-          <p class="post-subtitle">{{ eleventyNavigation.subtitle }}</p>
-          {# <p class="post-date"><time datetime="{{ page.date }}" class="post-date-time">{{ page.date | postDate }}</time></p> #}
-
-          <div class="post-tags">
-            {% for tag in tags -%}
-              {% if tag !== 'posts' %}
-                <a class="post-tag" href="/tags/{{ tag }}">{{ tag }}</a>
-
-              {% endif %}
-            {%- endfor %}
-            <span class="post-tag">
-              {{ color }}
-            </span>
-            <span class="post-tag-color" style="background-color: {{ color }}">&nbsp;</span>
-          </div>
-
-        </div>
-        <details class="toc-toc">
-          <summary class="toc-toc-summary">Dans cette page</summary>
-          {{ content | toc | safe }}
-        </details>
-        {{ content | safe }}
-      </div>
-
-      {# ### Pager #}
-      {# https://github.com/11ty/eleventy-navigation/issues/22 #}
-      {% set flatNavItems = collections.all | eleventyNavigation | flattenNavigationAndAddNextPrev %}
-      <nav>
-        <ul class="pager">
-          {% for item in flatNavItems %}
-            {% if item.url === page.url %}
-              {% if item.prev %}
-                <li class="pager-item pager-item-prev">
-                  <a href="{{ item.prev.url }}">
-                    <span class="pager-item-label">Avant ça</span>
-                    {{ item.prev.title }}
-                    <span class="pager-item-subtitle">
-                      {{ item.prev.subtitle }}
-                    </span>
-                  </a>
-                </li>
-              {% endif %}
-
-              {% if item.next %}
-                <li class="pager-item pager-item-next">
-                  <a href="{{ item.next.url }}">
-                    <span class="pager-item-label">Avant ça</span>
-                    {{ item.next.title }}
-                    <span class="pager-item-subtitle">
-                      {{ item.next.subtitle }}
-                    </span>
-                  </a>
-                </li>
-              {% endif %}
-            {% endif %}
-          {% endfor %}
-        </ul>
+    <div class="main-layout">
+      <nav class="navigation">
+        {# https://www.11ty.dev/docs/plugins/navigation/ #}
+        {{ collections.all | eleventyNavigation | eleventyNavigationToHtml(navigationOptions) | safe }}
       </nav>
-    </main>
 
-    <nav class="navigation">
-      {{ collections.all | eleventyNavigation | eleventyNavigationToHtml(navigationOptions) | safe }}
-    </nav>
+      <main class="main">
 
-    <footer class="footer">
+        <div class="post">
+          <div class="post-header">
+            <h1 class="post-title">{{ eleventyNavigation.title }}</h1>
+
+            <p class="post-subtitle">{{ eleventyNavigation.subtitle }}</p>
+            {# <p class="post-date"><time datetime="{{ page.date }}" class="post-date-time">{{ page.date | postDate }}</time></p> #}
+
+            <div class="post-tags">
+              {% for tag in tags -%}
+                {% if tag !== 'posts' %}
+                  <a class="post-tag" href="/tags/{{ tag }}">{{ tag }}</a>
+
+                {% endif %}
+              {%- endfor %}
+              <span class="post-tag">
+                {{ color }}
+              </span>
+              <span class="post-tag-color" style="background-color: {{ color }}">&nbsp;</span>
+            </div>
+
+          </div>
+          <details class="toc-toc">
+            <summary class="toc-toc-summary">Dans cette page</summary>
+            {{ content | toc | safe }}
+          </details>
+          {{ content | safe }}
+        </div>
+
+        {# ### Pager #}
+        {# https://github.com/11ty/eleventy-navigation/issues/22 #}
+        {% set flatNavItems = collections.all | eleventyNavigation | flattenNavigationAndAddNextPrev %}
+        <nav>
+          <ul class="pager">
+            {% for item in flatNavItems %}
+              {% if item.url === page.url %}
+                {% if item.prev %}
+                  <li class="pager-item pager-item-prev">
+                    <a href="{{ item.prev.url }}">
+                      <span class="pager-item-label">Avant ça</span>
+                      {{ item.prev.title }}
+                      <span class="pager-item-subtitle">
+                        {{ item.prev.subtitle }}
+                      </span>
+                    </a>
+                  </li>
+                {% endif %}
+
+                {% if item.next %}
+                  <li class="pager-item pager-item-next">
+                    <a href="{{ item.next.url }}">
+                      <span class="pager-item-label">À suivre</span>
+                      {{ item.next.title }}
+                      <span class="pager-item-subtitle">
+                        {{ item.next.subtitle }}
+                      </span>
+                    </a>
+                  </li>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </nav>
+      </main>
+    </div>
+    {# <footer class="footer">
       <p>Site réalisé grâce à <a href="https://www.11ty.dev">{{ eleventy.generator }}</a> - Le contenu de ce site est totalement libre.</p>
-    </footer>
+    </footer> #}
 
     <script>
       const root = document.querySelector("body");
