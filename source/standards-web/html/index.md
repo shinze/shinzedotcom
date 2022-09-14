@@ -1,8 +1,9 @@
 ---
 color: "#00C49A"
+title: "Test"
 eleventyNavigation:
   title: "HTML"
-  subtitle: "HyperText Markup Language"
+  excerpt: "HyperText Markup Language"
   key: "HTML"
   parent: "Standards"
   order: 1

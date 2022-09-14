@@ -1,7 +1,7 @@
 ---
 eleventyNavigation:
   title : "La mise en page (à faire)"
-  subtitle: "grid, flex et autre propriétés de mise en page"
+  excerpt: "grid, flex et autre propriétés de mise en page"
   key: "La mise en page"
   parent: "CSS"
   order: 6

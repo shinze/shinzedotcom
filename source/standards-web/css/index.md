@@ -2,7 +2,7 @@
 color: "#C8FFBE"
 eleventyNavigation:
   title: "CSS"
-  subtitle: "Cascading StyleSheets"
+  excerpt: "Cascading StyleSheets"
   key: "CSS"
   parent: "Standards"
   order: 2

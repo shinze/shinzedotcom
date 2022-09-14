@@ -2,9 +2,10 @@
 color: "#EEFC57"
 eleventyNavigation:
   title: "Les balises"
-  subtitle: "Les bases du language HTML"
+  excerpt: "Les bases du language HTML"
   key: "Balises"
   parent: "HTML"
+  order: 1
 ---
 
 HTML est un **langage à balises**: du code permettant de délimiter différentes parties de votre contenu et chaque **élément** ainsi créé va apporter un sens différent à votre contenu.

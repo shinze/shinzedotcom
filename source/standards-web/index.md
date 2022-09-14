@@ -1,7 +1,7 @@
 ---
 eleventyNavigation:
   title: "Les standards web"
-  subtitle: "HTML, CSS, SVG et une pincée de JS"
+  excerpt: "HTML, CSS, SVG et une pincée de JS"
   key: "Standards"
   parent: "Shinze"
   order: 1

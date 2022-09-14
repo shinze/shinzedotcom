@@ -1,6 +1,7 @@
 ---
 eleventyNavigation:
   title: "Javascript"
+  excerpt: "À venir"
   key: "Javascript"
   parent: "Standards"
   order: 5

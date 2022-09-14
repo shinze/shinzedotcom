@@ -2,7 +2,7 @@
 color: "#fddbf8"
 eleventyNavigation:
   title : "Les unités de dimension"
-  subtitle: "pixel, rem, ch, vw, %…"
+  excerpt: "pixel, rem, ch, vw, %…"
   key: "Les unités"
   parent: "CSS"
   order: 5

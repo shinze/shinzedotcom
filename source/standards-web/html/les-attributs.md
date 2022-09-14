@@ -2,9 +2,10 @@
 color: "#d8bef8"
 eleventyNavigation:
   title: "Les attributs"
-  subtitle: "Nom d’attribut et valeur"
+  excerpt: "Nom d’attribut et valeur"
   key: "Les attributs"
   parent: "HTML"
+  order: 2
 ---
 
 

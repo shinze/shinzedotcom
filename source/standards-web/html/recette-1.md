@@ -2,7 +2,7 @@
 color: "#B8336A"
 eleventyNavigation:
   title: "La recette de cuisine"
-  subtitle: "Un faux départ"
+  excerpt: "Un faux départ"
   key: "Recette"
   parent: "HTML"
   order: "100"

@@ -2,7 +2,7 @@
 color: "#FFF3DA"
 eleventyNavigation:
   title: "La cascade"
-  subtitle: "Le C de CSS ou de quelle couleur sera cet élément ?"
+  excerpt: "Le C de CSS ou de quelle couleur sera cet élément ?"
   key: "La cascade"
   parent: "CSS"
   order: 3

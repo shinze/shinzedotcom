@@ -356,7 +356,6 @@ pre[class="language-svg"]::before {
   padding-right: 5vw;
   margin-left: auto;
   margin-right: auto;
-  border-top: 1px solid var(--txt-softer);  
 }
 
 .navigation a {
@@ -690,6 +689,8 @@ pre[class="language-svg"]::before {
   flex: 1;
 }
 
+
+
 .pager-item-next {
   text-align: right;
 }
@@ -702,12 +703,20 @@ pre[class="language-svg"]::before {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+  
 }
 
 .pager-item a:hover,
 .pager-item a:focus {
   background-color: var(--bg-alt2);
+}
+
+.pager-item a:before {
+  content: "<"
+}
+
+.pager-item-next a:before {
+  content: ">"
 }
 
 .pager-item-label {

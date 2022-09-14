@@ -33,25 +33,48 @@ module.exports = function(eleventyConfig) {
   });
 
   // Codepen embeds
- // Multiline Content with Parameter
- eleventyConfig.addShortcode("livecode", function(href, defaultTab) {
-  const cpUrl = `https://codepen.io/shinze/embed/preview/${href}?default-tab=${defaultTab}%2Cresult&editable=true`;
-  const alternative = `
-  <a href="https://codepen.io/shinze/pen/${href}">Accéder au document sur codepen</a>
-  `
-  return `
-  <div className="livecode">
-    <iframe src="${cpUrl}" frameborder="no" loading="lazy" allowtransparency="true"
-        allowfullscreen="true"
-        height="500"
-        class="livecode-iframe"
-        scrolling="no">
-      ${alternative}
-    </iframe>
-  </div>
-  `;
-});
+  // Multiline Content with Parameter
+  eleventyConfig.addShortcode("livecode", function(href, defaultTab) {
+    const cpUrl = `https://codepen.io/shinze/embed/preview/${href}?default-tab=${defaultTab}%2Cresult&editable=true`;
+    const alternative = `
+    <a href="https://codepen.io/shinze/pen/${href}">Accéder au document sur codepen</a>
+    `
+    return `
+    <div className="livecode">
+      <iframe src="${cpUrl}" frameborder="no" loading="lazy" allowtransparency="true"
+          allowfullscreen="true"
+          height="500"
+          class="livecode-iframe"
+          scrolling="no">
+        ${alternative}
+      </iframe>
+    </div>
+    `;
+  });
 
+  /**
+   * Flatten a navigation object into an array, and add "next" and "prev"
+   * properties.
+   * More : https://github.com/11ty/eleventy-navigation/issues/22
+   */
+  eleventyConfig.addFilter('flattenNavigationAndAddNextPrev', (nav) => {
+    const flat = [];
+    const visit = (items) => {
+      for (const item of items) {
+        flat.push(item);
+        visit(item.children);
+      }
+    };
+    visit(nav);
+    for (let i = 0; i < flat.length; i++) {
+      const item = flat[i];
+      item.prev = flat[i - 1];
+      item.next = flat[i + 1];
+    }
+    return flat;
+  });
+
+  
 
   let mdOptions = {
     html: true,

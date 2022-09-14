@@ -2,7 +2,7 @@
 color: "#B6E8FF"
 eleventyNavigation:
   title : "Les couleurs"
-  subtitle: "Bleu, vert, orange, #2288FF, etc."
+  excerpt: "Bleu, vert, orange, #2288FF, etc."
   key: "Les couleurs"
   parent: "CSS"
   order: 4

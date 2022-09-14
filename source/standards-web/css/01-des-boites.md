@@ -2,7 +2,7 @@
 color: "#88fda2"
 eleventyNavigation:
   title: "Le modèle de boîtes"
-  subtitle: "Un modèle pas très naturel"
+  excerpt: "Un modèle pas très naturel"
   key: "Le modèle de boîtes"
   parent: "CSS"
   order: 1
