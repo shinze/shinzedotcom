@@ -5,7 +5,6 @@ eleventyNavigation:
   excerpt: "pixel, rem, ch, vw, %…"
   key: "Les unités"
   parent: "CSS"
-  order: 5
 ---
 
 <!-- Vous savez quelle est la dimension d’une feuille A4, mais quelle est la largeur du Web, sa longueur ? Une multitude de réponses sont possibles, autant qu’il existe d’écrans et de fenêtres dans le monde.
@@ -144,7 +143,7 @@ Si j’ajoute ces styles, la valeur de translation (`translateX(-50%)`) s’appl
 
 ::: callout
 
-## Pour résumer
+#### Pour résumer
 
 Selon la propriété utilisant des pourcentages, l’élément de référence servant au calcul ne sera pas le même.
 
@@ -213,3 +212,13 @@ La fenêtre est la zone dans laquelle s’affiche votre page web en anglais le *
 #### Les unités `vw, vh…`
 
 `vw` la largeur de la fenêtre et `vh` la hauteur de la fenêtre, la valeur calculée sera un pourcentage de la dimension de la fenêtre, `20vw` sera `20%` de la largeur de la fenêtre et `10vw` sera 10% de la hauteur de la fenêtre.
+
+## Une calculatrice intégrée
+
+CSS permet de manipuler différentes unités et permet aussi d’additionner des carottes et des torchons, c’est le travail de la fonction `calc()` qui peut effectuer des calculs en manipulant les différentes unités vues précédemment.
+
+```css
+.item { width: calc((100vw - 30%) / 2) }
+```
+
+Je peux additionner, soustraire, multiplier, diviser différentes unités entre-elles sans avoir à faire les calculs moi-même.

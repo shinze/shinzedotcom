@@ -1,0 +1,94 @@
+<p>En CSS, on a des couleurs et de nombreuses manières de les noter et de les appliquer.</p>
+<h2>Ou appliquer les couleurs ?</h2>
+<p><code>color</code>, <code>background-color</code>, <code>box et text-shadow</code>,<code>border</code> et <code>outline</code> sont les propriétés acceptant une valeur de couleurs.</p>
+<pre><code class="language-css">/* Le texte de ma page est violet */
+body { color: purple }
+
+/* Le fond de ma page est orange */
+body { background-color: orange; }
+
+/* Tous les paragraphes seront avec une bordure bleue avec des tirets */
+p { border: 2px dashed blue }
+
+/* Les articles ont une ombre orange */
+article { box-shadow: 0 0 1rem 0 orange }
+
+/* Le h1 a une ombre bleue */
+h1 { text-shadow: 0 1ch 0 blue }
+</code></pre>
+<h2>Les mots clefs</h2>
+<p>Quelques mots clefs permettent l’ajout de fonctionnalités au langage :</p>
+<ul>
+<li><code>transparent</code> applique une transparence totale à un élément;</li>
+<li><code>currentColor</code> permet d’appliquer la couleur de l’élément parent (définie par la propriété <code>color</code>);</li>
+</ul>
+<h2>Les couleurs nommées</h2>
+<p>CSS bénéficie d’un <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/named-color">référentiel historique</a> de couleurs <em>nommées</em> qui continue d’évoluer et propose maintenant un peu plus de 256 couleurs.</p>
+<p>L’avantage de ce référentiel est sa simplicité mais son inconvénient majeur est qu’il très limité pour des usages réels et est <strong>donc peu utilisé</strong> aujourd’hui.</p>
+<pre><code class="language-css">/* Tous les liens seront violets */
+a { color: rebeccapurple }
+</code></pre>
+<h2>La notation hexadécimale</h2>
+<p>La notation hexadécimale, en base 16, permet d’indiquer une couleur en utilisant 8 caractères allant de 0 à F (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E et F.) précédés d’un croisillon (<code>#</code> et non pas un <em>hashtag</em> 😜).</p>
+<p><code>#f1de8c80, #RRVVBBAA</code> : Chaque paire représente respectivement la valeur d’une des composante de la couleur RVB (<code>RR</code>, <code>VV</code> et <code>BB</code>) et éventuellement une composante <em>alpha</em> (opacité de la couleur, <code>AA</code>).</p>
+<p>::: callout</p>
+<p>Je vous rassure tous vos outils graphiques vous permettent de copier-coller cette valeur.</p>
+<p>:::</p>
+<pre><code class="language-css">/* Le paragraphe est orange légèrement transparent */
+p { color: #facd2080 }
+
+/* La même couleur sans transparence */
+p { color: #facd20 }
+</code></pre>
+<h2>La notation en <code>rgb</code> et <code>rgba</code></h2>
+<p>C’est pour des designers une manière de noter une couleur sans doute plus familière.</p>
+<pre><code class="language-css">p { color: rgb(120, 20, 255) }
+</code></pre>
+<p>Chaque terme séparé par une virgule est respectivement une composante couleur : r,v et b avec une valeur de 0 à 255 (comme dans tous les outils graphiques) indiquant la quantité de chaque couleur.</p>
+<p>Cette même notation peut aussi utiliser des pourcentages, <strong>à noter que chaque valeur doit alors être indiquée en pourcentage</strong></p>
+<pre><code class="language-css">p { color: rgb(10%, 20%, 80%) }
+</code></pre>
+<h3>La transparence : <code>rgba</code></h3>
+<p>La notation est similaire à celle en <code>rgb</code> mais ajoute une composante <em>alpha</em> permettant de spécifier l’opacité d’une couleur (de 0 à 100% d’opacité).</p>
+<p>L’alpha peut se noter de deux manières différentes comme illustré ci-après :</p>
+<pre><code class="language-css">/* L’opacité est de 80% */
+p { color: rgba(10%, 20%, 80%, 0.80) }
+
+/* Même opacité mais notée en pourcentage */
+p { color: rgba(10%, 20%, 80%, 80%) }
+</code></pre>
+<h2>La notation en <code>hsl</code> et <code>hsla</code></h2>
+<p>Les notation <code>hsl</code> et <code>hsla</code> (<em>Hue, Saturation et Lightness</em>) sont des notations équivalentes à <em>tsl (teinte, saturation et luminosité)</em>.</p>
+<p>Cette notation est souvent considérée comme plus simple que les deux notations précédentes car elle permet de mieux situer une couleur dans un cercle chromatique.</p>
+<p><code>hsl(H,S,L)</code> ou <code>hsl(H,S,L,A)</code> :</p>
+<ul>
+<li>H représente la teinte exprimée en degré allant de 0 à 360 degrés (sa position sur le <a href="https://fr.wikipedia.org/wiki/Cercle_chromatique">cercle chromatique</a>) à noter que l’unité <em>degré</em> n’est pas à indiquer;</li>
+<li>S le taux de saturation de la couleur exprimée en pourcentage, une valeur de 0% indique une couleur grise et 100% une couleur très vive;</li>
+<li>L, la luminosité est exprimée en pourcentage comme la saturation;</li>
+<li>A, l’opacité de la couleur est exprimée (comme pour la notation <code>rgb</code>), soit en pourcentage (<code>10%</code>) soit avec une valeur qui va de 0 à 1 (<code>0.10</code>).</li>
+</ul>
+<pre><code class="language-css">/*Trois manières de noter une couleur en hsl(a)*/
+p { color: hsl(120, 20%, 30%) }
+p { color: hsl(120, 20%, 30%, .1) }
+p { color: hsl(120, 20%, 30%, 10%) }
+</code></pre>
+<p>::: callout</p>
+<h3>À noter</h3>
+<p>La notation <code>hsl</code> est une représentation mathématique d’un espace colorimétrique qui <strong>ne prend pas en compte la perception humaine de luminosité d’une teinte</strong>.</p>
+<p>L’œil humain n’est pas sensible à toutes les teintes de la même manière, <strong>pour une même luminosité un jaune paraît plus lumineux qu’un bleu</strong>.</p>
+<p><a href="https://www.boronine.com/2012/03/26/Color-Spaces-for-Human-Beings/">En apprendre un peu plus</a> sur la perception des couleurs.</p>
+<p>:::</p>
+<h2>Accessibilité des couleurs</h2>
+<p><strong>L’accessibilité numérique consiste à rendre les contenus et services numériques compréhensibles et utilisables par toute personne.</strong></p>
+<p>Les couleurs sont un élément fondamental de l’accessibilité numérique, voici les deux principales règles concernant les couleurs :</p>
+<ul>
+<li>La couleur ne doit pas être le seul moyen de communiquer une information <em>(Ex. En rouge Les chiffres de cette année)</em>;</li>
+<li>Vous devez vous assurer que votre interface a des contrastes suffisants. Le rapport de contraste entre la couleur de fond et le contenu doit être suffisant;</li>
+</ul>
+<h3>Quelques outils pour vous simplifier le travail sur les contrastes couleurs</h3>
+<ul>
+<li>Un outil vous permettant de <a href="https://color.review/">visualiser vos contrastes</a> et de choisir des couleurs plus adaptées (vous devez atteindre au minimum un résultat <em>AA</em>);</li>
+<li>Ce service vous permet d’<a href="https://contrast-grid.eightshapes.com/">avoir un aperçu de l’accessibilité</a> de nombreuses couleurs en une seule fois;</li>
+<li>Un outil vous permettant de <a href="https://hue.tools/modify?format=hex&amp;color=77f15cff">manipuler les couleurs</a> un peu mieux que la plupart des outils graphiques;</li>
+<li>Un service avancé vous permettant de <a href="https://accessiblepalette.com/">créer une palette de couleurs</a> en limitant les problèmes de luminosité perçue.</li>
+</ul>

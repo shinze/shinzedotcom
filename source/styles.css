@@ -213,9 +213,7 @@ a:focus {
   color: var(--links-visited);
 } */
 
-[aria-current="page"] {
-  font-weight: bold;
-}
+
 
 p, ol, ul, pre {
   margin-bottom: var(--fz2);
@@ -228,6 +226,10 @@ ul, ol {
 
 ul ul {
   margin-bottom: 0;
+}
+
+li {
+  margin-left: var(--fz6);
 }
 
 code, pre {
@@ -334,29 +336,41 @@ pre[class="language-svg"]::before {
 
 .navigation {
   font-size: .80rem;
+  padding: 2rem;
 }
 
 .navigation a {
   text-decoration: none;
 }
 
-.navigation-title {
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation li {
+  margin: 0;
+}
+
+.navigation li[aria-current="page"] {
   font-weight: bold;
-  font-size: var(--fz5);
 }
 
-.navigation-list > li > a {
-  background: red;
+.navigation li[aria-current="page"] ul {
+  font-weight: initial;
 }
 
-.navigation-list > li > a {
-  background: red;
+.navigation-list {
+  margin-bottom: var(--fz6);
 }
 
 .navigation-list ul {
-  padding: 0;
   list-style: none;
-  margin-bottom: var(--fz6);
+  margin: 0;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 1px solid var(--bg-alt2)
 }
 
 
@@ -388,17 +402,15 @@ pre[class="language-svg"]::before {
 /* Contenu principal */
 
 .main-layout {
-  display: grid;
-  grid-template-columns: 20vw 1fr;
+  /* display: grid;
+  grid-template-columns: 20vw 1fr; */
 }
 
 .main {
 
 }
 
-.main li {
-  margin-left: var(--fz6);
-}
+
 
 .main li::marker {
   color: var(--txt-softer);
@@ -527,6 +539,10 @@ pre[class="language-svg"]::before {
   transition: all .4s;
 }
 
+.toc-toc a {
+  text-decoration: none;
+}
+
 .toc-toc + p {
   font-size: var(--fz5);
   letter-spacing: -0.022em;
@@ -569,15 +585,34 @@ pre[class="language-svg"]::before {
 
 .toc-toc[open] .toc-toc-summary:before {
   transform: rotate(-45deg) translateY(50%);
-  
   border-bottom: 0;
   border-top: 2px solid currentColor;
   border-right: 2px solid currentColor; 
 }
 
 .toc ol {
+  padding-left: 1rem;
+  margin-bottom: 0;
+  list-style: none;
+  border-left: 1px solid var(--callout-bg);
+  transition: all .3s;
+}
+
+.toc ol:hover {
+  border-left-color: var(--txt);
+}
+
+.toc > ol {
+  margin-left: 1.5rem;
+}
+
+.toc li {
+  margin-left: 0;
   margin-bottom: 0;
 }
+
+
+
 
 /* A blob */
 
@@ -680,34 +715,34 @@ pre[class="language-svg"]::before {
   padding: 0;
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
   gap: 4px;
 }
 
 .pager-item {
   margin: 0;
-  flex: 1;
-}
-
-
-
-.pager-item-next {
-  text-align: right;
+  flex: 1 1 15rem;
+  margin: 0
 }
 
 .pager-item a {
   text-decoration: none;
   font-weight: bold;
   background-color: var(--bg-alt1);
+  height: 100%;
   padding: var(--fz3);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
 }
 
 .pager-item a:hover,
 .pager-item a:focus {
   background-color: var(--bg-alt2);
+}
+
+.pager-item-next {
+  text-align: right;
 }
 
 .pager-item-label {

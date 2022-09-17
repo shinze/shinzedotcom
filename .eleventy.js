@@ -23,7 +23,7 @@ module.exports = function(eleventyConfig) {
   
 
   /* Option MD */
-  // @TODO : Voir ça pour des tag customs
+  // TODO: Voir ça pour des tag customs
   // https://www.11ty.dev/docs/languages/markdown/#why-cant-i-return-markdown-from-paired-shortcodes-to-use-in-a-markdown-file
   // Ou ça : https://github.com/markdown-it/markdown-it-container
   // Ou encore ça : https://www.npmjs.com/package/markdown-it-attrs

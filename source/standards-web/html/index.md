@@ -1,6 +1,5 @@
 ---
 color: "#00C49A"
-title: "Test"
 eleventyNavigation:
   title: "HTML"
   excerpt: "HyperText Markup Language"

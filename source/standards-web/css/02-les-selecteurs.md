@@ -5,7 +5,6 @@ eleventyNavigation:
   excerpt: "Cibler des éléments avec CSS"
   key: "Les sélecteurs CSS"
   parent: "CSS"
-  order: 2
 ---
 
 Les sélecteurs CSS indique le ou les éléments sur le(s)quels s’applique un ensemble de styles.

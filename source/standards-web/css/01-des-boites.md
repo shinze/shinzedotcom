@@ -5,12 +5,11 @@ eleventyNavigation:
   excerpt: "Un modèle pas très naturel"
   key: "Le modèle de boîtes"
   parent: "CSS"
-  order: 1
 ---
 
 Les éléments dans une page web sont tous représentés par des boîtes et ce modèle peut ne pas être intuitif ou naturel (surtout pour des designers habitués aux outils graphiques).
 
-Le modèle de boîte est le premier *outil* de mise en page que l’on peut citer.
+Le modèle de boîte est le premier *outil* de [mise en page](../06-mise-en-page) que l’on peut citer.
 
 ## Ma première boîte
 
@@ -40,9 +39,14 @@ La largeur totale de cette boîte est de 170 pixels : **largeur + bordures (
 
 ### Quelques explications
 
-Chaque élément HTMl est dans une boîte, ces boîtes ont aussi un *padding* (un marge interne), un contour, une marge.
+Chaque élément HTMl est une boîte. Ces boîtes peuvent avoir un *padding* (un marge interne), un contour (`border`), une marge (`margin`).
 
-Le calcul de la largeur ou la hauteur de la boîte n’inclut pas ces propriétés (`padding`, `border`, `margin`) par défaut et *s’ajoute* à la dimension calculée (et affichée) de la boîte.
+- Si la dimension est spécifiée (avec `width` et/ou `height`), le calcul de la largeur ou la hauteur de la boîte **n’inclut pas** les propriétés `padding`, `border`, `margin`;
+- Si elle n’est pas indiquée, la dimension de la boîte est déduite de l’espace nécessaire à afficher son contenu;
+
+![L’exemple du modèle de boîte tel que présenté dans l’inspecteur de Firefox](/img/box-model.png)
+
+Cette image illustre le modèle de boîte tel que l’on peut le voir dans l’inspecteur de votre navigateur et représente les différentes propriétés liées à un élément HTML dans le calcul d’une boîte : **la marge, la bordure, la marge interne et la dimension (hauteur et largeur)**.
 
 ### Comment y échapper ?
 
@@ -50,8 +54,8 @@ Pour échapper à ce modèle et adopter un calcul de boîte plus *naturel* voici
 
 ```css
 /*
-  Application d’un modèle de boîte naturel
-  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+  Modèle de boîte naturel
+  Infos : https://www.paulirish.com/2012/box-sizing-border-box-ftw/
 */
 
 html {
@@ -66,8 +70,8 @@ html {
 
 Les boîtes en HTML sont de deux types :
 
-- **Type *inline*** : Des éléments qui se mettent les uns à côté des autres;
-- **Type *block*** : Des éléments qui *s’empilent* les uns au-dessus des autres.
+- **Type *inline* (en ligne)** : les éléments se mettent les uns à côté des autres;
+- **Type *block* (bloc)** : les éléments *s’empilent* les uns au-dessus des autres.
 
 ```html
 <p>
@@ -82,7 +86,7 @@ Testez le code ci-dessus, certains éléments se mettent sur une rangée, d’au
 
 ::: callout
 
-Le type de boîte est différent selon l’élément HTML et c’est une propriété que l’on peut modifier en CSS.
+Le type de boîte est différent selon l’élément HTML utilisé, c’est une propriété que l’on peut modifier en CSS sans avoir à changer d’élément HTML.
 
 ```css
 strong {
@@ -96,7 +100,7 @@ p {
 
 :::
 
-### D’autres différences
+### D’autres différences (de taille ?)
 
 - Les éléments *inline* ne peuvent pas avoir de largeur, ni de hauteur propre, en modifiant leur propriété `display` on peut à nouveau rendre une largeur et une hauteur à ces éléments;
 - Un padding vertical sur un éléments *inline* ne va pas avoir d’impact sur d’autres éléments;

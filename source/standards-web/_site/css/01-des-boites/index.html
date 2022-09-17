@@ -1,0 +1,72 @@
+<p>Les éléments dans une page web sont tous représentés par des boîtes et ce modèle peut ne pas être intuitif ou naturel (surtout pour des designers habitués aux outils graphiques).</p>
+<p>Le modèle de boîte est le premier <em>outil</em> de mise en page que l’on peut citer.</p>
+<h2>Ma première boîte</h2>
+<p>Voici le code que je saisis dans un nouveau document HTML, le code qui suit est quand à lui dans un fichier CSS que je lie au document HTML.</p>
+<pre><code class="language-html">&lt;p&gt;Mon premier test de CSS&lt;/p&gt;
+</code></pre>
+<pre><code class="language-css">p {
+  border: 20px solid black;
+  width: 100px;
+  padding: 15px;
+}
+</code></pre>
+<h2>La question</h2>
+<p><strong>À votre avis, ce paragraphe (<code>p</code>) fait quelle largeur ? 100 pixels ? 130 ? Aucune idée ?</strong></p>
+<p>::: callout</p>
+<h3>La réponse</h3>
+<p>La largeur totale de cette boîte est de 170 pixels : <strong>largeur + bordures (×2), marges internes (×2)</strong>. C’est le modèle de boîte par défaut de CSS.
+:::</p>
+<h3>Quelques explications</h3>
+<p>Chaque élément HTMl est dans une boîte, ces boîtes ont aussi un <em>padding</em> (un marge interne), un contour, une marge.</p>
+<p>Le calcul de la largeur ou la hauteur de la boîte n’inclut pas ces propriétés (<code>padding</code>, <code>border</code>, <code>margin</code>) par défaut et <em>s’ajoute</em> à la dimension calculée (et affichée) de la boîte.</p>
+<h3>Comment y échapper ?</h3>
+<p>Pour échapper à ce modèle et adopter un calcul de boîte plus <em>naturel</em> voici ce que vous devriez ajouter systématiquement à vos fichiers CSS.</p>
+<pre><code class="language-css">/*
+  Application d’un modèle de boîte naturel
+  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+</code></pre>
+<h2>Deux types de boîtes</h2>
+<p>Les boîtes en HTML sont de deux types :</p>
+<ul>
+<li><strong>Type <em>inline</em></strong> : Des éléments qui se mettent les uns à côté des autres;</li>
+<li><strong>Type <em>block</em></strong> : Des éléments qui <em>s’empilent</em> les uns au-dessus des autres.</li>
+</ul>
+<pre><code class="language-html">&lt;p&gt;
+  &lt;strong&gt;Bonjour&lt;/strong&gt;
+  &lt;em&gt;à tous !&lt;/em&gt;
+&lt;/p&gt;
+&lt;p&gt;Comment, &lt;/p&gt;
+&lt;p&gt;Allez-vous ?&lt;/p&gt;
+</code></pre>
+<p>Testez le code ci-dessus, certains éléments se mettent sur une rangée, d’autres s’empilent (même si je saute une ligne dans le code).</p>
+<p>::: callout</p>
+<p>Le type de boîte est différent selon l’élément HTML et c’est une propriété que l’on peut modifier en CSS.</p>
+<pre><code class="language-css">strong {
+  display: block;
+}
+
+p {
+  display: inline;
+}
+</code></pre>
+<p>:::</p>
+<h3>D’autres différences</h3>
+<ul>
+<li>Les éléments <em>inline</em> ne peuvent pas avoir de largeur, ni de hauteur propre, en modifiant leur propriété <code>display</code> on peut à nouveau rendre une largeur et une hauteur à ces éléments;</li>
+<li>Un padding vertical sur un éléments <em>inline</em> ne va pas avoir d’impact sur d’autres éléments;</li>
+<li>Certaines autres propriétés CSS ne s’appliquent qu’à des éléments <em>inline</em> ou <em>block</em>;</li>
+</ul>
+<h2>Références</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/fr/docs/Learn/CSS/Building_blocks/The_box_model">Le modèle de boîte</a> sur MDN;</li>
+<li><a href="https://www.paulirish.com/2012/box-sizing-border-box-ftw/">Une petite explication en anglais</a>;</li>
+<li><a href="https://developer.mozilla.org/fr/docs/Web/CSS/display">La propriété CSS <code>display</code></a>;</li>
+</ul>

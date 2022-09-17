@@ -1,0 +1,35 @@
+<p>HTML est un <strong>langage à balises</strong>: du code permettant de délimiter différentes parties de votre contenu et chaque <strong>élément</strong> ainsi créé va apporter un sens différent à votre contenu.</p>
+<p>Les <em>balises</em> permettent de renseigner différents types de contenus : des titres, des paragraphes, des listes, des liens, des images, des navigations, des sections, des formulaires et <a href="http://html5doctor.com/element-index/">la liste peut être longue</a></p>
+<p>Utiliser des balises adaptées permet d’améliorer <a href="https://fr.wikipedia.org/wiki/HTML_s%C3%A9mantique">la sémantique</a> de votre contenu, son indexation dans les différentes moteurs de recherche et enfin et surtout l’acces de vos contenus au plus grand nombre.</p>
+<h2>Comment ça marche ?</h2>
+<p>Pour baliser un contenu vous utiliserez (la plupart du temps) une balise ouvrante, une balise fermante et un contenu.</p>
+<p>La balise ouvrante s’écrit <code>&lt;nomBalise&gt;</code> et la balise fermante <code>&lt;/nomBalise&gt;</code>, entre ces deux balises le contenu que l’on souhaite délimiter.</p>
+<pre><code class="language-html">&lt;h1&gt;Découvrir le langage HTML&lt;/h1&gt;
+&lt;p&gt;Le langage HTML (HyperText Markup Language) est…&lt;/p&gt;
+</code></pre>
+<p>Ci-dessus, l’extrait d’un document <code>html</code> avec un exemple de balises délimitant différents types de contenus :</p>
+<ul>
+<li>Un titre (avec les balises <code>h1</code>);</li>
+<li>Un paragraphe (avec les balises <code>p</code>).</li>
+</ul>
+<p>::: callout
+L’ensemble balise <strong>ouvrante + contenu + balise fermante</strong> se nomme <strong>un élément</strong>. Dans l’exemple précédent nous avons donc créé deux éléments.
+:::</p>
+<h2>Des balises particulières</h2>
+<p>Certaines balises HTML sont dites <em>auto-fermantes</em>, <strong>c’est par exemple le cas de certaines balises</strong> qui n’ont pas de contenu propre, c’est aussi parfois des balises qui portent une valeur par le biais d’<a href="../les-attributs">un attribut</a> .</p>
+<p>Une <a href="../les-images">image</a> (un contenu externe téléchargé et affiché par le navigateur) est une balise qui est auto-fermante comme illustré juste après.</p>
+<pre><code class="language-html">&lt;img src=&quot;https://placekitten.com/300&quot; alt=&quot;Un petit chat&quot;&gt;
+</code></pre>
+<!-- 
+## Un petit exercice
+
+1. Suivez ce [guide de mise en place d’un projet pour le web](../../pratique/nouveau-projet);
+2. Donnez-moi votre recette préférée dans le fichier *index.html* (si vous manquez d’inspiration faîtes la recette de ce que vous venez de manger);
+
+
+Une fois que vous avez terminé votre recette, vous pouvez aller consulter [ma version de la pizza quatre fromages](../recette). -->
+<h2>Références</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element">Liste de balises disponibles en HTML5</a>;</li>
+<li><a href="http://html5doctor.com/element-index/">Une autre liste d’éléments utilisables en HTML</a>, chaque élément HTML est ici analysé et illustré d’exemples.</li>
+</ul>

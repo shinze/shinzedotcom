@@ -8,7 +8,9 @@ eleventyNavigation:
   order: 2
 ---
 
-_Cascading StyleSheets_, ou les feuilles des styles en cascades (CSS) est le language du Web permettant de manipuler l’apparence du contenu que l’on auquel on a donné du sens grâce [au langage HTML](../html/).
+_Cascading StyleSheets_, ou les feuilles des styles en cascades (CSS) est le language du Web permettant de manipuler l’apparence d’éléments HTML mais aussi SVG.
+
+<!-- TODO: lien SVG -->
 
 CSS va nous permettre de sélectionner n’importe quel élément (ou une famille d’éléments) d’une page HTML, en modifier l’aspect visuel, changer la mise en page d’un document pour en adapter pour l’affichage sur un téléphone mobile, une tablette ou l’écran de [votre piscine connectée](https://www.oklyn.fr/) (oui, ça existe).
 

@@ -1,0 +1,44 @@
+<p>Une petite série montrant une progression dans un projet simple, pour le moment une seule page dans laquelle j’illustre l’usage de quelques balises HTML.</p>
+<h2>C’est parti pour la recette !</h2>
+<p>Dans mon document <code>index.html</code> avec VS Code, j’ai commencé à saisir le plan de mon document comme ceci :</p>
+<pre><code class="language-html">Recette de la pizza quatre fromages
+Listes des ingrédients
+La recette
+Et si je n’aime pas le gorgonzola ?
+Accompagnements
+</code></pre>
+<h2>Tester, c’est douter</h2>
+<p>Une fois le document enregistré et ouvert avec mon <a href="getfirefox.com">navigateur préféré</a>, je ne vois rien de spectaculaire, le navigateur n’affiche même pas le saut entre chaque ligne.</p>
+<div class="callout">
+Le document que je viens de créer porte bien l’extension `.html` et le navigateur sait afficher ce type de fichier mais ce n’est pas pour autant un document valide.
+</div>
+<h2>Partons sur de meilleures bases</h2>
+<p>Dans VS Code, j’ai tout effacé et à partir de ce fichier <code>html</code> vierge j’ai tapé <strong>«<em>!</em>» (un simple point d’exclamation) suivi de la touche de tabulation</strong>, celle avec le caractère «<em>⇥</em>» de mon clavier.</p>
+<p>VS Code a alors généré le code suivant :</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Cette dizaine de ligne est la structure de base d’un document html valide et on y trouve les informations suivantes :</p>
+<ol>
+<li>La première ligne, on indique au navigateur que le fichier est effectivement un document de type html;</li>
+<li>La balise <code>&lt;html&gt;</code> (fermée à la dernière ligne de l’extrait) ce qui sera l’intégralité du code <code>html</code> de ma future page.<br>
+À noter que par défaut, l’attribut <code>lang</code> a la valeur <code>en</code> ce qui signifie que cette page est en anglais (Une liste <a href="https://fr.wiktionary.org/wiki/Wiktionnaire:BCP_47/language-2">complète et indigeste des codes de langue</a> existants);</li>
+<li><code>&lt;head&gt;</code>, (fermée à la ligne 8 <code>&lt;/head&gt;</code>) représente l’entête du document. Permet de regrouper des <a href="https://fr.wikipedia.org/wiki/M%C3%A9tadonn%C3%A9e">métadonnées</a> concernant le document;</li>
+<li>Une métadonnée indiquant au navigateur le jeu de caractères utilisé pour votre contenu, <a href="https://openweb.eu.org/articles/jeux_caracteres/">pour en savoir plus</a>;</li>
+<li><code>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</code> réservée pour des problèmes de compatibilités de navigateurs <em>ancestraux</em> (Microsoft Explorer ©);</li>
+<li>Cette métadonnée permet d’indiquer comment un <em>smartphone ou une tablette</em> doit gérer l’<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Viewport_meta_tag">affichage de votre page</a>;</li>
+<li>La balise <code>&lt;title&gt;</code> représente le titre de votre document <strong>visible dans l’onglet de votre navigateur mais aussi sur les résultat de recherche</strong> d’un moteur de recherche;</li>
+<li>Fermeture de l’entête (<code>&lt;/head&gt;</code>);</li>
+<li>C’est dans <code>&lt;body&gt;&lt;/body&gt;</code> la partie <em>visible</em> de l’iceberg, votre contenu;</li>
+</ol>
+<p>**<a href="../recette-2">Pour la suite, c’est par ici</a>**‌</p>

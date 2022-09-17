@@ -5,7 +5,6 @@ eleventyNavigation:
   excerpt: "Bleu, vert, orange, #2288FF, etc."
   key: "Les couleurs"
   parent: "CSS"
-  order: 4
 ---
 
 En CSS, on a des couleurs et de nombreuses manières de les noter et de les appliquer.

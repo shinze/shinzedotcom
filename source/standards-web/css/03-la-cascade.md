@@ -5,7 +5,6 @@ eleventyNavigation:
   excerpt: "Le C de CSS ou de quelle couleur sera cet élément ?"
   key: "La cascade"
   parent: "CSS"
-  order: 3
 ---
 
 La cascade est le mécanisme par lequel le navigateur va déterminer l’apparence d’un élément en agglomérant les *propriétés* CSS et les *valeurs* issues de plusieurs sélecteurs et de l’héritage de l’élément.
