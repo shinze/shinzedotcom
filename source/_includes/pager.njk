@@ -1,0 +1,35 @@
+{# ### Pager #}
+{# https://github.com/11ty/eleventy-navigation/issues/22 #}
+{% set flatNavItems = collections.all | eleventyNavigation | flattenNavigationAndAddNextPrev %}
+<nav>
+  <ul class="pager">
+    {% for item in flatNavItems %}
+      {% if item.url === page.url %}
+        {% if item.prev %}
+          <li class="pager-item pager-item-prev">
+            <a href="{{ item.prev.url }}">
+              <span class="pager-item-label">Avant ça</span>
+              {{ item.prev.title }}
+              <span class="pager-item-subtitle">
+                {{ item.prev.subtitle }}
+              </span>
+            </a>
+          </li>
+        {% endif %}
+
+        {% if item.next %}
+          <li class="pager-item pager-item-next">
+            <a href="{{ item.next.url }}">
+              <span class="pager-item-label">À suivre</span>
+              {{ item.next.title }}
+              <span class="pager-item-subtitle">
+                {{ item.next.subtitle }}
+              </span>
+            </a>
+          </li>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>
+</main>

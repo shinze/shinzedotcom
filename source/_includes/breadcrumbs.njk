@@ -1,0 +1,10 @@
+{# https://mvolkmann.github.io/blog/eleventy/plugins/navigation-plugin/ #}
+{% set crumbs = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
+{% for crumb in crumbs %}
+  <li>
+    {% if loop.index != 1 %}
+      <span class="breadcrumbs-separator">/</span>
+    {% endif %}
+    <a class="crumb {{ 'breadcrumbs-home' if loop.index == 1 }}" href="{{ crumb.url | url }}">{{ crumb.title }}</a>
+  </li>
+{% endfor %}

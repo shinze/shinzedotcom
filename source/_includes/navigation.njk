@@ -1,0 +1,33 @@
+{# https://www.mikeaparicio.com/posts/2022-08-19-nested-navigation-in-eleventy/ #}
+{% macro renderNavListItem(entry) %}
+  {% if entry.children.length %}
+    {% if entry.url == page.url %}
+      <li aria-current="page">{{ entry.title }}</li>
+    {% else %}
+      <li>
+        <a href="{{ entry.url }}">{{ entry.title }}</a>
+        {# {{ entry.excerpt }} #}
+      </li>
+    {% endif %}
+    <ul role="list">
+      {%- for child in entry.children %}{{ renderNavListItem(child) }}
+      {% endfor -%}
+    </ul>
+  {% else %}
+    {% if entry.url == page.url %}
+      <li aria-current="page">{{ entry.title }}
+      {% else %}
+        <li>
+          <a href="{{ entry.url }}">{{ entry.title }}</a>
+        {% endif %}
+      {%- endif -%}
+    {%- endmacro %}
+
+    <nav class="navigation" aria-label="Navigation principale">
+      <ul class="navigation-list" role="list">
+        {% set navPages = collections.all | eleventyNavigation %}
+        {%- for entry in navPages %}
+          {{ renderNavListItem(entry) }}
+        {%- endfor -%}
+      </ul>
+    </nav>

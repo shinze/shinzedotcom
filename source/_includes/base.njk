@@ -1,27 +1,3 @@
----js
-{
-  navigationOptions: {
-    listElement    : "ul",   // Change the top level tag
-    listItemElement: "li",   // Change the item tag
-
-    listClass               : "navigation-list",        // Add a class to the top level
-    listItemClass           : "navigation-list-item",   // Add a class to every item
-    listItemHasChildrenClass: "",                       // Add a class if the item has children
-    activeListItemClass     : "current",                // Add a class to the current page’s item
-
-    anchorClass      : "tamere",          // Add a class to the anchor
-    activeAnchorClass: "active",   // Add a class to the current page’s anchor
-
-    // If matched, `activeListItemClass` and `activeAnchorClass` will be added
-    activeKey: "",
-    // It’s likely you want to pass in `eleventyNavigation.key` here, e.g.:
-    // activeKey: eleventyNavigation.key
-
-    // Show excerpts (if they exist in data, read more above)
-    showExcerpt: false
-  }
-}
----
 <!DOCTYPE html>
 <html lang="{{ metadata.language }}">
 
@@ -52,16 +28,7 @@
     <header>
       <nav>
         <ol class="breadcrumbs" aria-label="fil d’arianne">
-          {# https://mvolkmann.github.io/blog/eleventy/plugins/navigation-plugin/ #}
-          {% set crumbs = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
-          {% for crumb in crumbs %}
-            <li>
-              {% if loop.index != 1 %}
-                <span class="breadcrumbs-separator">/</span>
-              {% endif %}
-              <a class="crumb {{ 'breadcrumbs-home' if loop.index == 1 }}" href="{{ crumb.url | url }}">{{ crumb.title }}</a>
-            </li>
-          {% endfor %}
+          {% include "breadcrumbs.njk" %}
           <li>
             <span class="breadcrumbs-separator">/</span>
             <strong>{{ eleventyNavigation.title }}</strong>
@@ -71,7 +38,6 @@
     </header>
 
     <div class="main-layout">
-
       <main class="main">
 
         <div class="post">
@@ -102,75 +68,9 @@
           {{ content | safe }}
         </div>
 
-        {# ### Pager #}
-        {# https://github.com/11ty/eleventy-navigation/issues/22 #}
-        {% set flatNavItems = collections.all | eleventyNavigation | flattenNavigationAndAddNextPrev %}
-        <nav>
-          <ul class="pager">
-            {% for item in flatNavItems %}
-              {% if item.url === page.url %}
-                {% if item.prev %}
-                  <li class="pager-item pager-item-prev">
-                    <a href="{{ item.prev.url }}">
-                      <span class="pager-item-label">Avant ça</span>
-                      {{ item.prev.title }}
-                      <span class="pager-item-subtitle">
-                        {{ item.prev.subtitle }}
-                      </span>
-                    </a>
-                  </li>
-                {% endif %}
+      {% include "pager.njk" %}
+      {% include "navigation.njk" %}
 
-                {% if item.next %}
-                  <li class="pager-item pager-item-next">
-                    <a href="{{ item.next.url }}">
-                      <span class="pager-item-label">À suivre</span>
-                      {{ item.next.title }}
-                      <span class="pager-item-subtitle">
-                        {{ item.next.subtitle }}
-                      </span>
-                    </a>
-                  </li>
-                {% endif %}
-              {% endif %}
-            {% endfor %}
-          </ul>
-        </nav>
-      </main>
-
-      {# https://www.mikeaparicio.com/posts/2022-08-19-nested-navigation-in-eleventy/ #}
-      {% macro renderNavListItem(entry) %}
-        {% if entry.children.length %}
-          {% if entry.url == page.url %}
-            <li aria-current="page">{{ entry.title }}</li>
-            {% else %}
-              <li>
-                <a href="{{ entry.url }}">{{ entry.title }}</a>
-                {# {{ entry.excerpt }} #}
-              </li>
-              {% endif %}
-              <ul role="list">
-                {%- for child in entry.children %}{{ renderNavListItem(child) }}
-                {% endfor -%}
-              </ul>
-          {% else %}
-            {% if entry.url == page.url %}
-              <li aria-current="page">{{ entry.title }}
-              {% else %}
-                <li>
-                  <a href="{{ entry.url }}">{{ entry.title }}</a>
-                {% endif %}
-              {%- endif -%}
-            {%- endmacro %}
-
-            <nav class="navigation" aria-label="Navigation principale">
-              <ul class="navigation-list" role="list">
-                {% set navPages = collections.all | eleventyNavigation %}
-                {%- for entry in navPages %}
-                  {{ renderNavListItem(entry) }}
-                {%- endfor -%}
-              </ul>
-            </nav>
     </div>
     {# <footer class="footer">
       <p>Site réalisé grâce à <a href="https://www.11ty.dev">{{ eleventy.generator }}</a> - Le contenu de ce site est totalement libre.</p>
