@@ -1,24 +1,16 @@
-# À lire pour toi patate
+# Description
 
-C’est le repo pour tes cours. Ça tourne sous eleventy.
+Ici reposent les sources de shinze.com, ça tourne grâce à Eleventy.
 
-La ressource que tu as utilisé est celle ci : https://www.youtube.com/watch?v=BKdQEXqfFA0 trouvé en venant d’ici https://www.11ty.dev/docs/tutorials/
+## Pour lancer le projet en local
 
-- À voir pour minifier les ressources : https://www.benjaminrancourt.ca/how-to-minify-your-eleventy-build/
-- À lire : https://web.dev/learn/css/the-cascade/
-
-## Documentation
-
-- Lancer le projet en dev : `npm start`;
-- _builder le projet_ : `npm run build`.
+- Lancer le projet en dev : `npm start`;
+- _builder le projet_ : `npm run build`.
 
 ### Structure de l’appli
 
-- Chaque dossier est un nœud de l’arborescence et contient un fichier `dossier.json` contenant les données propres de ce niveau d’arborescence.
-- La navigation globale est gérée par `_data/navigation.js` et l’affichage est calculé dans `base.njk`;
+- Chaque dossier est un nœud de l’arborescence et contient un fichier `dossier.json` contenant les données propres de ce niveau d’arborescence;
 - Utilisation de MarkdownIt;
-- Utilisation de https://github.com/markdown-it/markdown-it-mark pour les tags md marqués de ==tag==;
-
 
 ## Ressources
 

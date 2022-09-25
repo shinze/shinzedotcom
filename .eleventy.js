@@ -11,6 +11,7 @@ const htmlmin = require('html-minifier');
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const { DateTime } = require("luxon");
 const pluginTOC = require('eleventy-plugin-toc');
+const eleventyPluginFilesMinifier = require("@sherby/eleventy-plugin-files-minifier");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
@@ -106,6 +107,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("source/styles.css");
   eleventyConfig.addPassthroughCopy("source/img");
   eleventyConfig.addPassthroughCopy("source/js");
+
+  // Minification : https://www.benjaminrancourt.ca/how-to-minify-your-eleventy-build/
+  eleventyConfig.addPlugin(eleventyPluginFilesMinifier);
   
   eleventyConfig.addTransform('htmlmin', (content, outputPath) => {
     if (outputPath.endsWith('.html')) {
