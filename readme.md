@@ -18,6 +18,7 @@ Ici reposent les sources de shinze.com, ça tourne grâce à Eleventy.
 - 11ty : https://davidea.st/articles/11ty-tips-i-wish-i-knew-from-the-start/;
 - Gandi et Github pages : https://gist.github.com/matt-bailey/bbbc181d5234c618e4dfe0642ad80297;
 - Ressources de Github (build, deploy) : https://maarten.be/blog/20220730/how-to-deploy-your-eleventy-website-to-github-pages-with-github-actions/
+- Deploy GHpages script : https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-first-deployment-with-github_token
 
 
 
