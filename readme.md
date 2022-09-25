@@ -16,6 +16,7 @@ Ici reposent les sources de shinze.com, ça tourne grâce à Eleventy.
 ## Ressources
 
 - 11ty : https://davidea.st/articles/11ty-tips-i-wish-i-knew-from-the-start/;
+- Gandi et Github pages : https://gist.github.com/matt-bailey/bbbc181d5234c618e4dfe0642ad80297;
 
 ## Todo
 
