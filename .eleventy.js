@@ -14,6 +14,11 @@ const pluginTOC = require('eleventy-plugin-toc');
 const eleventyPluginFilesMinifier = require("@sherby/eleventy-plugin-files-minifier");
 
 module.exports = function(eleventyConfig) {
+  // Pour les GH pages : https://www.11ty.dev/docs/config/#deploy-to-a-subdirectory-with-a-path-prefix
+  // return {
+  //   pathPrefix: "/eleventy-base-blog/"
+  // }
+
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(PostCSSPlugin);
   eleventyConfig.addPlugin(pluginTOC);

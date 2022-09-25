@@ -7,7 +7,7 @@
     <meta name="generator" content="{{ eleventy.generator }}">
     <title>{{ eleventyNavigation.title }} - {{ metadata.sitename }}</title>
     <meta name="description" content="{{ description or metadata.description }}">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="{{ '/styles.css' | url  }}">
     <style>
       :root {
         --post-color: {{color}};
@@ -50,8 +50,8 @@
             <div class="post-tags">
               {% for tag in tags -%}
                 {% if tag !== 'posts' %}
-                  <a class="post-tag" href="/tags/{{ tag }}">{{ tag }}</a>
-
+                  {# <a class="post-tag" href="/tags/{{ tag }}">{{ tag }}</a> #}
+                  {{ tag }}
                 {% endif %}
               {%- endfor %}
               <span class="post-tag">
