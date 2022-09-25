@@ -1,3 +1,5 @@
 .DS_Store
 public/
 node_modules/
+gh-pages
+gh-pages.pub
