@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npx eleventy --serve",
     "debug": "DEBUG=* npx eleventy",
-    "build": "env NODE_ENV=production npx eleventy --pathprefix 'nada/shinzedotcom'"
+    "build": "env NODE_ENV=production npx eleventy --pathprefix '/shinzedotcom/'"
   },
   "repository": {
     "type": "git",

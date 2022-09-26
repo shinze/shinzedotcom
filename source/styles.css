@@ -2,7 +2,7 @@
 /* https://github.com/antfu/prism-theme-vars?ref=morioh.com&utm_source=morioh.com */
 @import url(https://fonts.bunny.net/css?family=ibm-plex-mono:500,500i);
 @import url('https://rsms.me/inter/inter.css');
-@import url(/prism-base.css);
+@import url(prism-base.css);
 html { font-family: 'Inter', Segoe UI, system-ui, -apple-system, sans-serif; }
 @supports (font-variation-settings: normal) {
   html { font-family: 'Inter var', Segoe UI, system-ui, -apple-system, sans-serif; }
