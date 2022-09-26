@@ -10,7 +10,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: ['14.17.6']
+        node-version: ['17']
 
     steps:
       - uses: actions/checkout@v3
@@ -30,4 +30,4 @@ jobs:
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          deploy_key: ${{ secrets.GITHUB_TOKEN }}
