@@ -5,7 +5,7 @@
       <li aria-current="page">{{ entry.title }}</li>
     {% else %}
       <li>
-        <a href="{{ entry.url }}">{{ entry.title }}</a>
+        <a href="{{ entry.url | url }}">{{ entry.title }}</a>
         {# {{ entry.excerpt }} #}
       </li>
     {% endif %}
@@ -18,7 +18,7 @@
       <li aria-current="page">{{ entry.title }}
       {% else %}
         <li>
-          <a href="{{ entry.url }}">{{ entry.title }}</a>
+          <a href="{{ entry.url | url }}">{{ entry.title }}</a>
         {% endif %}
       {%- endif -%}
     {%- endmacro %}

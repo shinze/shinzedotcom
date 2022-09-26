@@ -7,7 +7,7 @@
       {% if item.url === page.url %}
         {% if item.prev %}
           <li class="pager-item pager-item-prev">
-            <a href="{{ item.prev.url }}">
+            <a href="{{ item.prev.url | url }}">
               <span class="pager-item-label">Avant ça</span>
               {{ item.prev.title }}
               <span class="pager-item-subtitle">
@@ -19,7 +19,7 @@
 
         {% if item.next %}
           <li class="pager-item pager-item-next">
-            <a href="{{ item.next.url }}">
+            <a href="{{ item.next.url | url }}">
               <span class="pager-item-label">À suivre</span>
               {{ item.next.title }}
               <span class="pager-item-subtitle">
