@@ -1,4 +1,5 @@
 ---
+color: "#DDE8B9"
 eleventyNavigation:
   title: "Les standards web"
   excerpt: "HTML, CSS, SVG et une pincée de JS"

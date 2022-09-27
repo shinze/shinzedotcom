@@ -1,7 +1,7 @@
 ---
 color: "#ffe76a"
 eleventyNavigation:
-  title : "Les sélecteurs CSS"
+  title : "Les sélecteurs"
   excerpt: "Cibler des éléments avec CSS"
   key: "Les sélecteurs CSS"
   parent: "CSS"

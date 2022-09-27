@@ -61,10 +61,12 @@
             </div>
 
           </div>
+          {% if content | toc %}
           <details class="toc-toc">
             <summary class="toc-toc-summary">Dans cette page</summary>
             {{ content | toc | safe }}
           </details>
+          {% endif %}
           {{ content | safe }}
         </div>
 

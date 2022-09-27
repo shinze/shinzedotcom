@@ -8,6 +8,7 @@ html { font-family: 'Inter', Segoe UI, system-ui, -apple-system, sans-serif; }
   html { font-family: 'Inter var', Segoe UI, system-ui, -apple-system, sans-serif; }
 }
 
+
 :root {
   --fz1: 3.5em;
   --fz2: 2.25rem;
@@ -335,8 +336,8 @@ pre[class="language-svg"]::before {
 /* Navigation principale */
 
 .navigation {
-  font-size: .80rem;
-  padding: 2rem;
+  font-size: .70rem;
+  padding: .5rem;
 }
 
 .navigation a {
@@ -369,7 +370,7 @@ pre[class="language-svg"]::before {
   list-style: none;
   margin: 0;
   margin-bottom: 1rem;
-  padding-left: 1rem;
+  padding-left: .5rem;
   border-left: 1px solid var(--bg-alt2)
 }
 
@@ -398,18 +399,6 @@ pre[class="language-svg"]::before {
   background-color: var(--links);
   color: white;
 }
-
-/* Contenu principal */
-
-.main-layout {
-  /* display: grid;
-  grid-template-columns: 20vw 1fr; */
-}
-
-.main {
-
-}
-
 
 
 .main li::marker {
@@ -621,10 +610,11 @@ pre[class="language-svg"]::before {
   position: absolute;
   width: 100vw;
   top: -70vh;
-  left: 50%;
+  left: 0;
   transform: translateX(-50%);
   z-index: -1;
-  /* filter: blur(100px); */
+  opacity: .5;
+  filter: blur(100px);
 }
 
 .blob-1 {
@@ -755,4 +745,19 @@ pre[class="language-svg"]::before {
 .pager-item-subtitle {
   font-weight: normal;
   color: var(--prism-class)
+}
+
+/* Global layout */
+
+
+@media (min-width: 60rem) {
+  .main-layout {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+  }
+  
+  .main {
+    grid-row: 1;
+    grid-column: 2;
+  } 
 }
