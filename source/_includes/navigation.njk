@@ -23,11 +23,15 @@
       {%- endif -%}
     {%- endmacro %}
 
+    
     <nav class="navigation" aria-label="Navigation principale">
-      <ul class="navigation-list" role="list">
-        {% set navPages = collections.all | eleventyNavigation %}
-        {%- for entry in navPages %}
-          {{ renderNavListItem(entry) }}
-        {%- endfor -%}
-      </ul>
+      <details class="navigation-accordion">
+        <summary class="navigation-btn">Menu</summary>
+        <ul class="navigation-list" role="list">
+          {% set navPages = collections.all | eleventyNavigation %}
+          {%- for entry in navPages %}
+            {{ renderNavListItem(entry) }}
+          {%- endfor -%}
+        </ul>
+      </details>
     </nav>

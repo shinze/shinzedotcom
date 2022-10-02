@@ -25,7 +25,7 @@
       <path fill="currentColor"  class="blob-2" d="M 178.029 80.881 C 183.229 100.981 173.479 141.292 149.579 157.792 C 125.679 174.192 87.629 166.781 71.929 156.281 C 56.329 145.781 51.829 116.181 60.129 91.781 C 68.329 67.381 89.429 48.181 115.529 46.581 C 141.629 44.881 172.929 60.781 178.029 80.881 Z"/>
     </svg>
 
-    <header>
+    <header class="header">
       <nav>
         <ol class="breadcrumbs" aria-label="fil d’arianne">
           {% include "breadcrumbs.njk" %}
@@ -35,6 +35,7 @@
           </li>
         </ol>
       </nav>
+      {% include "navigation.njk" %}
     </header>
 
     <div class="main-layout">
@@ -71,7 +72,6 @@
         </div>
 
       {% include "pager.njk" %}
-      {% include "navigation.njk" %}
 
     </div>
     {# <footer class="footer">
