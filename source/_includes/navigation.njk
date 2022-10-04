@@ -26,7 +26,10 @@
     
     <nav class="navigation" aria-label="Navigation principale">
       <details class="navigation-accordion">
-        <summary class="navigation-btn">Menu</summary>
+        <summary class="navigation-btn">
+          <div class="navigation-btn-open">Menu</div>
+          <div class="navigation-btn-close">Fermer</div>
+        </summary>
         <ul class="navigation-list" role="list">
           {% set navPages = collections.all | eleventyNavigation %}
           {%- for entry in navPages %}

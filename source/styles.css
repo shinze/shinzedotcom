@@ -12,6 +12,13 @@ html {
   }
 }
 
+html {
+  box-sizing: border-box;
+}
+*,*::after,*::before {
+  box-sizing: inherit;
+}
+
 :root {
   --fz1: 3.5em;
   --fz2: 2.25rem;
@@ -138,6 +145,9 @@ body {
   width: 100vw;
   background-repeat: no-repeat;
   background-position: 0 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 100vh;
 }
 
 *,
@@ -322,19 +332,13 @@ pre[class="language-svg"]::before {
   align-items: center;
   align-content: center;
   justify-content: space-between;
-}
-
-.post-header {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
-  padding-top: var(--fz1);
-  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
 
 .navigation {
-  font-size: 0.7rem;
+  font-size: .8rem;
 }
 
 .navigation a {
@@ -366,7 +370,8 @@ pre[class="language-svg"]::before {
   top: 100%;
   right: 0;
   width: 30vw;
-  z-index: 1000;
+  height: 100vh;
+  border-left: .25rem solid var(--txt);
 }
 
 .navigation-list ul {
@@ -378,6 +383,12 @@ pre[class="language-svg"]::before {
 }
 
 .navigation-btn {
+  display: flex;
+  z-index: 4;
+}
+
+.navigation-btn-open,
+.navigation-btn-close {
   padding: 0.25rem 0.75rem;
   display: flex;
   gap: 1rem;
@@ -392,7 +403,7 @@ pre[class="language-svg"]::before {
   transition: all 0.2s;
 }
 
-.navigation-btn:after {
+.navigation-btn-open::after {
   content: "";
   display: inline-block;
   background-color: currentColor;
@@ -402,13 +413,34 @@ pre[class="language-svg"]::before {
   transition: all 0.2s;
 }
 
-[open] .navigation-btn:after {
+.navigation-btn-close::before {
+  content: "";
+  display: inline-block;
+  background-color: currentColor;
+  width: 1rem;
+  height: 0.12rem;
+  transition: all 0.2s;
 }
 
-.navigation-btn:hover,
-.navigation-btn:focus {
+[open] .navigation-btn-open {
+  display: none;
+}
+
+[open] .navigation-btn-close {
+  display: flex;
+}
+
+.navigation-btn-close {
+  display: none;
+}
+
+.navigation-btn:hover {
   background-color: var(--bg);
   color: var(--txt);
+}
+
+.header-nav {
+  height: 100%;
 }
 
 .breadcrumbs {
@@ -416,6 +448,7 @@ pre[class="language-svg"]::before {
   font-size: 0.75rem;
   font-weight: 500;
   list-style: none;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -451,9 +484,7 @@ pre[class="language-svg"]::before {
   transform: scale(1.2) rotate(3deg);
 }
 
-.post-subtitle {
-  font-weight: bold;
-}
+/* Post */
 
 .post > * {
   /* TODO: à revoir */
@@ -464,9 +495,27 @@ pre[class="language-svg"]::before {
   margin-right: auto;
 }
 
+.post-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  padding-top: var(--fz1);
+  text-align: center;
+}
+
+.post-subtitle {
+  font-weight: bold;
+}
+
+
+
 .post li {
   margin-bottom: var(--fz7);
 }
+
+/* Main */
+.main {}
 
 .main li::marker {
   color: var(--txt-softer);
@@ -631,6 +680,7 @@ pre[class="language-svg"]::before {
   /* transform: translateX(-50%); */
   z-index: -1;
   opacity: 0.5;
+  color: var(--post-color)
 }
 
 .blob-1 {
@@ -640,7 +690,7 @@ pre[class="language-svg"]::before {
 .blob-2 {
   transform: rotate(var(--rotation2));
 }
-
+/* 
 @media (prefers-color-scheme: dark) {
   .blob {
     color: var(--post-color-dark);
@@ -651,7 +701,7 @@ pre[class="language-svg"]::before {
   .blob {
     color: var(--post-color);
   }
-}
+} */
 
 /* A blog without tags is not a blog */
 

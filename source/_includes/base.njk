@@ -26,7 +26,7 @@
     </svg>
 
     <header class="header">
-      <nav>
+      <nav class="header-nav">
         <ol class="breadcrumbs" aria-label="fil d’arianne">
           {% include "breadcrumbs.njk" %}
           <li>
@@ -38,42 +38,38 @@
       {% include "navigation.njk" %}
     </header>
 
-    <div class="main-layout">
-      <main class="main">
+    <main class="main">
+      <div class="post">
+        <div class="post-header">
+          <h1 class="post-title">{{ eleventyNavigation.title }}</h1>
 
-        <div class="post">
-          <div class="post-header">
-            <h1 class="post-title">{{ eleventyNavigation.title }}</h1>
+          <p class="post-subtitle">{{ eleventyNavigation.subtitle }}</p>
+          {# <p class="post-date"><time datetime="{{ page.date }}" class="post-date-time">{{ page.date | postDate }}</time></p> #}
 
-            <p class="post-subtitle">{{ eleventyNavigation.subtitle }}</p>
-            {# <p class="post-date"><time datetime="{{ page.date }}" class="post-date-time">{{ page.date | postDate }}</time></p> #}
-
-            <div class="post-tags">
-              {% for tag in tags -%}
-                {% if tag !== 'posts' %}
-                  {# <a class="post-tag" href="/tags/{{ tag }}">{{ tag }}</a> #}
-                  {{ tag }}
-                {% endif %}
-              {%- endfor %}
-              <span class="post-tag">
-                {{ color }}
-              </span>
-              <span class="post-tag-color" style="background-color: {{ color }}">&nbsp;</span>
-            </div>
-
+          <div class="post-tags">
+            {% for tag in tags -%}
+              {% if tag !== 'posts' %}
+                <a class="post-tag" href="/tags/{{ tag }}">{{ tag }}</a>
+              {% endif %}
+            {%- endfor %}
+            <span class="post-tag">
+              {{ color }}
+            </span>
+            <span class="post-tag-color" style="background-color: {{ color }}">&nbsp;</span>
           </div>
-          {% if content | toc %}
-          <details class="toc-toc">
-            <summary class="toc-toc-summary">Dans cette page</summary>
-            {{ content | toc | safe }}
-          </details>
-          {% endif %}
-          {{ content | safe }}
+
         </div>
+        {% if content | toc %}
+        <details class="toc-toc">
+          <summary class="toc-toc-summary">Dans cette page</summary>
+          {{ content | toc | safe }}
+        </details>
+        {% endif %}
+        {{ content | safe }}
+      </div>
+    </main>
 
-      {% include "pager.njk" %}
-
-    </div>
+    {% include "pager.njk" %}
     {# <footer class="footer">
       <p>Site réalisé grâce à <a href="https://www.11ty.dev">{{ eleventy.generator }}</a> - Le contenu de ce site est totalement libre.</p>
     </footer> #}
@@ -89,7 +85,7 @@
       }
       root
         .style
-        .setProperty("--post-color-dark", lightnessToHex("{{ color }}", 20));
+        .setProperty("--post-color", lightnessToHex("{{ color }}", 20));
     </script>
 
   </body>
