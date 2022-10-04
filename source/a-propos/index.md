@@ -8,7 +8,7 @@ eleventyNavigation:
   order: 10
 ---
 
-shinze.com a pour objectif la mise à disposition de contenu *pédagogique* permettant à des débutants de découvrir quelques-uns des langages du web (essentiellement [HTML](/standards-web/html) et [CSS](/standards-web/css)).
+shinze.com a pour objectif la mise à disposition de contenus permettant à des débutants de découvrir quelques-uns des langages du web (essentiellement [HTML](/standards-web/html) et [CSS](/standards-web/css)).
 
 ## Faîtes-en ce que vous voulez !
 
@@ -25,6 +25,8 @@ L’intégralité du contenu et images est libre, c’est-à-dire faîtes ce que
 
 ## Mais qui me parle
 
-Bonjour ! Je suis Gaëtan Ark ✌️. Designer qui a été mordu il y a de nombreuses années par un développeur et qui se passionne depuis pour les technologies du web.
+Bonjour ! Je suis Gaëtan Ark ✌️. Designer, mordu il y a de nombreuses années par un développeur et qui se passionne depuis pour les technologies du web.
 
 J’interviens de temps à autres à l’[école de Design de Nantes](https://www.lecolededesign.com/) à propos de [standards web](/standards-web) et fait souffrir chaque année de grandes quantités de futur(e)s UX/UI designer(euse ?)s en leur assénant mes cours.
+
+Si vous avez des questions ou des remarques concernant ce contenu n’hésitez [pas à me contacter](mailto:gaetan.ark+dotcom@gmail.com).

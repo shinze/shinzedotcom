@@ -145,9 +145,6 @@ body {
   width: 100vw;
   background-repeat: no-repeat;
   background-position: 0 0;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  min-height: 100vh;
 }
 
 *,
@@ -369,9 +366,8 @@ pre[class="language-svg"]::before {
   position: absolute;
   top: 100%;
   right: 0;
-  width: 30vw;
-  height: 100vh;
-  border-left: .25rem solid var(--txt);
+  min-width: 50vw;
+  border: .25rem solid var(--txt);
 }
 
 .navigation-list ul {
