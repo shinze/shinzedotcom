@@ -1,4 +1,5 @@
 ---
+color: "#aedfae"
 layout: "base.njk"
 eleventyNavigation:
   key: "Shinze"

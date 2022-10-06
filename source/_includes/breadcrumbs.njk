@@ -7,4 +7,10 @@
     {% endif %}
     <a class="crumb {{ 'breadcrumbs-home' if loop.index == 1 }}" href="{{ crumb.url | url }}">{{ crumb.title }}</a>
   </li>
+
 {% endfor %}
+
+<li>
+  <span class="breadcrumbs-separator">/</span>
+  <strong>{{ eleventyNavigation.title }}</strong>
+</li>

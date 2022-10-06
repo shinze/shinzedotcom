@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="{{ '/styles.css' | url  }}">
     <style>
       :root {
-        --post-color: {{color}};
-        --post-rotation1: {{[0, 15, 30, 45, 180] | random}}deg;
-        --post-rotation2: {{[0, 15, 30, 45, 180] | random}}deg;
-      }
+        {% if color %}
+          --post-color: {{color}};
+        {% else %}
+          --post-color: var(--links) {% endif %}--post-rotation1: {{[0, 15, 30, 45, 180] | random}}deg;
+          --post-rotation2: {{[0, 15, 30, 45, 180] | random}}deg;
+        }
     </style>
     <script src="{{ '/js/hsluv.js' | url  }}"></script>
   </head>
@@ -29,10 +31,6 @@
       <nav class="header-nav">
         <ol class="breadcrumbs" aria-label="fil d’arianne">
           {% include "breadcrumbs.njk" %}
-          <li>
-            <span class="breadcrumbs-separator">/</span>
-            <strong>{{ eleventyNavigation.title }}</strong>
-          </li>
         </ol>
       </nav>
       {% include "navigation.njk" %}
@@ -60,10 +58,10 @@
 
         </div>
         {% if content | toc %}
-        <details class="toc-toc">
-          <summary class="toc-toc-summary">Dans cette page</summary>
-          {{ content | toc | safe }}
-        </details>
+          <details class="toc-toc">
+            <summary class="toc-toc-summary">Dans cette page</summary>
+            {{ content | toc | safe }}
+          </details>
         {% endif %}
         {{ content | safe }}
       </div>
@@ -75,7 +73,18 @@
     </footer> #}
 
     <script>
+      const userPrefersDark = window.matchMedia && window
+        .matchMedia('(prefers-color-scheme: dark)')
+        .matches;
+
+      const userPrefersLight = window.matchMedia && window
+        .matchMedia('(prefers-color-scheme: light)')
+        .matches;
+
+
       const root = document.querySelector("body");
+      const postColor = getComputedStyle(root).getPropertyValue("--post-color");
+      console.log(postColor);
       function lightnessToHex(color, lightness) {
         return hsluv.hsluvToHex([
           hsluv.hexToHsluv(color)[0],
@@ -83,9 +92,17 @@
           lightness
         ]);
       }
-      root
+
+      if (userPrefersDark) {
+        root
         .style
         .setProperty("--post-color", lightnessToHex("{{ color }}", 20));
+      } else if (userPrefersLight) {
+        root
+        .style
+        .setProperty("--post-color", postColor);
+      }
+
     </script>
 
   </body>
