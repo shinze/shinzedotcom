@@ -1,16 +1,21 @@
 {# https://mvolkmann.github.io/blog/eleventy/plugins/navigation-plugin/ #}
-{% set crumbs = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
-{% for crumb in crumbs %}
+
+<nav class="header-nav">
+  <ol class="breadcrumbs" aria-label="fil d’arianne">
+  {% set crumbs = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
+  {% for crumb in crumbs %}
+    <li>
+      {% if loop.index != 1 %}
+        <span class="breadcrumbs-separator">/</span>
+      {% endif %}
+      <a class="crumb {{ 'breadcrumbs-home' if loop.index == 1 }}" href="{{ crumb.url | url }}">{{ crumb.title }}</a>
+    </li>
+
+  {% endfor %}
+
   <li>
-    {% if loop.index != 1 %}
-      <span class="breadcrumbs-separator">/</span>
-    {% endif %}
-    <a class="crumb {{ 'breadcrumbs-home' if loop.index == 1 }}" href="{{ crumb.url | url }}">{{ crumb.title }}</a>
+    <span class="breadcrumbs-separator">/</span>
+    <strong>{{ eleventyNavigation.title }}</strong>
   </li>
-
-{% endfor %}
-
-<li>
-  <span class="breadcrumbs-separator">/</span>
-  <strong>{{ eleventyNavigation.title }}</strong>
-</li>
+  </ol>
+</nav>

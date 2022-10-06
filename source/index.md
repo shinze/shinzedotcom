@@ -1,6 +1,6 @@
 ---
 color: "#aedfae"
-layout: "base.njk"
+layout: "post.njk"
 eleventyNavigation:
   key: "Shinze"
   title: "Accueil"

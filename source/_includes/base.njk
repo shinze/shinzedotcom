@@ -28,46 +28,15 @@
     </svg>
 
     <header class="header">
-      <nav class="header-nav">
-        <ol class="breadcrumbs" aria-label="fil d’arianne">
-          {% include "breadcrumbs.njk" %}
-        </ol>
-      </nav>
+      {% include "breadcrumbs.njk" %}
       {% include "navigation.njk" %}
     </header>
-
+    
     <main class="main">
-      <div class="post">
-        <div class="post-header">
-          <h1 class="post-title">{{ eleventyNavigation.title }}</h1>
-
-          <p class="post-subtitle">{{ eleventyNavigation.subtitle }}</p>
-          {# <p class="post-date"><time datetime="{{ page.date }}" class="post-date-time">{{ page.date | postDate }}</time></p> #}
-
-          <div class="post-tags">
-            {% for tag in tags -%}
-              {% if tag !== 'posts' %}
-                <a class="post-tag" href="/tags/{{ tag }}">{{ tag }}</a>
-              {% endif %}
-            {%- endfor %}
-            <span class="post-tag">
-              {{ color }}
-            </span>
-            <span class="post-tag-color" style="background-color: {{ color }}">&nbsp;</span>
-          </div>
-
-        </div>
-        {% if content | toc %}
-          <details class="toc-toc">
-            <summary class="toc-toc-summary">Dans cette page</summary>
-            {{ content | toc | safe }}
-          </details>
-        {% endif %}
-        {{ content | safe }}
-      </div>
+    {{ content | safe }}
     </main>
 
-    {% include "pager.njk" %}
+    
     {# <footer class="footer">
       <p>Site réalisé grâce à <a href="https://www.11ty.dev">{{ eleventy.generator }}</a> - Le contenu de ce site est totalement libre.</p>
     </footer> #}
