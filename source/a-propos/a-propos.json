@@ -1,4 +1,3 @@
 {
-  "layout": "base.njk",
-  "tags": "a-propos"
+  "layout": "base.njk"
 }

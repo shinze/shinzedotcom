@@ -6,13 +6,11 @@
   {% for crumb in crumbs %}
     <li>
       {% if loop.index != 1 %}
-        <span class="breadcrumbs-separator">/</span>
+      <span class="breadcrumbs-separator">/</span>
       {% endif %}
       <a class="crumb {{ 'breadcrumbs-home' if loop.index == 1 }}" href="{{ crumb.url | url }}">{{ crumb.title }}</a>
     </li>
-
   {% endfor %}
-
   <li>
     <span class="breadcrumbs-separator">/</span>
     <strong>{{ eleventyNavigation.title }}</strong>

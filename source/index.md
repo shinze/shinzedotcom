@@ -6,7 +6,7 @@ eleventyNavigation:
   title: "Accueil"
 ---
 
-Page d’accueil est inutile pour le moment, [tout se passe ici](/standards-web/).
+La page d’accueil est inutile pour le moment, [tout se passe ici](/standards-web/).
 
 
 

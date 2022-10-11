@@ -18,7 +18,7 @@ Dans mon document `index.html` avec VS Code, j’ai commencé à saisir le plan 
 Recette de la pizza quatre fromages
 Listes des ingrédients
 La recette
-Et si je n’aime pas le gorgonzola ?
+Et si je n’aime pas le gorgonzola ?
 Accompagnements
 ```
 

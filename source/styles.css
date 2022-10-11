@@ -12,12 +12,7 @@ html {
   }
 }
 
-html {
-  box-sizing: border-box;
-}
-*,*::after,*::before {
-  box-sizing: inherit;
-}
+
 
 :root {
   --fz1: 3.5em;
@@ -107,9 +102,6 @@ html {
   }
 }
 
-* {
-  margin: 0;
-}
 
 ::selection {
   background-color: var(--txt);
@@ -137,6 +129,7 @@ html {
   font-weight: var(--font-weight);
 }
 
+
 body {
   color: var(--txt);
   background-color: var(--bg);
@@ -150,7 +143,8 @@ body {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  /* TODO: bug in ffox to fix when value is inherit */
+  box-sizing: border-box;
 }
 
 img,
@@ -203,7 +197,8 @@ h1 {
 h2 {
   font-size: var(--fz2);
   margin-bottom: var(--fz4);
-  margin-top: calc(var(--fz2) * 2);
+  /* margin-top: calc(var(--fz2) * 2); */
+  margin-top: clamp(1rem, 10vw, 4rem);
   letter-spacing: -0.022em;
 }
 
@@ -241,10 +236,6 @@ a:hover,
 a:focus {
   color: var(--links-hover);
 }
-
-/* a:visited {
-  color: var(--links-visited);
-} */
 
 p,
 ol,
@@ -355,19 +346,20 @@ pre[class="language-svg"]::before {
 }
 
 .navigation-accordion {
-  position: relative;
+  /* position: relative; */
 }
 
 .navigation-list {
-  margin-bottom: var(--fz6);
+  margin: 0;
   padding: 1rem;
   background-color: var(--bg);
   list-style: none;
   position: absolute;
-  top: 100%;
+  top: 0;
   right: 0;
-  min-width: 50vw;
-  border: .25rem solid var(--txt);
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
 }
 
 .navigation-list ul {
@@ -380,6 +372,7 @@ pre[class="language-svg"]::before {
 
 .navigation-btn {
   display: flex;
+  position: relative;
   z-index: 4;
 }
 
@@ -481,6 +474,9 @@ pre[class="language-svg"]::before {
 }
 
 /* Post */
+.post {
+  min-height: 80vh;
+}
 
 .post > * {
   /* TODO: à revoir */
@@ -511,7 +507,9 @@ pre[class="language-svg"]::before {
 }
 
 /* Main */
-.main {}
+.main {
+  
+}
 
 .main li::marker {
   color: var(--txt-softer);
@@ -583,6 +581,7 @@ pre[class="language-svg"]::before {
 
 /* Table of contents */
 
+
 .toc-toc {
   padding-top: var(--fz5);
   padding-bottom: var(--fz5);
@@ -646,18 +645,15 @@ pre[class="language-svg"]::before {
 
 .toc ol {
   padding-left: 1rem;
-  margin-bottom: 0;
+  margin: 0;
   list-style: none;
   border-left: 1px solid var(--callout-bg);
   transition: all 0.3s;
+  font-size: .85rem;
 }
 
 .toc ol:hover {
   border-left-color: var(--txt);
-}
-
-.toc > ol {
-  margin-left: 1.5rem;
 }
 
 .toc li {
@@ -718,7 +714,7 @@ pre[class="language-svg"]::before {
   padding: 0 0.5rem;
   font-family: var(--prism-font-family);
   font-weight: 500;
-  background-color: var(--bg);
+  background-color: var(--bg-alt1);
 }
 
 .post-tag-color {

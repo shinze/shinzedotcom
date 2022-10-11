@@ -11,7 +11,7 @@ Aborder un projet pour le Web peut sembler insurmontable, voici quelques conseil
 
 ## C’est quoi le plan ?
 
-Votre projet a plusieurs pages ? Une seule page ? Vous avez combien de projets à présenter dans votre portfolio ?
+Votre projet a plusieurs pages ? Une seule page ? Vous avez combien de projets à présenter dans votre portfolio ?
 
 N’hésitez pas à prendre votre outil de dessin préféré et commencez à poser l’architecture générale de votre projet, ce que l’on nomme une arborescence. C’est souvent l’occasion de se poser des questions essentielles sur le contenu car au final tout est là : **quel est le contenu que je vais publier et comment je l’organise**.
 
@@ -21,7 +21,7 @@ N’hésitez pas à prendre votre outil de dessin préféré et commencez à pos
 
 *Tout comme pourrait être l’enfer le Web est pavé de bonnes idées*.
 
-Le problème d’UX ou d’UI est rarement unique, essayez de trouver des réponses ailleurs, faîtes une étude *concurentielle*, ils font comment les autres ?
+Le problème d’UX ou d’UI est rarement unique, essayez de trouver des réponses ailleurs, faîtes une étude *concurrentielle*, ils font comment les autres ?
 
 Dans cette exercice *d’espionnage industriel* n’oubliez pas d’observer vos trouvailles, lisez, **utilisez votre cerveau et analysez**.
 
@@ -58,13 +58,13 @@ Si vous aimez ranger vos documents par ordre alphabétique, dîtes-le ! Si vous 
 
 Documenter l’organisation de votre projet est un vrai bénéfice, lorsque vous êtes en équipe mais aussi quand vous reprenez un projet après l’avoir lâchement laissé de côté pendant 6 mois.
 
-Pour cela, vous pouvez créer un [fichier Markdown](https://www.markdowntutorial.com/fr/) à la racine de votre projet (souvent intitulé `README.md`) dans lequel vous documentez l’organisation de votre projet, la manière de nommer les images, les choses à régler ou à finaliser et enfin comment marche ce projet, quels sont les choix techniques qui ont été faits ? Ça vous aidera dans 6 mois.
+Pour cela, vous pouvez créer un [fichier Markdown](https://www.markdowntutorial.com/fr/) à la racine de votre projet (souvent intitulé `README.md`) dans lequel vous documentez l’organisation de votre projet, la manière de nommer les images, les choses à régler ou à finaliser et enfin comment marche ce projet, quels sont les choix techniques qui ont été faits ? Ça vous aidera dans 6 mois.
 
 **Le nom de vos éléments et l’organisation de vos fichiers doivent être tristes à mourir**
 
 ### Testez
 
-Vous produisez un projet mobile ? Testez le sur du matériel réel (un vrai téléphone), les sensations visuelles que vous allez avoir sont très différentes de ce qui est sur votre écran 17 pouces, les interactions sont différentes. C’est une expérience différente.
+Vous produisez un projet mobile ? Testez le sur du matériel réel (un vrai téléphone), les sensations visuelles que vous allez avoir sont très différentes de ce qui est sur votre écran 17 pouces, les interactions sont différentes. C’est une expérience différente.
 
 (Comme 99% des designers de la planète) vous réalisez un projet qui ne vous est pas destiné ? Testez-le avec des utilisateurs potentiels, dans des conditions reproduisant au mieux la réalité, ne les aidez pas et observez leur comportement (vous les aiderez par la suiite en améliorant votre interface) et enfin demandez leur avis, vous en apprendrez plus comme ça.
 

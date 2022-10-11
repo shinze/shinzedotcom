@@ -26,17 +26,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight, {
     // alwaysWrapLineHighlights: true,
   });
-  
 
-  /* Option MD */
-  // TODO: Voir ça pour des tag customs
-  // https://www.11ty.dev/docs/languages/markdown/#why-cant-i-return-markdown-from-paired-shortcodes-to-use-in-a-markdown-file
-  // Ou ça : https://github.com/markdown-it/markdown-it-container
-  // Ou encore ça : https://www.npmjs.com/package/markdown-it-attrs
-
-  eleventyConfig.addFilter("postDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_FULL);
-  });
+  /* Options MD */
 
   // Codepen embeds
   // Multiline Content with Parameter

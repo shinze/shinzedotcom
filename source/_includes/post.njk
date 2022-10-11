@@ -10,17 +10,7 @@ layout: base.njk
     <p class="post-subtitle">{{ eleventyNavigation.subtitle }}</p>
     {# <p class="post-date"><time datetime="{{ page.date }}" class="post-date-time">{{ page.date | postDate }}</time></p> #}
 
-    {# <div class="post-tags">
-      {% for tag in tags -%}
-        {% if tag !== 'posts' %}
-          <a class="post-tag" href="/tags/{{ tag }}">{{ tag }}</a>
-        {% endif %}
-      {%- endfor %}
-      <span class="post-tag">
-        {{ color }}
-      </span>
-      <span class="post-tag-color" style="background-color: {{ color }}">&nbsp;</span>
-    </div> #}
+    {% include "post-tags.njk" %}
 
   </div>
   {% if content | toc %}
@@ -29,7 +19,9 @@ layout: base.njk
       {{ content | toc | safe }}
     </details>
   {% endif %}
+
   {{ content | safe }}
+
 </div>
 
 {% include "pager.njk" %}

@@ -20,16 +20,6 @@ Les images sont des éléments insérés dans un document HTML, elles ne font pa
 
 Ci-dessus un exemple illustrant l’insertion de trois images de types différents.
 
-::: callout
-
-## En résumé (tltr)
-
-- La plupart des images sur le Web sont au format PNG;
-- Les éléments graphiques (logotypes, des icônes) utilisent le format SVG;
-- L’attribut `alt` doit être mis sur chaque image et sa valeur renseignée si l'image fait partie du contenu.
-
-:::
-
 ## L’attribut `alt`
 
 **L’attribut `alt` est obligatoire, sa valeur quand elle n’est nécessaire que si l'image sert au contenu et n’est pas un simple élément de décoration.**
@@ -145,6 +135,16 @@ L’exemple précédent est assez parlant, mais ce qu’il faut noter est que l�
 </figure>
 ```
 
+
+::: callout
+
+## En résumé (tl;dr)
+
+- Vous pouvez utiliser PNG si vous ne savez pas quoi choisir;
+- Les éléments graphiques (logotypes, des icônes) seront au format SVG;
+- L’attribut `alt` doit être mis sur chaque image et sa valeur renseignée **si l'image fait partie du contenu**.
+
+:::
 ## Références
 
 - [Les images sur MDN](https://developer.mozilla.org/fr/docs/Web/HTML/Element/Img);

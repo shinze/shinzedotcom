@@ -1,0 +1,33 @@
+---
+layout: "post.njk"
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  addAllPagesToCollections: false
+permalink: /categories/{{ tag | slugify }}/
+eleventyExcludeFromCollections: true
+eleventyNavigation:
+  key: "Shinze"
+  title: Catégories
+---
+
+{% set postslist = collections[ tag ] %}
+
+<ul class="postlist">
+{% for post in postslist | reverse %}
+  <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+    <span class="post-tag-color" style="background-color: {{ post.data.color }}">&nbsp;</span>
+    <a href="{{ post.url | url }}" class="postlist-link">
+      {{ post.data.eleventyNavigation.title }}
+      {# {% if post.eleventyNavigation.title %}{{ post.eleventyNavigation.title }}{% else %}<code>{{ post.url }}</code>{% endif %} #}
+    </a>
+    {% for tag in post.data.tags %}
+      {% set tagUrl %}/categories/{{ tag | slugify }}/{% endset %}
+      <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+    {% endfor %}
+  </li>
+{% endfor %}
+</ul>
+
+<p>Voir <a href="{{ '/categories/' | url }}">toutes les catégories</a>.</p>

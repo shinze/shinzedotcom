@@ -2,6 +2,6 @@
 eleventyNavigation:
   title: "Pratiques de développement"
   key: "Pratiques"
-  parent: "Standards"
+  parent: "Shinze"
   order: 100
 ---

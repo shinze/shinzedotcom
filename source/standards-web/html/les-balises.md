@@ -14,7 +14,7 @@ Les *balises* permettent de renseigner différents types de contenus : des titre
 
 Utiliser des balises adaptées permet d’améliorer [la sémantique](https://fr.wikipedia.org/wiki/HTML_s%C3%A9mantique) de votre contenu, son indexation dans les différentes moteurs de recherche et enfin et surtout l’acces de vos contenus au plus grand nombre.
 
-## Comment ça marche ?
+## Comment ça marche ?
 
 Pour baliser un contenu vous utiliserez (la plupart du temps) une balise ouvrante, une balise fermante et un contenu.
 

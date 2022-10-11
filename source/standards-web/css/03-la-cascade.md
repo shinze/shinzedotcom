@@ -2,7 +2,7 @@
 color: "#FFF3DA"
 eleventyNavigation:
   title: "La cascade"
-  excerpt: "Le C de CSS ou de quelle couleur sera cet élément ?"
+  excerpt: "Le C de CSS ou de quelle couleur sera cet élément ?"
   key: "La cascade"
   parent: "CSS"
 ---
@@ -90,7 +90,7 @@ En CSS, c’est la dernière déclaration qui sera appliquée mais tous les sél
 
 ```html
 <article id="art">
-  <p class="question" id="quest">Je suis de quelle couleur ?</p>
+  <p class="question" id="quest">Je suis de quelle couleur ?</p>
 </article>
 ```
 
@@ -161,7 +161,7 @@ La présence de cette déclaration est l’indice d’un code de *mauvaise quali
 
 :::
 
-## Éviter les crampes aux doigts et les mots de tête ?
+## Éviter les crampes aux doigts et les mots de tête ?
 
 Dans le monde réel, **on ne joue pas avec la spécificité**, car le code est amené à être manipulé par différents intervenant(e)s de niveaux de connaissance différents du langage CSS.
 

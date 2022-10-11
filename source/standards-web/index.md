@@ -8,8 +8,6 @@ eleventyNavigation:
   order: 1
 ---
 
-## Des standards ?
-
 Le [W3C](https://www.w3.org/) (World Wide Web Consortium) est un groupement [d’industriels](https://www.w3.org/Consortium/Member/List) du web dont l’objectif est de trouver un consensus autour [des technologies](https://www.w3.org/standards/) (langages, architecture, protocoles…) faisant le web d’aujourd’hui et de demain, ce sont des standards.
 
 **L’existence de standards pour le web et fondamentale, elle garantit théoriquement un web ouvert ou chacun accède à l’information quelles que soient ses capacités techniques ou physiques.**

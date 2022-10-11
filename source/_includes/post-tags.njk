@@ -1,0 +1,11 @@
+{# <div class="post-tags">
+  {% for tag in tags -%}
+    {% if tag !== 'posts' %}
+      <a class="post-tag" href="/categories/{{ tag }}">{{ tag }}</a>
+    {% endif %}
+  {%- endfor %}
+  <span class="post-tag">
+    {{ color }}
+  </span>
+  <span class="post-tag-color" style="background-color: {{ color }}">&nbsp;</span>
+</div> #}

@@ -16,7 +16,7 @@ Dans ce document `index.html`, entre les balises `<body></body>`, je tape ça, [
 <h1>Recette de la pizza quatre fromages</h1>
 <h2>Listes des ingrédients</h2>
 <h2>La recette</h2>
-<h3>Et si je n’aime pas le gorgonzola ?</h3>
+<h3>Et si je n’aime pas le gorgonzola ?</h3>
 <h2>Accompagnements</h2>
 ```
 
@@ -57,7 +57,7 @@ Après toutes ces modifications, voici le code que j’obtiens :
   <h1>Recette de la pizza quatre fromages</h1>
   <h2>Listes des ingrédients</h2>
   <h2>La recette</h2>
-  <h3>Et si je n’aime pas le gorgonzola ?</h3>
+  <h3>Et si je n’aime pas le gorgonzola ?</h3>
   <h2>Accompagnements</h2>
 </body>
 </html>
@@ -73,7 +73,7 @@ Elles ne sont utiles qu’aux humains (vous) pour vous rendre le document plus c
 
 </div>
 
-## On la mange quand cette pizza ?
+## On la mange quand cette pizza ?
 
 Sour le `h1`, j’ajoute du contenu, un rapide texte d’introduction.
 

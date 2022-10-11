@@ -1,5 +1,4 @@
 ---
-tags: "standards"
 eleventyNavigation:
   title : "Initialiser un projet avec VS Code"
   key: "Débuter un projet web avec VSCode"

@@ -1,11 +1,9 @@
 ---
-tags: "post, a-propos"
-title: "À propos de ce site"
 eleventyNavigation:
   key: "À propos"
   parent: "Shinze"
   title: "À propos de ce site"
-  order: 10
+  order: 9000
 ---
 
 shinze.com a pour objectif la mise à disposition de contenus permettant à des débutants de découvrir quelques-uns des langages du web (essentiellement [HTML](/standards-web/html) et [CSS](/standards-web/css)).

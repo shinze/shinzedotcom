@@ -11,17 +11,19 @@
     <style>
       :root {
         {% if color %}
-          --post-color: {{color}};
+          --post-color: {{ color }};
         {% else %}
-          --post-color: var(--links) {% endif %}--post-rotation1: {{[0, 15, 30, 45, 180] | random}}deg;
-          --post-rotation2: {{[0, 15, 30, 45, 180] | random}}deg;
+          --post-color: red;
+        {% endif %}
+          --post-rotation1: {{ [0, 15, 30, 45, 180] | random }}deg;
+          --post-rotation2: {{ [0, 15, 30, 45, 180] | random }}deg;
         }
     </style>
     <script src="{{ '/js/hsluv.js' | url  }}"></script>
   </head>
 
   <body>
-
+    
     <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="blob">
       <path fill="currentColor" class="blob-1" d="M 129.256 45.475 C 134.456 65.575 113.556 89.875 89.656 106.375 C 65.756 122.775 38.856 131.375 23.156 120.875 C 7.556 110.375 3.056 80.775 11.356 56.375 C 19.556 31.975 40.656 12.775 66.756 11.175 C 92.856 9.475 124.156 25.375 129.256 45.475 Z"/>
       <path fill="currentColor"  class="blob-2" d="M 178.029 80.881 C 183.229 100.981 173.479 141.292 149.579 157.792 C 125.679 174.192 87.629 166.781 71.929 156.281 C 56.329 145.781 51.829 116.181 60.129 91.781 C 68.329 67.381 89.429 48.181 115.529 46.581 C 141.629 44.881 172.929 60.781 178.029 80.881 Z"/>

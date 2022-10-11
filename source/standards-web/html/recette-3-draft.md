@@ -38,7 +38,7 @@ Si vous êtes observateur vous pouvez voir ici l’utilisation d’un type de li
 Après les étapes de la recette, j’ai poursuivi comme ceci :
 
 ```html
-<h3>Et si je n’aime pas le gorgonzola ?</h3>
+<h3>Et si je n’aime pas le gorgonzola ?</h3>
 <p>Si tel est le cas, sachez tout d’abord que vous n’avez aucun goût. Si vous n’aimez pas ce
   délice qu’est le gorgonzola, je vous propose de le remplacer par un fromage insipide de votre
   choix.
@@ -106,7 +106,7 @@ Je ne vous conseille pas de réaliser cette recette qui est improvisée.
       sa surface puis déposez quelques morceaux de fromages;</li>
     <li>Vous pouvez cuire vos pizzas dans un four à 230 degrés pendant 15 minutes</li>
   </ol>
-  <h3>Et si je n’aime pas le gorgonzola ?</h3>
+  <h3>Et si je n’aime pas le gorgonzola ?</h3>
   <p>Si tel est le cas, sachez tout d’abord que vous n’avez aucun goût. Si vous n’aimez pas ce
     délice qu’est le gorgonzola, je vous propose de le remplacer par un fromage insipide de votre
     choix.

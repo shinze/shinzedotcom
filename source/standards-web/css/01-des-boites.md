@@ -29,7 +29,7 @@ p {
 
 ## La question
 
-**À votre avis, ce paragraphe (`p`) fait quelle largeur ? 100 pixels ? 130 ? Aucune idée ?**
+**À votre avis, ce paragraphe (`p`) fait quelle largeur ? 100 pixels ? 130 ? Aucune idée ?**
 
 ::: callout
 ### La réponse
@@ -79,7 +79,7 @@ Les boîtes en HTML sont de deux types :
   <em>à tous !</em>
 </p>
 <p>Comment, </p>
-<p>Allez-vous ?</p>
+<p>Allez-vous ?</p>
 ```
 
 Testez le code ci-dessus, certains éléments se mettent sur une rangée, d’autres s’empilent (même si je saute une ligne dans le code).
@@ -100,7 +100,7 @@ p {
 
 :::
 
-### D’autres différences (de taille ?)
+### D’autres différences (de taille ?)
 
 - Les éléments *inline* ne peuvent pas avoir de largeur, ni de hauteur propre, en modifiant leur propriété `display` on peut à nouveau rendre une largeur et une hauteur à ces éléments;
 - Un padding vertical sur un éléments *inline* ne va pas avoir d’impact sur d’autres éléments;

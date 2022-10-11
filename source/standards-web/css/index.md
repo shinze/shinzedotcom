@@ -73,7 +73,7 @@ Enfin, ouvrez une des pages HTML à laquelle vous avez ajouté la feuille de sty
 ### Et si chez moi ça ne marche pas ?
 
 1. La page HTML que vous avez ouverte contient-t’elle bien le lien vers le fichier `style.css` ?;
-2. Votre fichier `style.css` est-il correctement nommé ? Vous n’avez pas ajouté un *s* ? Remplacé le *y* par un *i* ? Des espaces invisibles ? Dans ce cas, retapez le nom du fichier.
+2. Votre fichier `style.css` est-il correctement nommé ? Vous n’avez pas ajouté un *s* ? Remplacé le *y* par un *i* ? Des espaces invisibles ? Dans ce cas, retapez le nom du fichier.
 3. Si votre feuille de styles est dans un dossier, il faut alors changer le chemin vers ce fichier;
 4. Avez-vous simplement bien enregistré vos modifications ? (Oui, ça arrive aussi)
 

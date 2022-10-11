@@ -15,10 +15,10 @@ Un attribut est un bout de code ajouté à un élément pour modifier ses propri
 ## Exemple simple d’attribut
 
 ```html
-<a href="https://perdu.com">Vous êtes perdu ?</a>
+<a href="https://perdu.com">Vous êtes perdu ?</a>
 ```
 
-Exemple d’une balise délimitant un lien, ici les balises `<a></a>` permettent d’ajouter un lien sur le contenu `vous êtes perdu`. L’attribut nommé `href` est l’adresse à laquelle l’utilisateur est redirigé : `https://perdu.com` une fois le lien utilisé.
+Exemple d’une balise délimitant un lien, ici les balises `<a></a>` permettent d’ajouter un lien sur le contenu `vous êtes perdu`. L’attribut nommé `href` est l’adresse à laquelle l’utilisateur est redirigé vers `https://perdu.com` une fois le lien utilisé.
 
 
 ## Les attributs obligatoires

@@ -1,10 +1,9 @@
 ---
-tags: "test"
 eleventyNavigation:
   title : "Guide de styles"
   key: "Styleguide"
   parent: "Shinze"
-  order: 10
+  order: 1000
 ---
 
 Ce document n’est là que pour tester les [différents éléments](#) qui le composent. Des titres, des liens, des images. Un large panel de différents élément html afin d’avoir un aperçu rapide des fonctions du site.
